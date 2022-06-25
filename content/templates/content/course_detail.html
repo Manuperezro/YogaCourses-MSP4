@@ -3,10 +3,62 @@
 {{object.name}}
 {% endblock title %}
 {% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-8">
+            <div class="card">
+                <div class="card-body">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video autoplay loop controls poster="{{ object.thumbnail.url }}" class="embed-responsive-item" src="...">
+                            <source src="{{object.video_intro_url}}" type="video/mp4">
+                        </video>
+                      </div>
+                      <h5 class="font-weight-bold mt-4">
+                        Description
+                      </h5>
+                      <p class="card-text">{{object.description}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title font-weight-bold mb-4">{{object.name}}</div>
+                    <div class="card-subtitle text-muted-mb-4">{{object.sub_title}}</div>
+                    <p>
+                        <a href="" class="btn btn-dark btn-block font-weight-bold mt-4">View</a>
+                    </p>
+                </div>
+            </div>
+            <br>
+          <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">
+                    Rock Yoga
+                </h4>
+                <p class="card-subtitle">
+                    Intructor
+                </p>
+            </div>
+            <div class="card-body">
+                The instructot's description
+            </div>
+          </div>
+          <br>
+          <div class="card">
 
-<h1>{{object.name}}</h1>
+            <div class="card-body">
+                <i class="fas fa-th"></i>
+                &nbsp; {{ object.category }}
+            </div>
+
+          </div>
+       </div>
+    </div>
+</div>
+<!-- <h1>{{object.name}}</h1>
 <h1>{{object.sub_title}}</h1>
 <h1>{{object.description}}</h1>
-<h1>{{object.video_intro_url}}</h1>
+<h1>{{object.video_intro_url}}</h1> -->
 
 {% endblock content %}
