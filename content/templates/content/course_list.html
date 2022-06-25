@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}
+Home
+{% endblock title %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        {% for object in object_list  %}
+        <div class="col">
+            <div class="card shadow-sm">
+                <a href="{{ object.get_absolute_url }}"></a>
+                <img src="{{ object.thumbnail.url }}" class="card-img-top" width="100%" height="225" alt="thumbnail">
+                <div class="card-body">
+                    <p class="card-text">{{ object.name }}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <a href="{{ object.get_absolute_url }}"><small class="text-muted">Free</small></a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <a href="{{ object.get_absolute_url }}">
+            <h1>{{ object.name }}</h1>
+        </a> -->
+        {% endfor %}
+
+
+    </div>
+</div>
+{% endblock content %}
