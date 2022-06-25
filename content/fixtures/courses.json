@@ -1,0 +1,33 @@
+[{
+        "model": "content.course",
+        "pk": 1,
+        "fields": {
+            "category": 2,
+            "name": "Ashtanga for begginers",
+            "slug": "ashtanga-for-begginers",
+            "thumbnail": "categories/photos/2022/\n/25/begginers.jpg",
+            "sub_title": "Start your journey today",
+            "video_intro_url": "https://www.youtube.com/watch?v=Dbmwx2C80To&t=6s&ab_channel=AloMoves-OnlineYoga%26FitnessVideos",
+            "description": "Intro to Ashtanga Yoga Primary Series with Laruga Glaser",
+            "created": "2022-06-25",
+            "is_published": true,
+            "is_feautured": false
+        }
+    },
+        {
+            "model": "content.course",
+            "pk": 2,
+            "fields": {
+                "category": 2,
+                "name": "Ashtanga for begginers",
+                "slug": "Adjustments Whit Ryan Spielman",
+                "thumbnail": "categories/photos/2022/\n/25/begginers.jpg",
+                "sub_title": "Start your journey today",
+                "video_intro_url": "https://www.youtube.com/watch?v=9MQNGFCkm1U&ab_channel=ryanspielman",
+                "description": "Intro to Ashtanga Yoga Primary Series with Laruga Glaser",
+                "created": "2022-06-25",
+                "is_published": true,
+                "is_feautured": false
+            }
+        }
+    ]

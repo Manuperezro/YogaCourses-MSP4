@@ -1,0 +1,20 @@
+[
+{
+  "model": "content.category",
+  "pk": 1,
+  "fields": {
+    "title": "Pravrita Trikonasana Adjustments",
+    "slug": "Adjustments",
+    "thumbnail": "categories/photos/2022/\n/24/Ashtanga.jpg"
+  }
+},
+{
+  "model": "content.category",
+  "pk": 2,
+  "fields": {
+    "title": "begginers",
+    "slug": "begginers",
+    "thumbnail": "categories/photos/2022/\n/24/begginers.jpg"
+  }
+}
+]
