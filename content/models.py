@@ -35,8 +35,13 @@ class Course(models.Model):
         return reverse('course-detail', kwargs={
             'slug': self.slug
         })
+    
+    # property to return all the sections of the course, and sorted byt the section's position property.
+    @property
+    def sections(self):
+        return self.section_set.all().order_by('position')
 
-
+    
 class Section(models.Model):
     course = models.ForeignKey(Category, related_name='sections', on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
@@ -46,6 +51,11 @@ class Section(models.Model):
 
     def __str__(self):
         return self.title
+    
+    # property to return a list of section's videos and sorted byt the section's Video's property.
+    @property
+    def videos(self):
+        return self.video_set.all().order_by('position')
 
 
 class Video(models.Model):
