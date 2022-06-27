@@ -9,9 +9,8 @@
             <div class="card">
                 <div class="card-body">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <video autoplay loop controls poster="{{ object.thumbnail.url }}" class="embed-responsive-item"
-                            src="{{ object.video_intro_url }}">
-                            <!-- <source src="{{ object.video_intro_url }}" type="video/mp4"> -->
+                        <video autoplay loop controls controlList="nodownload" poster="{{ object.thumbnail.url }}" class="embed-responsive-item">
+                            <source src="{{ object.video_intro_url }}" type="video/mp4">
                         </video>
                     </div>
                     <h5 class="font-weight-bold mt-4">
@@ -71,7 +70,7 @@
                     <hr>
                     <div class="list">
                         <div class="list-row">
-                            <!-- {% for video in section.videos.all %} -->
+                            {% for video in section.videos.all %}
                             <div class="list-item mb-3 mr-3">
                                 <a href="">
                                     <div>
@@ -92,8 +91,4 @@
             {% endfor %}
         </div>
     </div>
-    <!-- <h1>{{object.name}}</h1>
-<h1>{{object.sub_title}}</h1>
-<h1>{{object.description}}</h1>
-<h1>{{object.video_intro_url}}</h1> -->
     {% endblock content %}
