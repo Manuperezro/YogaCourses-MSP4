@@ -71,9 +71,9 @@
                     <hr>
                     <div class="list">
                         <div class="list-row">
-                            <!-- {% for video in section.videos.all %} -->
+                            {% for video in section.videos.all %}
                             <div class="list-item mb-3 mr-3">
-                                <a href="">
+                                <a href="{{ video.get_absolute_url }}">
                                     <div>
                                         <img src="{{ video.thumbnail.url }}" width="100%" alt="">
                                     </div>
@@ -92,8 +92,4 @@
             {% endfor %}
         </div>
     </div>
-    <!-- <h1>{{object.name}}</h1>
-<h1>{{object.sub_title}}</h1>
-<h1>{{object.description}}</h1>
-<h1>{{object.video_intro_url}}</h1> -->
     {% endblock content %}

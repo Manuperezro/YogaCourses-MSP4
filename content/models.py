@@ -52,7 +52,7 @@ class Section(models.Model):
     def __str__(self):
         return self.title
     
-    # property to return a list of the sections of videos and sorted byt the section's Video's property.
+    # property to return a list of the sections of videos and sort it by the section's Video's property.
     @property
     def videos(self):
         return self.video_set.all().order_by('position')
@@ -69,6 +69,12 @@ class Video(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('video-detail', kwargs={
+            "course_slug": self.section.course.slug,
+            "slug": self.slug
+        })
 
 
 def pre_save_category(sender, instance, *args, **kwargs):
