@@ -17,8 +17,8 @@ class VideoDetailView(DetailView):
     model = Video
     template_name = "content/video_detail.html"
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['course'] = get_object_or_404(Course, slug=self.kwargs["course_slug"])
-    #     context['course'] = Course
-    #     return context
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        course = get_object_or_404(Course, slug=self.kwargs["course_slug"])
+        context['course'] = course
+        return context
