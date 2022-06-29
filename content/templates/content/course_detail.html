@@ -9,9 +9,8 @@
             <div class="card">
                 <div class="card-body">
                     <div class="embed-responsive embed-responsive-16by9">
-                        <video autoplay loop controls poster="{{ object.thumbnail.url }}" class="embed-responsive-item"
-                            src="{{ object.video_intro_url }}">
-                            <!-- <source src="{{ object.video_intro_url }}" type="video/mp4"> -->
+                        <video autoplay loop controls poster="{{ object.thumbnail.url }}" class="embed-responsive-item">
+                            <source src="{{object.video_intro_url}}" type="video/mp4">
                         </video>
                     </div>
                     <h5 class="font-weight-bold mt-4">

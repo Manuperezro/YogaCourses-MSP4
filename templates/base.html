@@ -23,7 +23,12 @@
 </head>
 
 <body>
-    {% include 'partials/_navbar.html' %}
+    {% if '/learn/' in request.path %}
+        {% block video_header %}
+        {% endblock video_header %}
+    {% else %}
+        {% include 'partials/_navbar.html' %}
+    {% endif %}
 
     {% block content %}
     {% endblock content %}
