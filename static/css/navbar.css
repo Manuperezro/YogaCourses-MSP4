@@ -25,6 +25,13 @@
     font-size: 15px;
 }
 
+#search-input::placeholder {
+    color: #787f88;
+    font-size: 13px;
+    font-weight: 400;
+
+}
+
 #search-input::placeholder { 
     color: #787f88;
     font-size: 13px;
