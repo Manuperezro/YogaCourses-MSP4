@@ -17,8 +17,6 @@ Learn
 {% endblock video_header %}
 
 {% block content %}
-
-
 <div class="container-fluid bg-withe ">
     <div class="row">
         <div class="col-9 px-0">
@@ -45,7 +43,7 @@ Learn
                       {% for video in section.videos.all %}
                       <div id="{{section.slug}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body">
-                            <a href="{{ video.get_absolute_url}}" class="text-dark">{{video.position}}. {{video.title}}</a>
+                            <a href="{{ object.get_absolute_url}}" class="text-dark">{{video.position}}. {{video.title}}</a>
                         </div>
                       </div>
                       {% endfor %}
