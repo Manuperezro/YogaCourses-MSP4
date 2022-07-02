@@ -3,27 +3,14 @@
 Home
 {% endblock title %}
 {% block content %}
-
-{% load static %}
-<div class="hero">
-
-    <div class="embed-responsive embed-responsive-16by9">
-        <video id="background-video" autoplay loop controls poster="" class="embed-responsive-item">
-            <source src="static/videos/video.mp4" type="video/mp4">
-        </video>
-
-    </div>
-</div>
-
 <div class="container mt-5">
     <div class="row">
         {% for object in object_list  %}
         <div class="col-md-4">
             <div class="card mb-5 shadow-sm card-course">
                 <a href="{{ object.get_absolute_url }}">
-                    <img src="{{ object.thumbnail.url }}" class="card-img-top" width="100%" height="225"
-                        alt="thumbnail">
-                </a>
+                <img src="{{ object.thumbnail.url }}" class="card-img-top" width="100%" height="225" alt="thumbnail">
+                 </a>
                 <div class="card-body">
                     <p class="card-text font-weight-bold">{{ object.name }}</p>
                     <div class="d-flex justify-content-between align-items-center">
