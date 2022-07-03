@@ -2,6 +2,7 @@ from django.db import models
 from django.db.models.signals import pre_save
 from django.utils.text import slugify
 from django.shortcuts import reverse
+from  embed_video.fields  import  EmbedVideoField
 # Create your models here.
 
 class Category(models.Model):
@@ -60,7 +61,7 @@ class Section(models.Model):
 
 class Video(models.Model):
     section = models.ForeignKey(Section, related_name='videos', on_delete=models.CASCADE)
-    video_url = models.CharField(max_length=200)
+    dideoUrl = EmbedVideoField()
     thumbnail = models.ImageField(upload_to='lessons/photos/%Y/%m/%d/')
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, blank=True, unique=True)
