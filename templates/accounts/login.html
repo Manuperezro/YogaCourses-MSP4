@@ -1,9 +1,40 @@
+
+
 {% extends 'base.html' %}
 {% block title %}
-Login
+Register
 {{object.name}}
 {% endblock title %}
-<h1>Login page</h1>
 {% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card">
+                <div class="card-header text-white" style="background-color: black">
+                    <h5>
+                        <i class="fas fa-user-plus"></i> Register
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <form action="{% url 'register' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="username">User Name</label>
+                            <input type="text" name="username" class="form-control" required>
+                          </div>
+                          <!-- <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" class="form-control" required>
+                          </div> -->
+                          <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" class="form-control" required>
+                          </div>
+                        <button type="submit" class="btn btn-block text-white" style="background-color: black;">Login</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
-

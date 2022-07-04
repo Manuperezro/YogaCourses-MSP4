@@ -22,3 +22,9 @@ class VideoDetailView(DetailView):
         course = get_object_or_404(Course, slug=self.kwargs["course_slug"])
         context['course'] = course
         return context
+
+
+def display_video(request):
+    videos = Video.objets.all
+    context = {'videos': videos}
+    return render(request, "content/video_detail.html", context)

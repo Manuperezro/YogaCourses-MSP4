@@ -23,8 +23,11 @@ Learn
         <div class="col-9 px-0">
             <div class="embed-responsive embed-responsive-16by9">
                 {% for item in Videos %}
-                    {% video item.video_url '426x240' %} 
+                    {% video item.video as my  %}
+                    <i frame width="{{ 480 }}" height="{{ 320 }}" src="{{ my.video_url }}" frameborder="0" allowfullscreen> </i frame>
+                    {% endvideo %}
                 {% endfor %}
+                {{ object.video_url }}
                 <!-- <video autoplay loop controls poster="{{ object.thumbnail.url }}" class="embed-responsive-item">
                     <source src="{{ object.video_url }}" type="video/mp4">
                 </video> -->

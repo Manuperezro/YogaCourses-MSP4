@@ -61,7 +61,7 @@ class Section(models.Model):
 
 class Video(models.Model):
     section = models.ForeignKey(Section, related_name='videos', on_delete=models.CASCADE)
-    dideoUrl = EmbedVideoField()
+    video_url = EmbedVideoField()
     thumbnail = models.ImageField(upload_to='lessons/photos/%Y/%m/%d/')
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, blank=True, unique=True)
