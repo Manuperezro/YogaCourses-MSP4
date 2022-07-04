@@ -42,10 +42,10 @@
         <li class="nav-item dropdown">
             <a class="nav-link text-dark dropdown-toggle nav-text" href="#" id="navbarDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Welcome {{user.username}}
+                <img src="{{ user.student.avatar.url }}" class="rounded-circule" height="25" alt="">&nbsp: Welcome {{user.username}}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">My Profile</a>
+                <a class="dropdown-item" href="{% url 'my_profile' %}">My Profile</a>
                 <a class="dropdown-item" href="#">Subscription</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'logout' %}">
