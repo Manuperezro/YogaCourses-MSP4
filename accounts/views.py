@@ -68,8 +68,7 @@ def logout(request):
     return redirect('course-list')
 
 
-# my profile users allows users to see their purchases
-
+# my profile users allows users to change information and the avatar img in their files.
 def my_profile(request):
 
     if request.method == 'POST':
