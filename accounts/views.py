@@ -15,12 +15,11 @@ def login(request):
             auth.login(request, user)
             print('You are now logge in')
             return redirect('course-list')
-        else:
-            print('Invalid credentials')
-            return redirect('login')
-            
-    else:
-        return render(request, 'accounts/login.html')
+        
+        print('Invalid credentials')
+        return redirect('login')
+        
+    return render(request, 'accounts/login.html')
     
 
 
@@ -34,25 +33,23 @@ def register(request):
         password_1 = request.POST['password_1']
         password_2 = request.POST['password_2']
 
-        if password_1 == password_2:
-            if User.objects.filter(username=username).exists():
-                #that username is taken
-                return redirect('register')
-            elif User.objects.filter(email=email).exists():
-                #that email is being used
-                return redirect('register')
-            else:
-                # Ccreate a new user
-                user = User.objects.create_user(username=username, email=email, first_name=first_name, last_name=last_name)
-                user.save()
-                # Your are now register and can login
-                return redirect('login')
-
-        else:
+        if password_1 != password_2:
             # Passwords don't match
             return redirect('register') 
-    else:
-        return render(request, 'accounts/register.html')
+        if User.objects.filter(username=username).exists():
+            # that username is taken
+            return redirect('register')
+        elif User.objects.filter(email=email).exists():
+            # that email is being used
+            return redirect('register')
+        
+        user = User.objects.create_user(username=username, email=email, password=password_1, first_name=first_name, last_name=last_name)
+        user.save()
+        # Your are now register and can login
+        return redirect('login')
+
+    return render(request, 'accounts/register.html')
+
 
 #Logout dont render any template, simply will navigate to the course list url.
 def logout(request):

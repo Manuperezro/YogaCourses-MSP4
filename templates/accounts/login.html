@@ -16,7 +16,7 @@ Register
                     </h5>
                 </div>
                 <div class="card-body">
-                    <form action="{% url 'register' %}" method="POST">
+                    <form action="{% url 'login' %}" method="POST">
                         {% csrf_token %}
                         <div class="form-group">
                             <label for="username">User Name</label>
