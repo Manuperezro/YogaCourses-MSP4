@@ -4,6 +4,12 @@ from django.contrib import auth
 #Login Register and Logout Functions
 
 def login(request):
+
+    # I add this first if to redirect the user to the courses list page when logout. 
+    if request.user.is_authenticated:
+        return redirect('course-list')
+
+
     if request.method == "POST":
         # get form input values
         username = request.POST['username']
@@ -24,6 +30,10 @@ def login(request):
 
 
 def register(request):
+
+    if request.user.is_authenticated:
+        return redirect('course-list')
+
     if request.method == "POST":
         # get form input values
         first_name = request.POST['first_name']
@@ -53,4 +63,5 @@ def register(request):
 
 #Logout dont render any template, simply will navigate to the course list url.
 def logout(request):
+    auth.logout(request)
     return redirect('course-list')

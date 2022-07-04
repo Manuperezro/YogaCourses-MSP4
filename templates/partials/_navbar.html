@@ -38,12 +38,26 @@
             </li>
 
         </ul class="navbar-nav ml-auto">
-
+        {% if user.is_authenticated %}
+        <li class="nav-item dropdown">
+            <a class="nav-link text-dark dropdown-toggle nav-text" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Welcome {{user.username}}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">My Profile</a>
+                <a class="dropdown-item" href="#">Subscription</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'logout' %}">
+                    <i class="fas fa-sign-out-alt"></i>Logout</a>
+        </li>
+        {% else %}
         <div class="nav-item">
             <a href="{% url 'login' %}" class="nav-link btn btn-log-in">Log in</a>
         </div>
         <div class="nav-item">
             <a href="{% url 'register' %}" class="nav-link btn ml-3 btn-sign-up">Sign Up</a>
         </div>
+        {% endif %}
     </div>
 </nav>
