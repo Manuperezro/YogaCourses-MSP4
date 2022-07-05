@@ -76,7 +76,6 @@ def my_profile(request):
     # if not request.user.is_authenticated:
     #     return redirect('login')
 
-
     if request.method == 'POST':
         user = request.user
         user.email = request.POST['email']

@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.utils.text import slugify
 from django.db.models.signals import post_save, pre_save
 from django.conf import settings
-import stripe 
+import stripe
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
