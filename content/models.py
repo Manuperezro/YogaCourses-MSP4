@@ -91,23 +91,29 @@ class Video(models.Model):
             "slug": self.slug
         })
 
+# pre_save method to autmatically generate the slug fields by adding dashes between worlds in the title with pre_save and slugify
+# The instance here will be the catgory object
 
 def pre_save_category(sender, instance, *args, **kwargs):
+    # check if the category slug doen't exists and then vonvert the category title to the slug.
     if not instance.slug:
         instance.slug = slugify(instance.title)
 
 
 def pre_save_course(sender, instance, *args, **kwargs):
+     # check if the course slug doen't exists and then vonvert the category title to the slug.
     if not instance.slug:
         instance.slug = slugify(instance.name)
 
 
 def pre_save_section(sender, instance, *args, **kwargs):
+     # check if the section slug doen't exists and then vonvert the category title to the slug.
     if not instance.slug:
         instance.slug = slugify(instance.title)
 
 
 def pre_save_video(sender, instance, *args, **kwargs):
+     # check if the video slug doen't exists and then vonvert the category title to the slug.
     if not instance.slug:
         instance.slug = slugify(instance.title)
 

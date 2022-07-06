@@ -6,8 +6,14 @@ from .mixins import CoursePermissionMixin
 
 
 class CourseListView(ListView):
+    """ This class iherit the listView class which means it will have built in features to return a list of objects of a model. """
+    # Assign it the Course class to the model variable, because the course 
+    # list view inherits from the listView so it will be automaticly 
+    # return the list of course objects.(to an array call object_list by default)
     model = Course
     template_name = "content/course_list.html"
+
+    # query to tell the class CourseListView which data need to return, but updating the model variable is more concise, assign it the Course class  to it
     # queryset = Course.objects.all()
 
 class CourseDetailView(DetailView):
