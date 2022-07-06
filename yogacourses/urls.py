@@ -25,5 +25,6 @@ urlpatterns = [
     path('', include('content.urls')),
 ]
 
+# To allows Django to knwo where the media is store either in development or production mode
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

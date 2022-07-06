@@ -7,18 +7,25 @@ from accounts.models import Pricing
 # Create your models here.
 
 class Category(models.Model):
+    """ Create categories which will include list of courses,
+    a category can contain many courses inside, when a category 
+    is deleted all the courses inside  will be deleted. """
+
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, blank=True, unique=True)
     thumbnail = models.ImageField(upload_to='categories/photos/%Y/%m/%d/')
-
+    
+    # Meta clase to update the string values for the verbose name and it's plural
     class Meta:
         verbose_name = 'category'
         verbose_name_plural = 'categories'
 
+    # The str method tells django wich field of the model display when we need to create a instance of the category model. 
     def __str__(self):
         return self.title
 
 class Course(models.Model):
+    """ Create Courses which will include list of videos """
     pricing_tiers = models.ManyToManyField(Pricing, blank=True)
     category = models.ForeignKey(Category, related_name='courses', on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
@@ -30,7 +37,8 @@ class Course(models.Model):
     created = models.DateField(auto_now_add=True)
     is_published = models.BooleanField(default=True)
     is_feautured = models.BooleanField(default=False)
-
+    
+    # The str here represent a course object each time is called, here will return course name.
     def __str__(self):
         return self.name
 
@@ -46,6 +54,8 @@ class Course(models.Model):
 
     
 class Section(models.Model):
+    """In each section it will be a list of videos that belongs to this section """
+
     course = models.ForeignKey(Course, related_name='sections', on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, blank=True, unique=True)
@@ -62,6 +72,7 @@ class Section(models.Model):
 
 
 class Video(models.Model):
+    """ This model will return a video object, the foreign key of this model will point to the videos model """
     section = models.ForeignKey(Section, related_name='videos', on_delete=models.CASCADE)
     video_url = EmbedVideoField()
     thumbnail = models.ImageField(upload_to='lessons/photos/%Y/%m/%d/')
@@ -69,7 +80,8 @@ class Video(models.Model):
     slug = models.SlugField(max_length=100, blank=True, unique=True)
     description = models.TextField(blank=True, null=True)
     position = models.IntegerField()
-
+    
+    # Return the section title
     def __str__(self):
         return self.title
 

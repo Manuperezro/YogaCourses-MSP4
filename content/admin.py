@@ -2,7 +2,7 @@ from django.contrib import admin
 from embed_video.admin import AdminVideoMixin
 from .models import Category, Course, Section, Video
 
-# Register your models here.
+# Register the models of the app 
 
 admin.site.register(Category)
 admin.site.register(Course)
