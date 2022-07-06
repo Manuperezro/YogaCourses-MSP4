@@ -10,7 +10,6 @@ class Category(models.Model):
     """ Create categories which will include list of courses,
     a category can contain many courses inside, when a category 
     is deleted all the courses inside  will be deleted. """
-
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, blank=True, unique=True)
     thumbnail = models.ImageField(upload_to='categories/photos/%Y/%m/%d/')
