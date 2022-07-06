@@ -5,10 +5,11 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .mixins import CoursePermissionMixin
 
 
-class CategoryListView(ListView):
-    """ This class is to display the list of courses per category """
+class CategoryDetailView(DetailView):
+    """ This class is to display the list Categories """
     model = Category
-    template_name = "content/category_list.html"
+    template_name = "content/category_detail.html"
+
 
 class CourseListView(ListView):
     """ This class iherit the listView class which means it will have built 
@@ -21,7 +22,7 @@ class CourseListView(ListView):
 
     # query to tell the class CourseListView which data need to return, but 
     # updating the model variable is more concise, assign it the Course class  
-    # to it queryset = Course.objects.all()
+    # to it: (queryset = Course.objects.all())
 
 class CourseDetailView(DetailView):
     model = Course
@@ -40,6 +41,7 @@ class VideoDetailView(LoginRequiredMixin, CoursePermissionMixin, DetailView):
 
         return context
 
+# Tryng to play the videos from youtube embed
 # def display_video(request):
 #     videos = Video.objets.all
 #     context = {'videos': videos}

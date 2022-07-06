@@ -1,9 +1,17 @@
 {% extends 'base.html' %}
 {% block title %}
+
 Categories List
+
 {% endblock title %}
 {% block content %}
 
 <h1> Category List</h1>
+
+{{ object.title }}
+
+{{ object.slug }}
+
+{{ object.thumbnail }}
 
 {% endblock content %}

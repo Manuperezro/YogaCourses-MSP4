@@ -13,19 +13,19 @@
                     Categories
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Ashtanga for Begginers</a>
-                    <a class="dropdown-item" href="#">Ashtanga for Everyone</a>
-                    <a class="dropdown-item" href="#">Ashtanga Adjustments for teachers</a>
+                    <a class="dropdown-item" href="{% url 'category-list' %}">Ashtanga for Begginers</a>
+                    <a class="dropdown-item" href="{% url 'category-list' %}">Ashtanga for Everyone</a>
+                    <a class="dropdown-item" href="{% url 'category-list' %}">Ashtanga Adjustments for teachers</a>
             </li>
 
-            <form class="form-inline" methdo="GET">
+            <!-- <form class="form-inline" methdo="GET">
                 <div class="input-group">
                     <input type="text" class="from-control" placeholder="Sear for anything" id="search-input">
                     <div class="input-group-append">
                         <button type="submit" class="imput-group-text" >Search</i></i></button>
                     </div>
                 </div>
-            </form>
+            </form> -->
 
             <li class="nav-item">
                 <a href="{% url 'view_bag' %}" class="nav-link text-dark nav-text">Shopping Cart</a>
