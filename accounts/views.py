@@ -17,12 +17,15 @@ def login(request):
         # get form input values
         username = request.POST['username']
         password = request.POST['password']
-
+          
+        # Authentificated the users username and password
         user = auth.authenticate(username=username, password=password)
 
+        # I f the user variable exists then log in to this account using the (auth.login) funtion
         if user is not None:
             auth.login(request, user)
             print('You are now logge in')
+            # Once loged in navigate to the course list
             return redirect('course-list')
         
         print('Invalid credentials')
