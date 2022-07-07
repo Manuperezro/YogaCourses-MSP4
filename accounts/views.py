@@ -5,6 +5,7 @@ from .forms import UpdateProfileForm
 from django.contrib.auth.decorators import login_required
 
 #Login Register and Logout Functions
+
 def login(request):
 
     # I add this first if to redirect the user to the courses list page when logout. 
@@ -48,23 +49,26 @@ def register(request):
         if password_1 != password_2:
             # Passwords don't match
             return redirect('register') 
-        if User.objects.filter(username=username).exists():
+        elif User.objects.filter(username=username).exists():
             # that username is taken
             return redirect('register')
         elif User.objects.filter(email=email).exists():
             # that email is being used
             return redirect('register')
         
+        # If username and email doesn't exist in the database, create a new user with the user variable and saving called the  with the save method.
         user = User.objects.create_user(username=username, email=email, password=password_1, first_name=first_name, last_name=last_name)
         user.save()
+        # Once register is succesfull navigate to the login page
         # Your are now register and can login
         return redirect('login')
-
+    
     return render(request, 'accounts/register.html')
 
 
-#Logout dont render any template, simply will navigate to the course list url.
+# Logout dont render any template, simply will navigate to the course list url.
 def logout(request):
+    """ This function redirect to the course list view """
     auth.logout(request)
     return redirect('course-list')
 

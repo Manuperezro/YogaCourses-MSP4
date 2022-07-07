@@ -9,11 +9,13 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 
 # Students Model
 class Student(models.Model):
+    """ Each user will link by default with one student object """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     avatar = models.ImageField(default='defatul.png', upload_to='avatar')
     stripe_customer_id = models.CharField(blank=True, null=True, max_length=100)
 
     def __str_(self):
+        # accesing the username of the user object. created by default with django auth.
         return self.user.username
 
 class Pricing(models.Model):
@@ -66,5 +68,7 @@ def pre_save_pricing(sender, instance, *args, **kwargs):
         instance.slug = slugify(instance.name)
 
 
-post_save.connect(post_save_student_create, sender=User)
+# To create the student object manually I used the post_save.connect signal, 
+# This create an object corresponding with the default user in django
+post_save.connect(post_save_student_create, sender=User) # connects the signal with the user model.
 pre_save.connect(pre_save_pricing, sender=Pricing)
