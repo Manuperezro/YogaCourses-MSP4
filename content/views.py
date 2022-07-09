@@ -1,14 +1,14 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
-from .models import Course, Video, Category
+from .models import Course, Video
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .mixins import CoursePermissionMixin
 
 
-class CategoryDetailView(DetailView):
-    """ This class is to display the list Categories """
-    model = Category
-    template_name = "content/category_detail.html"
+# class CategoryDetailView(DetailView):
+#     """ This class is to display the list Categories """
+#     model = Category
+#     template_name = "content/category_detail.html"
 
 
 class CourseListView(ListView):

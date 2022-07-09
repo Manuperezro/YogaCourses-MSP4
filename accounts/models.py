@@ -7,9 +7,10 @@ import stripe
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
-# Students Model
+# Students Model 
 class Student(models.Model):
     """ Each user will link by default with one student object """
+    # OneToOneField to link each django user with an student user by default
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     avatar = models.ImageField(default='defatul.png', upload_to='avatar')
     stripe_customer_id = models.CharField(blank=True, null=True, max_length=100)
@@ -19,6 +20,7 @@ class Student(models.Model):
         return self.user.username
 
 class Pricing(models.Model):
+    """ Each pricing object correspond to a pricing plan of Stripe and each course can have differents pricing """
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, blank=True, unique=True)
     stripe_price_id = models.CharField(max_length=100, blank=True)
@@ -29,8 +31,9 @@ class Pricing(models.Model):
         return self.name
 
 class Subscription(models.Model):
+    """ Each student will have a corresponding subscription, and the Pricing object may have multiple subscriptions """
     student = models.OneToOneField(Student, on_delete=models.CASCADE)
-    pricing = models.ForeignKey(Pricing, on_delete=models.CASCADE, related_name='subscriptions')
+    pricing = models.ForeignKey(Pricing, on_delete=models.CASCADE, related_name='subscriptions') # related name is to acces the subscriptions and the Pricing object
     stripe_subscription_id = models.CharField(max_length=100, blank=True)
     status = models.CharField(max_length=100)
 
@@ -38,12 +41,17 @@ class Subscription(models.Model):
         return self.student.user.email
 
 
+# As son as the student is created, this will create a corresponding subscription for that student
 def post_save_student_create(sender, instance, created, *args, **kwargs):
+    # if statement to check if the create parameter is true  which meanst that the user object has been created
     if created:
+        # create a student subscription
         student = Student.objects.create(user=instance)
+        # get the pricing object with the name of Free, and assign the object to a variable called:(free_pricing)
         free_pricing = Pricing.objects.get(name='Free')
-        subscription = Subscription.objects.create(student=student, pricing=free_pricing)
-        # Create a new customer object 
+        # Then create the subscripton with the pricing fiels is the free_pricing variable 
+        subscription = Subscription.objects.create(student=student, pricing=free_pricing) 
+        # the subscription sutend paramaters are the paramter that ust have been created
         customer = stripe.Customer.create(
             email=instance.email
         )
