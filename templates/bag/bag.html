@@ -1,9 +1,102 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}
 Shopping Bag 
 {% endblock title %}
 {% block content %}
-<div class="row mx-5 mt-5">
+
+{% if not cart_items %}
+  <div class="text-center">
+    <br>
+    <h1 class="text-center product_title">
+      Your shopping cart is empty
+    </h1>
+    <br>
+    <p class="text-center">
+      Please click <a href="{% url 'course-list' %}">Here</a> To navigate to the main page
+    </p>
+  </div>
+   {% else %}
+<div class="text-center mb-5">
+  <br>
+  <div class="text-center product_title">
+    Your Shopping cart
+  </div>
+</div>
+<div class="row mx-auto">
+  <div class="col-12 col-sm-12 colmd-12 col-lg-6 text-center">
+    <table class="table cart_table">
+      <thead class="cart_thead">
+        <tr>
+          <th colspan="4">
+            Your Subscription
+          </th>
+        </tr>
+      </thead>
+         <!-- Tag with Loop to filter the  users selected subscription Item from the subscription Model --> 
+         {% for cart_item in cart_items %}
+         <tr>
+          <td>
+            <a href="">
+              <!-- <img src="{% static 'images/Free.jpg' %}" width="150" height="150" alt=""> -->
+              {{ cart_item.pricing.name }}
+            </a>
+          </td>
+          <td class="text-left">
+            <br>
+            {{ cart_item.pricing.name }}
+            <br>
+            <br>
+            <br>
+            Price: £{{ cart_item.pricing.price }}
+          </td>
+          ${{ cart_item.sub_total }}
+          <td>
+            <br>
+            <br>
+            <a href="{% url 'add_cart' cart_item.pricing.stripe_price_id %}" class="text_icon">Delete <i class="fas fa-plus-circle"></i></a>
+            <a href="" class="text_icon">Delete <i class="fas fa-minus-circle"></i></a>
+            <a href="" class="text_icon">Delete <i class="fas fa-trash"></i></a>
+          </td>
+         </tr>
+          <!--Loop to filter the  users selected subscription --> 
+          {% endfor %}
+    </table>
+  </div>
+  <div class="col-12 col-sm-12 colmd-12 col-lg-6 text-center">
+    <table class="table">
+      <thead>
+        <tr>
+          <th colspan="4">
+            checkout
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Please Review your cart before proceeding with the payment
+          </td>
+        </tr>
+        <tr>
+          <td class="text-center">
+             Your total is: <strong>£ {{ total }}</strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="mx-auto">
+      <a href="{% url 'course-list' %}" style="text-decoration: none;">
+        <button type="button" class="btn btn-lg btn-block bg-dark text-white">Continue Shopping</button>
+      </a>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endblock %}
+
+
+<!-- <div class="row mx-5 mt-5">
     <div class="col-75">
       <div class="container">
         <form action="/action_page.php">
@@ -67,9 +160,9 @@ Shopping Bag
           <input type="submit" value="Continue to checkout" class="btn">
         </form>
       </div>
-    </div>
+    </div> -->
   
-    <div class="col-25">
+    <!-- <div class="col-25">
       <div class="container">
         <h4>Cart
           <span class="price" style="color:black">
@@ -85,16 +178,17 @@ Shopping Bag
         <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
       </div>
     </div>
-  </div>
-  <style>
-    body {
+  </div> -->
+
+  <!-- <style>
+  
+  body {
     font-family: Arial;
     font-size: 17px;
     padding: 8px;
   }
 
   .price
-  
   * {
     box-sizing: border-box;
   }
@@ -192,5 +286,5 @@ Shopping Bag
       margin-bottom: 20px;
     }
   }
-  </style>
-{% endblock %}
+
+  </style> -->

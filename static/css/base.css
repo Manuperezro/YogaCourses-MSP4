@@ -6,6 +6,7 @@ body {
     color: #212529;
     background-color: #f7f8fa;
     letter-spacing: 0.7px;
+    padding: 8px;
 }
 
 #background-video {
@@ -36,3 +37,10 @@ body {
     text-align: center;
   }
   
+  .product_title {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }

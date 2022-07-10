@@ -20,7 +20,8 @@ class Student(models.Model):
         return self.user.username
 
 class Pricing(models.Model):
-    """ Each pricing object correspond to a pricing plan of Stripe and each course can have differents pricing """
+    """ Each pricing object correspond to a pricing plan of Stripe and each 
+    Course can have differents pricing """
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, blank=True, unique=True)
     stripe_price_id = models.CharField(max_length=100, blank=True)
@@ -31,7 +32,8 @@ class Pricing(models.Model):
         return self.name
 
 class Subscription(models.Model):
-    """ Each student will have a corresponding subscription, and the Pricing object may have multiple subscriptions """
+    """ Each student will have a corresponding subscription, and the Pricing 
+    object may have multiple subscriptions """
     student = models.OneToOneField(Student, on_delete=models.CASCADE)
     pricing = models.ForeignKey(Pricing, on_delete=models.CASCADE, related_name='subscriptions') # related name is to acces the subscriptions and the Pricing object
     stripe_subscription_id = models.CharField(max_length=100, blank=True)
