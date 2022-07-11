@@ -3,7 +3,7 @@ from django.db.models.signals import pre_save
 from django.utils.text import slugify
 from django.shortcuts import reverse
 from  embed_video.fields  import  EmbedVideoField
-from accounts.models import Pricing
+# from accounts.models import Pricing
 # Create your models here.
 
 # class Category(models.Model):
@@ -25,7 +25,7 @@ from accounts.models import Pricing
 
 class Course(models.Model):
     """ Create Courses which will include list of videos """
-    pricing_tiers = models.ManyToManyField(Pricing, blank=True)
+    # pricing_tiers = models.ManyToManyField(Pricing, blank=True)
     # category = models.ForeignKey(Category, related_name='courses', on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=10, decimal_places=2, null=True)
     name = models.CharField(max_length=100)

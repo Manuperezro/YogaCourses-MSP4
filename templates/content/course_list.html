@@ -26,9 +26,11 @@ Home
                 <div class="card-body">
                     <p class="card-text font-weight-bold">{{ object.name }}</p>
                     <div class="d-flex justify-content-between align-items-center">
-                        {% for object in Pricing  %}
-                        <div class="font-weight-bold pricing-text">{{  object.name }}</div>
-                        {% endfor %}
+                        <div class="font-weight-bold pricing-text">£{{  object.price }}</div>
+                        <div>
+                            <button>Add to the Shopping Bag</button>
+                        </div>
+                        
                     </div>
                 </div>
             </div>

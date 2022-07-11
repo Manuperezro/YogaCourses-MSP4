@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.utils.text import slugify
 from django.db.models.signals import post_save, pre_save
 from django.conf import settings
-from content.models import Pricing
+# from content.models import Pricing
 import stripe
 
 # Create your models here.
@@ -21,7 +21,7 @@ class CartItem(models.Model):
     """ A cart item object includes some information about a single product
     added to the card (Pricing)"""
     # adding a table 
-    pricing = models.ForeignKey(Pricing, on_delete=models.CASCADE)
+    # pricing = models.ForeignKey(Pricing, on_delete=models.CASCADE)
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
     quantity = models.IntegerField()
     active = models.BooleanField(default=True)

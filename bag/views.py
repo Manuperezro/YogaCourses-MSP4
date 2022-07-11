@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Pricing, Cart, CartItem
+from .models import Cart, CartItem
 from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
@@ -38,7 +38,7 @@ def _cart_id(request):
 
 
 def add_cart(request, stripe_price_id):
-    pricing = Pricing.objects.get(id=stripe_price_id)
+    course = Course.objects.get(id=stripe_price_id)
     try:
         cart = Cart.objects.get(cart_id=_cart_id(request))
     except Cart.DoesNotExist:
@@ -47,12 +47,12 @@ def add_cart(request, stripe_price_id):
         )
         cart.save()
     try:
-        cart_item = CartItem.objects.get(pricing=pricing, cart=cart)
+        cart_item = CartItem.objects.get(course=course, cart=cart)
         cart_item.quantity += 1
         cart_item.save()
     except CartItem.DoesNotExist:
         cart_item = CartItem.objects.create(
-            pricing = pricing,
+            course = course,
             quantity = 1,
             cart = cart
         )
