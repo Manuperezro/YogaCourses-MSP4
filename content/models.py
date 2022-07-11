@@ -27,6 +27,7 @@ class Course(models.Model):
     """ Create Courses which will include list of videos """
     pricing_tiers = models.ManyToManyField(Pricing, blank=True)
     # category = models.ForeignKey(Category, related_name='courses', on_delete=models.CASCADE)
+    price = models.DecimalField(max_digits=10, decimal_places=2, null=True)
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, blank=True, unique=True)
     thumbnail = models.ImageField(upload_to='courses/thumbnails/%Y/%m/%d/')
