@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.utils.text import slugify
 from django.db.models.signals import post_save, pre_save
 from django.conf import settings
-# from content.models import Pricing
+from content.models import Course
 import stripe
 
 # Create your models here.
@@ -12,16 +12,16 @@ class Cart(models.Model):
     date_added = models.DateField(auto_now_add=True)
     class Meta:
         db_table = 'Cart'
-        ordering = ['date_added']
+        ordering = ['-date_added']
 
     def __str__(self):
         return self.cart_id
 
 class CartItem(models.Model):
     """ A cart item object includes some information about a single product
-    added to the card (Pricing)"""
+    added to the card (Courses)"""
     # adding a table 
-    # pricing = models.ForeignKey(Pricing, on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, null=True)
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
     quantity = models.IntegerField()
     active = models.BooleanField(default=True)
@@ -31,8 +31,8 @@ class CartItem(models.Model):
 
     
     def sub_total(self):
-        return self.pricing.price * self.quantity
+        return self.course.price * self.quantity
 
 
     def __str__(self):
-        return self.pricing
+        return self.course

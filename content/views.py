@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
 from .models import Course, Video
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .mixins import CoursePermissionMixin
+# from .mixins import CoursePermissionMixin
 
 
 # class CategoryDetailView(DetailView):
@@ -29,8 +29,8 @@ class CourseDetailView(DetailView):
     template_name = "content/course_detail.html"
 
 # I used LoginRequiredMixin here so when students try to acces for a Course
-# That required a subscription payment will redirect the user to the Login view.
-class VideoDetailView(LoginRequiredMixin, CoursePermissionMixin, DetailView):
+# That required a subscription payment will redirect the user to the Login view. 
+class VideoDetailView(LoginRequiredMixin, DetailView):     # CoursePermissionMixin as a parameter
     model = Video
     template_name = "content/video_detail.html"
 

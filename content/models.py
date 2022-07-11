@@ -2,8 +2,8 @@ from django.db import models
 from django.db.models.signals import pre_save
 from django.utils.text import slugify
 from django.shortcuts import reverse
-from  embed_video.fields  import  EmbedVideoField
-# from accounts.models import Pricing
+from  embed_video.fields import EmbedVideoField
+from accounts.models import Student
 # Create your models here.
 
 # class Category(models.Model):
@@ -28,6 +28,7 @@ class Course(models.Model):
     # pricing_tiers = models.ManyToManyField(Pricing, blank=True)
     # category = models.ForeignKey(Category, related_name='courses', on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=10, decimal_places=2, null=True)
+    # user = models.ForeignKey(Student, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, blank=True, unique=True)
     thumbnail = models.ImageField(upload_to='courses/thumbnails/%Y/%m/%d/')
@@ -52,10 +53,9 @@ class Course(models.Model):
     def sections(self):
         return self.section_set.all().order_by('position')
 
-    
+
 class Section(models.Model):
     """In each section it will be a list of videos that belongs to this section """
-
     course = models.ForeignKey(Course, related_name='sections', on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, blank=True, unique=True)
@@ -94,10 +94,12 @@ class Video(models.Model):
 # pre_save method to autmatically generate the slug fields by adding dashes between worlds in the title with pre_save and slugify
 # The instance here will be the catgory object
 
-def pre_save_category(sender, instance, *args, **kwargs):
-    # check if the category slug doen't exists and then vonvert the category title to the slug.
-    if not instance.slug:
-        instance.slug = slugify(instance.title)
+
+
+# def pre_save_category(sender, instance, *args, **kwargs):
+#     # check if the category slug doen't exists and then vonvert the category title to the slug.
+#     if not instance.slug:
+#         instance.slug = slugify(instance.title)
 
 
 def pre_save_course(sender, instance, *args, **kwargs):
