@@ -4,7 +4,9 @@ footer{
   bottom: 0;
   left: 0;
   background: #fff;
+  height: auto;
 }
+
 footer .content{
   max-width: 1350px;
   margin: auto;
@@ -13,6 +15,7 @@ footer .content{
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
 footer .content p,a{
   color: black;
 }
