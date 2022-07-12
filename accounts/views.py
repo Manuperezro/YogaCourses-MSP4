@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib import auth
-from .forms import UpdateProfileForm
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+from .forms import UpdateProfileForm
 
 #Login Register and Logout Functions
 
@@ -24,12 +25,13 @@ def login(request):
         # I f the user variable exists then log in to this account using the (auth.login) funtion
         if user is not None:
             auth.login(request, user)
-            print('You are now logge in')
             # Once loged in navigate to the course list
             return redirect('course-list')
-        
-        print('Invalid credentials')
-        return redirect('login')
+
+        else:
+            print('Invalid credentials')
+            messages.success(request, "There was an Error in the Login, Please Try again")
+            return redirect('login')
         
     return render(request, 'accounts/login.html')
     
@@ -51,11 +53,14 @@ def register(request):
 
         if password_1 != password_2:
             # Passwords don't match
+            messages.success(request, "Passwords Don't match")
             return redirect('register') 
         elif User.objects.filter(username=username).exists():
             # that username is taken
+            messages.success(request, "Username already exists")
             return redirect('register')
         elif User.objects.filter(email=email).exists():
+            messages.success(request, " The email is already in use, try with a different email")
             # that email is being used
             return redirect('register')
         
