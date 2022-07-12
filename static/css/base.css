@@ -22,7 +22,6 @@ body {
 
   
   .overlay {
-    /* background-image: linear-gradient(to bottom right,#002f4b,#dc4225); */
     opacity: .8;
     position: absolute;
     bottom: 0;

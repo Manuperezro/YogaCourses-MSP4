@@ -10,6 +10,11 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 #     model = Category
 #     template_name = "content/category_detail.html"
 
+def view_home(request):
+    """ A view to return the home page"""
+
+    return render(request, 'content/home.html')
+
 
 class CourseListView(ListView):
     """ This class iherit the listView class which means it will have built 
