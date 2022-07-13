@@ -2,8 +2,30 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
 from .models import Course, Video, Category
 from django.contrib.auth.mixins import LoginRequiredMixin
-# from .mixins import CoursePermissionMixin
+from django.conf import settings
+import stripe
 
+
+stripe.api_key = settings.STRIPE_SECRET_KEY
+
+products = stripe.Product.list()
+prices = stripe.Price.list()
+
+# def get_stripe_products():
+#     for product in products.data:
+#         obj, _ = Course.objects.get_or_create(name=product.name)
+#         price_ = [x for x in prices.data if x.product == product.id][0] 
+#         price = float(price_.unit_amount/ 100)
+#         obj.price = price
+#         image_ = [y for y in images.data if y.product == product.id][0]
+#         obj.image = image
+#         active_ = [z for z in prices.data if z.product == product.id][0]
+#         obj.price = avtive
+
+	# Set the object image to the one on Stripe
+
+	# Set the object active to the one Stripe
+        
 
 class CategoryDetailView(DetailView):
     """ This class is to display the list Categories """
@@ -26,7 +48,6 @@ def view_home(request):
 #         courses = Course.objects.all().filter(avalaible=True)
 #     return render(request, 'content/home.html' {'category': category_page, 'courses' : courses})
     
-
     return render(request, 'content/home.html')
 
 

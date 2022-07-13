@@ -30,14 +30,15 @@ class Category(models.Model):
 class Course(models.Model):
     """ Create Courses which will include list of videos """
     category = models.ForeignKey(Category, related_name='courses', on_delete=models.CASCADE)
-    price = models.DecimalField(max_digits=10, decimal_places=2, null=True)
+    price = models.FloatField(null=True)
     # user = models.ForeignKey(Student, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, blank=True, unique=True)
-    thumbnail = models.ImageField(upload_to='courses/thumbnails/%Y/%m/%d/')
+    thumbnail = models.URLField(null=True)
     sub_title = models.CharField(max_length=200)
-    video_intro_url = models.CharField(max_length=200)
+    # video_intro_url = models.CharField(max_length=200)
     description = models.TextField(blank=True, null=True)
+    active = models.BooleanField(null=True)
     created = models.DateField(auto_now_add=True)
     is_published = models.BooleanField(default=True)
     is_feautured = models.BooleanField(default=False)
@@ -46,10 +47,14 @@ class Course(models.Model):
     def __str__(self):
         return self.name
 
+
     def get_absolute_url(self):
         return reverse('course-detail', kwargs={
             'slug': self.slug
         })
+    
+    def get_formated_price(self):
+        return "£{0:.2f}".format(self.price / 100) 
     
     # property to return all the sections of the course, and sorted byt the section's position property.
     @property
