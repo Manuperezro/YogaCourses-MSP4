@@ -21,7 +21,6 @@ body {
     z-index: -1;
   }
 
-  
   .overlay {
     opacity: .8;
     position: absolute;
@@ -44,3 +43,4 @@ body {
     padding-top: 15px;
     padding-bottom: 10px;
   }
+

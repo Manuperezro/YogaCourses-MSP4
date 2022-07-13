@@ -15,4 +15,130 @@ Home
 
     </div>
 </div>
+
+<div class="carousel" data-carousel>
+    <div class="carousel-buttons">
+      <button
+        class="carousel-button carousel-button_previous"
+        data-carousel-button-previous
+      >
+        <span class="fas fa-chevron-circle-left"></span>
+      </button>
+      <button
+        class="carousel-button carousel-button_next"
+        data-carousel-button-next
+      >
+        <span class="fas fa-chevron-circle-right"></span>
+      </button>
+    </div>
+    <div class="slides" data-carousel-slides-container>
+      <div class="slide">
+        <!-- Anything can be here. Each slide can have any content -->
+        <h2>Slide 1 heading</h2>
+        <p>Slide 1 content
+      </div>
+      <div class="slide">
+        <!-- Anything can be here. Each slide can have any content -->
+        <h2>Slide 2 heading</h2>
+        <p>Slide 2 content
+      </div>
+    </div>
+  </div>
+  
+  <style>
+      .carousel {
+    --current-slide: 0;
+    /* we set position relative so absolute position works properly for the buttons */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-button {
+    /* vertically centering the buttons */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  
+    /* basic styling */
+    padding: 0;
+    margin: 0.5rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+  
+    font-size: 1.5rem;
+    cursor: pointer;
+  
+    transition: color 0.1s;
+  }
+  
+  .carousel-button:hover {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .carousel-button_next {
+    /* The "next slide button" will be at the right */
+    right: 0;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s;
+    transform: translateX(calc(-100% * var(--current-slide)));
+  }
+  
+  .slide {
+    flex: 0 0 100%;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .carousel-button {
+      font-size: 2rem;
+      margin: 1rem;
+    }
+  }
+  </style>
+
+  <script>
+    function modulo(number, mod) {
+  let result = number % mod;
+  if (result < 0) {
+    result += mod;
+  }
+  return result;
+}
+
+function setUpCarousel(carousel) {
+  function handleNext() {
+    currentSlide = modulo(currentSlide + 1, numSlides);
+    changeSlide(currentSlide);
+  }
+
+  function handlePrevious() {
+    currentSlide = modulo(currentSlide - 1, numSlides);
+    changeSlide(currentSlide);
+  }
+
+  function changeSlide(slideNumber) {
+    carousel.style.setProperty('--current-slide', slideNumber);
+  }
+
+  // get elements
+  const buttonPrevious = carousel.querySelector('[data-carousel-button-previous]');
+  const buttonNext = carousel.querySelector('[data-carousel-button-next]');
+  const slidesContainer = carousel.querySelector('[data-carousel-slides-container]');
+
+  // carousel state we need to remember
+  let currentSlide = 0;
+  const numSlides = slidesContainer.children.length;
+
+  // set up events
+  buttonPrevious.addEventListener('click', handlePrevious);
+  buttonNext.addEventListener('click', handleNext);
+}
+
+const carousels = document.querySelectorAll('[data-carousel]');
+carousels.forEach(setUpCarousel);
+  </script>
 {% endblock content %}

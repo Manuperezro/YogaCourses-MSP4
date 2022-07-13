@@ -15,6 +15,20 @@ def view_home(request):
 
     return render(request, 'content/home.html')
 
+# def view_home(request, category_slug=None):
+#     """ A view to return the home page"""
+#     category_page = None
+#     courses = None
+#     if category_slug != None:
+#         category_page = get_object_or_404(Category, slug=category_slug)
+#         courses = Course.objects.filter(category=category_page, avalaible=True)
+#     else:
+#         courses = Course.objects.all().filter(avalaible=True)
+#     return render(request, 'content/home.html' {'category': category_page, 'courses' : courses})
+    
+
+    return render(request, 'content/home.html')
+
 
 class CourseListView(ListView):
     """ This class iherit the listView class which means it will have built 

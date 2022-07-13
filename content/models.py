@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models.signals import pre_save
 from django.utils.text import slugify
+from django.urls import reverse
 from django.shortcuts import reverse
 from  embed_video.fields import EmbedVideoField
 from accounts.models import Student
@@ -19,14 +20,16 @@ class Category(models.Model):
         verbose_name = 'category'
         verbose_name_plural = 'categories'
 
+    def get_url(self):
+        return reverse('category-list', args=[self.slug])
+
     # The str method tells django wich field of the model display when we need to create a instance of the category model. 
     def __str__(self):
         return self.title
 
 class Course(models.Model):
     """ Create Courses which will include list of videos """
-    # pricing_tiers = models.ManyToManyField(Pricing, blank=True)
-    # category = models.ForeignKey(Category, related_name='courses', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, related_name='courses', on_delete=models.CASCADE)
     price = models.DecimalField(max_digits=10, decimal_places=2, null=True)
     # user = models.ForeignKey(Student, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
