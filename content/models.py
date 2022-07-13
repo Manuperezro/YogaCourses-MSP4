@@ -6,22 +6,22 @@ from  embed_video.fields import EmbedVideoField
 from accounts.models import Student
 # Create your models here.
 
-# class Category(models.Model):
-#     """ Create categories which will include list of courses,
-#     a category can contain many courses inside, when a category 
-#     is deleted all the courses inside  will be deleted. """
-#     title = models.CharField(max_length=100)
-#     slug = models.SlugField(max_length=100, blank=True, unique=True)
-#     thumbnail = models.ImageField(upload_to='categories/photos/%Y/%m/%d/')
+class Category(models.Model):
+    """ Create categories which will include list of courses,
+    a category can contain many courses inside, when a category 
+    is deleted all the courses inside  will be deleted. """
+    title = models.CharField(max_length=100)
+    slug = models.SlugField(max_length=100, blank=True, unique=True)
+    thumbnail = models.ImageField(upload_to='categories/photos/%Y/%m/%d/')
     
-#     # Meta clase to update the string values for the verbose name and it's plural
-#     class Meta:
-#         verbose_name = 'category'
-#         verbose_name_plural = 'categories'
+    # Meta clase to update the string values for the verbose name and it's plural
+    class Meta:
+        verbose_name = 'category'
+        verbose_name_plural = 'categories'
 
-#     # The str method tells django wich field of the model display when we need to create a instance of the category model. 
-#     def __str__(self):
-#         return self.title
+    # The str method tells django wich field of the model display when we need to create a instance of the category model. 
+    def __str__(self):
+        return self.title
 
 class Course(models.Model):
     """ Create Courses which will include list of videos """
