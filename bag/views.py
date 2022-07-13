@@ -10,19 +10,6 @@ def view_bag(request):
     return render(request, 'bag/bag.html')
 
 
-def subscription_type(request, pricing_slug=None):
-    """ A view to return the subscription types and Prices """
-    # pricing_page = None
-    # products=None
-    # if pricing_slug!=None:
-    #     pricing_page = get_object_or_404(Pricing, slug=pricing_slug)
-    #     pricing = Pricing.objects.filter(price=pricing_page)
-    # else:
-    #     pricing = Pricing.objects.all().filter(avalaible=True)
-    # , {'Pricing':pricing_page,'pricing': pricing}
-
-    return render(request, 'bag/subscription.html')
-
 def cart(request):
     """ Shopping cart,  show the produccts before purchase """
 

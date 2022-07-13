@@ -46,8 +46,3 @@ class VideoDetailView(LoginRequiredMixin, DetailView):     # CoursePermissionMix
 
         return context
 
-# Tryng to play the videos from youtube embed
-# def display_video(request):
-#     videos = Video.objets.all
-#     context = {'videos': videos}
-#     return render(request, "content/video_detail.html", context)
