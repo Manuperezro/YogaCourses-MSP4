@@ -17,6 +17,7 @@ Home
     </div>
 </div>
 
+
 <div class="carousel" data-carousel>
     <div class="carousel-buttons">
       <button
@@ -38,9 +39,9 @@ Home
           <div class="card mb-5 shadow-sm card-stori mt-5">
             <img src="static/images/stories1 (2).jpg" class="card-img-stori" alt="thumbnail">
               <div class="card-body-stori">
-                  <p class="card-text font-weight-bold">Slide 1</p>
                   <div class="d-flex justify-content-between align-items-center">
-                      <div class="font-weight-bold overlay-story">Lore 1</div>
+                    <p class="card-text font-weight-bold">Enjoy Our Range of Online Courses</p>
+                      <div class="font-weight-bold overlay-story">Lore 1 Enjoy Our Range <br> of Online Courses<</div>
                   </div>
               </div>
           </div>
@@ -51,9 +52,9 @@ Home
           <div class="card mb-5 shadow-sm card-stori mt-5">
             <img src="static/images/stories2.jpg" class="card-img-stori" alt="thumbnail">
               <div class="card-body-stori">
-                  <p class="card-text font-weight-bold">Slide 2</p>
                   <div class="d-flex justify-content-between align-items-center">
-                      <div class="font-weight-bold overlay-story">Lorem Ipsum</div>
+                    <p class="card-text font-weight-bold">Enjoy Our Range of Online Courses</p>
+                      <div class="font-weight-bold overlay-story">Lorem 2 Enjoy Our Range <br> of Online Courses<</div>
                   </div>
               </div>
           </div>
@@ -64,10 +65,10 @@ Home
         <div class="card mb-5 shadow-sm card-stori mt-5">
           <img src="static/images/stories3.jpg" class="card-img-stori" alt="thumbnail">
             <div class="card-body-stori">
-                <p class="card-text font-weight-bold">Slide 3</p>
                 <div class="d-flex justify-content-between align-items-center">
-                    <div class="font-weight-bold overlay-story"> 
-                      <p>Mikaela</p> 
+                  <p class="font-weight-bold">Enjoy Our Range of Online Courses</p>
+                    <div class="font-weight-bold overlay-story">
+                      <p>Lore 3 Enjoy Our Range <br> of Online Courses</p> 
                     </div>
                 </div>
             </div>
@@ -80,6 +81,8 @@ Home
   <!--CSS-->
   <style>
 
+    /* Big corusel offers */
+
     .card-stori{
       height: 500px;
       border-radius: 10px;
@@ -88,20 +91,25 @@ Home
     }
     
     .overlay-story {
-      opacity: .8;
-      position: absolute;
-      bottom: 100px;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      box-sizing: border-box;
-      padding: 15% 32px;
-      line-height: 1.5;
-      text-align: center;
-      color: gold;
-      font-size: xx-large;
-    }
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .8;
+    position: absolute;
+    bottom: 151px;
+    right: 0;
+    width: 33%;
+    margin: 48px;
+    padding: inherit;
+    box-sizing: border-box;
+    line-height: 1.5;
+    text-align: center;
+    color: rgb(130, 138, 66);
+    font-size: xx-large;
+    background-color: lightgray;
+    border-radius: 5%;
+  
+  }
 
     .card-body-stori{
       flex: 1 1 auto;
@@ -168,6 +176,13 @@ Home
 }
   
   @media screen and (min-width: 768px) {
+    .carousel-button {
+      font-size: 2rem;
+      margin: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 500px) {
     .carousel-button {
       font-size: 2rem;
       margin: 1rem;
