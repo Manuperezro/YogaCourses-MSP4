@@ -29,7 +29,7 @@ class Category(models.Model):
 
 class Course(models.Model):
     """ Create Courses which will include list of videos """
-    category = models.ForeignKey(Category, related_name='courses', on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, related_name='courses', on_delete=models.CASCADE, null=True)
     price = models.FloatField(null=True)
     # user = models.ForeignKey(Student, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)

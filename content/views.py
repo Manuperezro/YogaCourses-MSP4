@@ -3,6 +3,7 @@ from django.views.generic import ListView, DetailView
 from .models import Course, Video, Category
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.conf import settings
+from django.http import HttpResponse
 import stripe
 
 
@@ -11,22 +12,21 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 products = stripe.Product.list()
 prices = stripe.Price.list()
 
-# def get_stripe_products():
-#     for product in products.data:
-#         obj, _ = Course.objects.get_or_create(name=product.name)
-#         price_ = [x for x in prices.data if x.product == product.id][0] 
-#         price = float(price_.unit_amount/ 100)
-#         obj.price = price
-#         image_ = [y for y in images.data if y.product == product.id][0]
-#         obj.image = image
-#         active_ = [z for z in prices.data if z.product == product.id][0]
-#         obj.price = avtive
-
-	# Set the object image to the one on Stripe
-
-	# Set the object active to the one Stripe
-        
-
+def get_stripe_products(request):
+    print('get_stripe_products')
+    for product in products.data:
+        obj, _ = Course.objects.get_or_create(name=product.name)
+        print('object is ', obj)
+        obj.active = product.active
+        price_ = [x for x in prices.data if x.product == product.id][0] 
+        price = float(price_.unit_amount / 100)
+        obj.price = price
+        print('Stripe Price', price)
+        obj.thumbnail = product.images[0] if len(product.images) > 0 else '' 
+        obj.save()
+    
+    return HttpResponse()
+    
 class CategoryDetailView(DetailView):
     """ This class is to display the list Categories """
     model = Category
@@ -34,9 +34,6 @@ class CategoryDetailView(DetailView):
 
 def view_home(request):
     """ A view to return the home page"""
-
-    return render(request, 'content/home.html')
-
 # def view_home(request, category_slug=None):
 #     """ A view to return the home page"""
 #     category_page = None
@@ -47,7 +44,8 @@ def view_home(request):
 #     else:
 #         courses = Course.objects.all().filter(avalaible=True)
 #     return render(request, 'content/home.html' {'category': category_page, 'courses' : courses})
-    
+    get_stripe_products(request)
+    print('Afer- get_stripe_products')
     return render(request, 'content/home.html')
 
 
