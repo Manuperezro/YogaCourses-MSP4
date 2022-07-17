@@ -32,18 +32,18 @@ class CategoryDetailView(DetailView):
     model = Category
     template_name = "content/category_detail.html"
 
-def view_home(request):
     """ A view to return the home page"""
-# def view_home(request, category_slug=None):
-#     """ A view to return the home page"""
-#     category_page = None
-#     courses = None
-#     if category_slug != None:
-#         category_page = get_object_or_404(Category, slug=category_slug)
-#         courses = Course.objects.filter(category=category_page, avalaible=True)
-#     else:
-#         courses = Course.objects.all().filter(avalaible=True)
-#     return render(request, 'content/home.html' {'category': category_page, 'courses' : courses})
+def view_home(request, category_slug=None):
+    """ A view to return the home page"""
+    category_page = None
+    courses = None
+    if category_slug != None:
+        category_page = get_object_or_404(Category, slug=category_slug)
+        courses = Course.objects.filter(category=category_page)
+    else:
+        courses = Course.objects.all()
+    return render(request, 'content/home.html', {'category': category_page, 'courses' : courses})
+
     get_stripe_products(request)
     print('Afer- get_stripe_products')
     return render(request, 'content/home.html')
@@ -58,9 +58,6 @@ class CourseListView(ListView):
     model = Course
     template_name = "content/course_list.html"
 
-    # query to tell the class CourseListView which data need to return, but 
-    # updating the model variable is more concise, assign it the Course class  
-    # to it: (queryset = Course.objects.all())
 
 class CourseDetailView(DetailView):
     model = Course
@@ -78,4 +75,3 @@ class VideoDetailView(LoginRequiredMixin, DetailView):     # CoursePermissionMix
         context['course'] = course
 
         return context
-

@@ -18,7 +18,7 @@ Developing testing = BDD => tO TES THE DATABASE with models i udes db Borwser an
 
 ## Table of Content
 
-![Mock-up](static/images/mokauP3.png "MockUp")
+![Mock-up]( "MockUp")
 
 [View Repository in GitHub Pages](https://github.com/Manuperezro/YogaCourses-MSP4)
 
@@ -26,7 +26,6 @@ Developing testing = BDD => tO TES THE DATABASE with models i udes db Borwser an
 
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 ## The Why
 
@@ -177,7 +176,6 @@ Optimism, Encouragement.
 
 ### Design Brief:
 
-
 + Colour:
 
 ![Color](static/images/readme/black-gold-color-palette-by-schemecolor.png "Color Scheme")
@@ -202,9 +200,9 @@ The Basic structure of Rock Yoga on Demand was created using:
 
 - PC Mac screen: 
 
- ![wireframe](static/images/wireframe1.png "PC  and phone wireframe")
+ ![wireframe](static/images/readme/wireframe1.png "PC  and phone wireframe")
 
- ![wireframe](static/images/wireframe2.png "PC  and phone wireframe")
+ ![wireframe](static/images/readme/wireframe2.png "PC  and phone wireframe")
 
 ## Features
 
@@ -216,7 +214,7 @@ The Basic structure of Rock Yoga on Demand was created using:
 
    - Navigation Menu: I decided to go with a simple and clean navigation bar to keep the feeling of a minimalism Yoga Studio which invite to take a brake and relax.
       
-   ![features](static/images/navbar.png "Navigation bar")
+   ![features](static/images/readme/navbar.png "Navigation bar")
 
    + Courses display list:
 
@@ -230,9 +228,7 @@ The Basic structure of Rock Yoga on Demand was created using:
 
    + Shopping Cart:
 
-    ![features](static/images/features/createbuttom.png "Create recipe")
-
-    ![features](static/images/features/createreceipe.png "Create recipe")
+     ![features](Shopping cart "Course list")
 
    + Edit and deleted Recipes
    
@@ -582,74 +578,15 @@ You may want to have access via a copy of the repository on your own device. The
 [top](#content)
 
 ### Content
-* I copied and pasted [lorem ipsum](https://www.lipsum.com/) texts into the products details due to the nature of the project
-* About us written content was written by me
 
 [top](#content)
 
 ### Media
-* [Jeremy Bezanger](https://unsplash.com/photos/NsdNBQxb-8s)
-* [Antonino Cicero](https://unsplash.com/photos/_5puSofcfOs)
-* [Pascal Bernardon](https://unsplash.com/photos/1wOv0s1oR4A)
-* [Nick Kwan](https://unsplash.com/photos/FeBoOVQv0sQ)
-* [Jeremy Bezanger](https://unsplash.com/photos/rCefTI3jS2Y)
-* [Bees And Green Tea](https://unsplash.com/photos/WqjW5em9S5o)
-* [Jeremy Bezanger](https://unsplash.com/photos/7vGDT1Ygbl4)
-* [Jorge Zapata](https://unsplash.com/photos/TPPzDKIvROw)
-* [Timothy Dykes](https://unsplash.com/photos/KTYSVnv6lUw)
-* [Pegah Mostafavi Zade](https://unsplash.com/photos/w-ImBSMvpZM)
-* [Trude Jonsson Stangel](https://unsplash.com/photos/TO_h3akXWf0)
-* [Vika Wendish](https://unsplash.com/photos/h4PSY635040)
-* [Matt Seymour](https://unsplash.com/photos/rSKjPA41H2Q)
-* [Vika Wendish](https://unsplash.com/photos/PFmk0-yVKzI)
-* [adr sree](https://unsplash.com/photos/sWvbhOTl09o)
-* [Earl Wilcox](https://unsplash.com/photos/j_9wznLtfKk)
-* [Misael Moreno](https://unsplash.com/photos/14HNtFPbKbs)
-* [Kevin Bluer](https://unsplash.com/photos/e6XqFP4kCxM)
-* [Mattias Russo-Larsson](https://unsplash.com/photos/GQ8JIFHHmCg)
-* [denis pan](https://unsplash.com/photos/FnNIDG9k8Ag)
-* [Stavrialena Gontzou](https://unsplash.com/photos/jyE-TqbRy3Y)
-* [Casey Horner](https://unsplash.com/photos/Ms77GfPPT48)
-* [Jan Gottweiss](https://unsplash.com/photos/SCTALD23uXA)
-* [Oneisha Lee](https://unsplash.com/photos/r3WFKMR9zzI)
-* [Mika](https://unsplash.com/photos/y-RjWd6Ol7A)
-* [Matteo Vistocco](https://unsplash.com/photos/mJUpopBUGsg)
-* [Matt Moloney](https://unsplash.com/photos/tKB1GDJUq9c)
-* [Jen Theodore](https://unsplash.com/photos/PU4sOcNnYj8)
-* [Katie Rainbow](https://unsplash.com/photos/DjGHuzUh_84)
-* [Karim MANJRA](https://unsplash.com/photos/fm9wqDNXyQ0)
-* [Avinash Kumar](https://unsplash.com/photos/u3B4oNyXYXE)
-* [Tim Hufner](https://unsplash.com/photos/QtL46PrOg9E)
-* [Oscar Helgstrand](https://unsplash.com/photos/HPwbniZ9g6Q)
-* [Matt Moloney](https://unsplash.com/photos/lYENI1CYeP0)
-* [Matt Moloney](https://unsplash.com/photos/cJL2LuBTu0A)
-* [Anil Kumar](https://unsplash.com/photos/dBkT44qZD6M)
-* [Ezi](https://unsplash.com/photos/ZcY6QeXg_J4)
-* [Alexander Shatov](https://unsplash.com/photos/DHl49oyrn7Y)
-* [Benjamin henon](https://unsplash.com/photos/2JlLdOm1xIs)
-* [Mingwei Lim](https://unsplash.com/photos/Q1Us6ITDPeo)
-* [Fakurian Design](https://unsplash.com/photos/nNpLEEdmUj0)
-* [KOBU Agency](https://unsplash.com/photos/csJt89dL9pE)
+
 * [Pink flip](https://unsplash.com/photos/1BcfKfeavVA)
 * [ueberform](https://unsplash.com/photos/eejq0xM2RTk)
 * [Europeana](https://unsplash.com/photos/6c43FgRt0Dw)
 * [Vojtech Bruzek](https://unsplash.com/photos/mCjA1I8SlS8)
-* [Europeana](https://unsplash.com/photos/TjegK_z-0j8)
-* [Matthew Brindle](https://unsplash.com/photos/p7ILrZmhHHc)
-* [Federico Di Dio](https://unsplash.com/photos/XVOBr3F95RY)
-* [Adrianna Geo](https://unsplash.com/photos/1rBg5YSi00c)
-* [Europeana](https://unsplash.com/photos/Wiad3DQxUho)
-* [Steve Johnson](https://unsplash.com/photos/iBlW9tjiyqw)
-* [Paul Blenkhorn](https://unsplash.com/photos/PkDnu0lImv4)
-* [Sir Edward Burne-Jones](https://unsplash.com/photos/tV02AFxvRJg)
-* [David Roberts](https://unsplash.com/photos/sJr8LDyEf7k)
-* [Frederick Sandys Greek](https://unsplash.com/photos/aE0-ZJb2VTQ)
-* [Michael Angelo](https://unsplash.com/photos/1rBg5YSi00c)
-* [Fuu J](https://unsplash.com/photos/KRztl5I6xac)
-* [McGill Library](https://unsplash.com/photos/eMw-fVXNpME)
-* [Sir David Wilkie](https://unsplash.com/photos/XSMTwl7n3p4)
-* [Francis Towne](https://unsplash.com/photos/5ruS8plfbvM)
-* [Robert Hills](https://unsplash.com/photos/6fv0MEf3FUE)
 
 [top](#content)
 
@@ -660,11 +597,11 @@ You may want to have access via a copy of the repository on your own device. The
 * [Codemy](https://www.youtube.com/c/Codemycom)
 * [Very Academy](https://www.youtube.com/c/veryacademy)
 * [The Net Ninja ](https://www.youtube.com/c/TheNetNinja)
-* [Cryce Truly](https://www.youtube.com/c/CryceTruly)
+* [Udemy](https://www.udemy.com/)
 
 [top](#content)
 
 ## **DISCLAIMER**
-This webite was built for educational reasons for my coding course from Code Institute. No content, written(unless mentioned in CREDITS - Content of this document) and imagery, is of mine. No offense was intentionaly made with the pricing of the art works (I randomly made up the numbers), and any namings of art works. If there is anything you would like enquire, please do so via my email - shibacdeb@gmail.com
+This webite was built for educational reasons for my coding course from Code Institute. No content, written(unless mentioned in CREDITS - Content of this document) and imagery, is of mine. No offense was intentionaly made with the pricing of the art works (I randomly made up the numbers), and any namings of art works. If there is anything you would like enquire, please do so via my email manuperezroomeroo@gmail.com
 
 [top](#content)
