@@ -21,7 +21,8 @@ from content.views import get_stripe_products
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('accounts.urls')),
+    # path('accounts/', include('accounts.urls')),
+    path('accounts/', include('allauth.urls')),
     path('bag/', include('bag.urls')),
     path('', include('content.urls')),
 ]
