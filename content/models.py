@@ -2,7 +2,6 @@ from django.db import models
 from django.db.models.signals import pre_save
 from django.utils.text import slugify
 from django.urls import reverse
-from django.shortcuts import reverse
 from  embed_video.fields import EmbedVideoField
 from accounts.models import Student
 # Create your models here.
