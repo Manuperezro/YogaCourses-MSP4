@@ -4,6 +4,7 @@ from django.utils.text import slugify
 from django.urls import reverse
 from  embed_video.fields import EmbedVideoField
 from accounts.models import Student
+
 # Create your models here.
 
 class Category(models.Model):
@@ -12,7 +13,7 @@ class Category(models.Model):
     is deleted all the courses inside  will be deleted. """
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, blank=True, unique=True)
-    thumbnail = models.ImageField(upload_to='categories/photos/%Y/%m/%d/')
+    thumbnail = models.ImageField(upload_to='categories/photos/')
     
     # Meta clase to update the string values for the verbose name and it's plural
     class Meta:
@@ -63,7 +64,7 @@ class Course(models.Model):
 
 class Section(models.Model):
     """In each section it will be a list of videos that belongs to this section """
-    course = models.ForeignKey(Course, related_name='sections', on_delete=models.CASCADE)
+    course = models.ForeignKey(Course, related_name='sections', on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, blank=True, unique=True)
     description = models.TextField(blank=True, null=True)

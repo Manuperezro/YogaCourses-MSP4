@@ -26,6 +26,7 @@ def get_stripe_products(request):
         obj.save()
     
     return HttpResponse()
+   
     
 class CategoryDetailView(DetailView):
     """ This class is to display the list Categories """
@@ -33,6 +34,8 @@ class CategoryDetailView(DetailView):
     template_name = "content/category_detail.html"
 
     """ A view to return the home page"""
+
+    
 def view_home(request, category_slug=None):
     """ A view to return the home page"""
     category_page = None
@@ -43,11 +46,6 @@ def view_home(request, category_slug=None):
     else:
         courses = Course.objects.all()
     return render(request, 'content/home.html', {'category': category_page, 'courses' : courses})
-
-    get_stripe_products(request)
-    print('Afer- get_stripe_products')
-    return render(request, 'content/home.html')
-
 
 class CourseListView(ListView):
     """ This class iherit the listView class which means it will have built 
