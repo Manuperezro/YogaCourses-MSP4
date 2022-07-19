@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse
+from django.contrib import messages
 
 # Create your views here.
 
@@ -15,12 +16,12 @@ def adjust_bag(request, item_id):
     
     if quantity > 0:
         bag[item_id] = quantity
+
     else:
-        bag.pop = item_id
+        bag[item_id] += quantity
 
     request.session['bag'] = bag
-    print('bag is', request.session['bag'])
-    return redirect(reverse(view_bag))
+    return redirect(reverse('view_bag'))
 
 
 def add_to_bag(request, item_id):
@@ -35,7 +36,7 @@ def add_to_bag(request, item_id):
         bag[item_id] = quantity
     
     request.session['bag'] = bag
-    print('bag is', request.session['bag'])
+    print('bag is in add', request.session['bag'])
     return redirect(redirect_url)
 
 
