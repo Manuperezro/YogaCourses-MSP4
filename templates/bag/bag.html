@@ -1,108 +1,106 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-Shopping Bag 
+Shopping Bag
 {% endblock title %}
 {% block content %}
- 
+
 <div class="row">
   <div class="col">
-      {% if bag_items %}
-          <div class="table-responsive rounded">
-              <table class="table table-sm table-borderless">
-                  <thead class="text-black">
-                      <tr>
-                          <th scope="col">Courses</th>
-                          <th scope="col"></th>
-                          <th scope="col">Price</th>
-                          <th scope="col">Qty</th>
-                          <th scope="col">Subtotal</th>
-                      </tr>
-                  </thead>
+    {% if bag_items %}
+    <div class="table-responsive rounded">
+      <table class="table table-sm table-borderless">
+        <thead class="text-black">
+          <tr>
+            <th scope="col">Courses</th>
+            <th scope="col"></th>
+            <th scope="col">Price</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Subtotal</th>
+          </tr>
+        </thead>
 
-                  {% for item in bag_items %}
-                      <tr>
-                          <td class="p-3 w-25">
-                              <img class="img-fluid rounded" src="{{ item.course.thumbnail }}">
-                          </td>
-                          <td class="py-3">
-                              <p class="my-0"><strong>{{ item.course.name }}</strong></p>
-                              <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
-                                {% csrf_token %}
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <button class="decrement-qty btn btn-sm btn-black rounded-0" 
-                                                data-item_id="{{ item.course_id }}" id="decrement-qty_{{ item.course_id }}">
-                                                <span>
-                                                    <i class="fas fa-minus fa-sm"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                        <input class="form-control form-control-sm qty_input" type="number"
-                                            name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                            data-item_id="{{ item.course_id }}"
-                                            id="id_qty_{{ item.course_id }}">
-                                        <div class="input-group-append">
-                                            <button class="increment-qty btn btn-sm btn-black rounded-0"
-                                                data-item_id="{{ item.course_id }}" id="increment-qty_{{ item.course_id }}">
-                                                <span>
-                                                    <i class="fas fa-plus fa-sm"></i>
-                                                </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                              <a href="update-link text-info"><small>Update</small></a>
-                              <a href="remove-item text-danger float right" id="remove_{{ item.course_id }}"><small>Remove</small></a>
-                              </form>
-                          </td>
-                          <td class="py-3">
-                              <p class="my-0">${{ item.course.price }}</p>
-                          </td>
-                          <td class="py-3 w-25">
-                              <p class="my-0">{{ item.quantity }}</p>
-                          </td>
-                          <td class="py-3">
-                              <p class="my-0">${{ item.course.price }}</p>
-                          </td>
-                      </tr>
-                  {% endfor %}
-                  <tr>
-                      <td colspan="5" class="pt-5 text-right">
-                          <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
-                          <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
-                          <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td colspan="5" class="text-right">
-                          <a href="{% url 'course-list' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                              <span class="icon">
-                                  <i class="fas fa-chevron-left"></i>
-                              </span>
-                              <span class="text-uppercase">Keep Shopping</span>
-                          </a>
-                          <a href="" class="btn btn-black rounded-0 btn-lg">
-                              <span class="text-uppercase">Secure Checkout</span>
-                              <span class="icon">
-                                  <i class="fas fa-lock"></i>
-                              </span>
-                          </a>
-                      </td>
-                  </tr>
-              </table>
-          </div>
-      {% else %}
-          <p class="lead mb-5">Your bag is empty.</p>
-          <a href="{% url 'course-list' %}" class="btn btn-outline-black rounded-0 btn-lg">
+        {% for item in bag_items %}
+        <tr>
+          <td class="p-3 w-25">
+            <img class="img-fluid rounded" src="{{ item.course.thumbnail }}">
+          </td>
+          <td class="py-3">
+            <p class="my-0"><strong>{{ item.course.name }}</strong></p>
+            <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
+              {% csrf_token %}
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <button class="decrement-qty btn btn-sm btn-black rounded-0" data-item_id="{{ item.course_id }}"
+                      id="decrement-qty_{{ item.course_id }}">
+                      <span>
+                        <i class="fas fa-minus fa-sm"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <input class="form-control form-control-sm qty_input" type="number" name="quantity"
+                    value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.course_id }}"
+                    id="id_qty_{{ item.course_id }}">
+                  <div class="input-group-append">
+                    <button class="increment-qty btn btn-sm btn-black rounded-0" data-item_id="{{ item.course_id }}"
+                      id="increment-qty_{{ item.course_id }}">
+                      <span>
+                        <i class="fas fa-plus fa-sm"></i>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+            </form>
+            <a class="update-link text-info"><small>Update</small></a>
+            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
+              data-size="{{ item.size }}"><small>Remove</small></a>
+          </td>
+          <td class="py-3">
+            <p class="my-0">${{ item.course.price }}</p>
+          </td>
+          <td class="py-3 w-25">
+            <p class="my-0">{{ item.quantity }}</p>
+          </td>
+          <td class="py-3">
+            <p class="my-0">${{ item.course.price }}</p>
+          </td>
+        </tr>
+        {% endfor %}
+        <tr>
+          <td colspan="5" class="pt-5 text-right">
+            <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
+            <h6>Delivery: ${{ delivery|floatformat:2 }}</h6>
+            <h4 class="mt-4"><strong>Grand Total: ${{ grand_total|floatformat:2 }}</strong></h4>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="5" class="text-right">
+            <a href="{% url 'course-list' %}" class="btn btn-outline-black rounded-0 btn-lg">
               <span class="icon">
-                  <i class="fas fa-chevron-left"></i>
+                <i class="fas fa-chevron-left"></i>
               </span>
               <span class="text-uppercase">Keep Shopping</span>
-          </a>
-      {% endif %}
+            </a>
+            <a href="" class="btn btn-black rounded-0 btn-lg">
+              <span class="text-uppercase">Secure Checkout</span>
+              <span class="icon">
+                <i class="fas fa-lock"></i>
+              </span>
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    {% else %}
+    <p class="lead mb-5">Your bag is empty.</p>
+    <a href="{% url 'course-list' %}" class="btn btn-outline-black rounded-0 btn-lg">
+      <span class="icon">
+        <i class="fas fa-chevron-left"></i>
+      </span>
+      <span class="text-uppercase">Keep Shopping</span>
+    </a>
+    {% endif %}
   </div>
 </div>
 </div>
@@ -110,16 +108,16 @@ Shopping Bag
   <div>
     <img src="{% static 'images/cart-bg.jpg' %}" class="" width="100%" height="100%" alt="Suscription-image">
 
-      <!-- <div class="overlay">
+    <!-- <div class="overlay">
           <h1>Thanks!</h1>
       </div> -->
-      
+
   </div>
   <div class="row mx-5 mt-5">
     <div class="col-75">
       <div class="container">
         <form action="/action_page.php">
-  
+
           <div class="row">
             <div class="col-50">
               <h3>Billing Address</h3>
@@ -131,7 +129,7 @@ Shopping Bag
               <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
               <label for="city"><i class="fa fa-institution"></i> City</label>
               <input type="text" id="city" name="city" placeholder="New York">
-  
+
               <div class="row">
                 <div class="col-50">
                   <label for="state">State</label>
@@ -143,7 +141,7 @@ Shopping Bag
                 </div>
               </div>
             </div>
-  
+
             <div class="col-50">
               <h3>Payment</h3>
               <label for="fname">Accepted Cards</label>
@@ -159,7 +157,7 @@ Shopping Bag
               <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
               <label for="expmonth">Exp Month</label>
               <input type="text" id="expmonth" name="expmonth" placeholder="September">
-  
+
               <div class="row">
                 <div class="col-50">
                   <label for="expyear">Exp Year</label>
@@ -171,7 +169,7 @@ Shopping Bag
                 </div>
               </div>
             </div>
-  
+
           </div>
           <label>
             <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
@@ -180,31 +178,34 @@ Shopping Bag
         </form>
       </div>
     </div>
-</div>
+  </div>
 </div>
 </script>
 {% endblock %}
 {% block posstloadjs %}
 
- <script type="text/javascript">
+<script type="text/javascript">
   //Update quantity on click
-  $('.update-link').click(function(e){
+  $('.update-link').click(function (e) {
     var form = $(this).prev('.update-form');
     form.submit
   })
 
   //Remove quantity on click
-  $('.remove-item').click(function(e){
+  $('.remove-item').click(function (e) {
     var csrfToken = "{{ csrf_}}";
     var itemId = $(this).attr('id').split('remove')[1];
     var url = `/bag/remove/${itemId}`;
-    var data = {'csrfmiddlewaretoken': csrfToen, 'size':size}
+    var data = {
+      'csrfmiddlewaretoken': csrfToen,
+      'size': size
+    }
 
     $.post(url, data)
-    .done(function(){
-      location.reload();
-    });
+      .done(function () {
+        location.reload();
+      });
 
-})
- </script>
+  })
+</script>
 {% endblock %}
