@@ -7,10 +7,11 @@ Course list
 <div class="my-5">
     <div class="row">
         {% for course in category_list %}
+        {% if object.image not null %}
         <div class="col-md-4">
             <div class="card my-5 mx-5 shadow-sm card-course">
                 <a href="{{ course.get_absolute_url }}">
-                <img src="{{ object.thumbnail }}" class="card-img-top" alt="thumbnail">
+                <!-- <img src="{{ object.thumbnail }}" class="card-img-top" alt="thumbnail"> -->
                  </a>
                 <div class="card-body">
                     <p class="card-text font-weight-bold">{{ object.name }} {{ object.category }}</p>
@@ -20,6 +21,7 @@ Course list
                 </div>
             </div>
         </div>
+        {% endif %}
         {% endfor %}
     </div>
 </div>

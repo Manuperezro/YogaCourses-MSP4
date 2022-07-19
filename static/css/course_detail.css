@@ -22,3 +22,134 @@ a:hover {
     color: white !important;
     border-color:white;
 }
+
+
+@media screen and (min-width: 200px) {
+    .card {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1pxsolidrgba(0,0,0,.125);
+        border-radius: 0.25rem;
+        width: 300px;
+}
+}
+
+@media screen and (min-width: 300px) {
+    .card {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1pxsolidrgba(0,0,0,.125);
+        border-radius: 0.25rem;
+        width: 345px;
+        left: 30px;
+}
+}
+
+@media screen and (min-width: 350px) {
+    .card {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1pxsolidrgba(0,0,0,.125);
+        border-radius: 0.25rem;
+        width: 345px;
+        left: 6px;
+}
+}
+
+
+@media screen and (min-width: 400px) {
+    .card {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1pxsolidrgba(0,0,0,.125);
+        border-radius: 0.25rem;
+        width: 395px;
+        left: 6px;
+}
+}
+
+@media screen and (min-width: 500px) {
+    .card {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1pxsolidrgba(0,0,0,.125);
+        border-radius: 0.25rem;
+        width: fit-content;
+}
+}
+
+@media screen and (min-width: 750px) {
+    .card {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1pxsolidrgba(0,0,0,.125);
+        border-radius: 0.25rem;
+        width: 750px;
+        left: 4px;
+}
+}
+
+@media screen and (min-width: 1200px) {
+    .card {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1pxsolidrgba(0,0,0,.125);
+        border-radius: 0.25rem;
+        width: 100%;
+}
+}
+
+
+
+
+width: 750px;
+left: 4px;
