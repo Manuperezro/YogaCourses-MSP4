@@ -21,7 +21,6 @@ def bag_contents(request):
             'course': course,
         })
 
-
     context = {
 
         'bag_items': bag_items,

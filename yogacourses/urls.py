@@ -25,6 +25,7 @@ urlpatterns = [
     # path('accounts/', include('allauth.urls')),
     path('bag/', include('bag.urls')),
     path('', include('content.urls')),
+    path('checkout/', include('checkout.urls')),
 ]
 
 # To allows Django to knwo where the media is store either in development or production mode
