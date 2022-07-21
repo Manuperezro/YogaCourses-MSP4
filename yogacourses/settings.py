@@ -51,6 +51,10 @@ INSTALLED_APPS = [
     'accounts',
     'bag',
     'checkout',
+
+    # Other
+
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -64,6 +68,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'yogacourses.urls'
+
+CRIPSY_TEMPLATE_PACK = 'boostrap4'
 
 TEMPLATES = [
     {
@@ -80,6 +86,10 @@ TEMPLATES = [
                 'content.context_processors.menu_links',
                 'bag.contexts.bag_contents'
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
