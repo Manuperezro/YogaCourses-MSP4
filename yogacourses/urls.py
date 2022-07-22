@@ -26,7 +26,7 @@ urlpatterns = [
     path('bag/', include('bag.urls')),
     path('', include('content.urls')),
     path('checkout/', include('checkout.urls')),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 # To allows Django to knwo where the media is store either in development or production mode
 if settings.DEBUG:

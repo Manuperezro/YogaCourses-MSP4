@@ -14,15 +14,13 @@
             <li class="nav-item">
                 <a href="{% url 'course-list' %}" class="nav-link text-dark nav-text">Courses</a>
             </li>
-            <li class="nav-item">
-                <a href="{% url 'view_bag' %}" class="nav-link text-dark nav-text">Shopping Cart</a>
-            </li>
         </ul class="navbar-nav ml-auto">
         {% if user.is_authenticated %}
+        <a href="{% url 'view_bag' %}" class="nav-link text-dark nav-text"><i class="fas fa-shopping-cart"> £{{ total|floatformat:2 }}</i></a>
         <div class="nav-item dropdown">
             <a class="nav-link text-dark dropdown-toggle nav-text" href="#" id="navbarDropdown" role="button"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="{{ user.student.avatar.url }}" class="rounded-circule" height="25" alt="">Welcome {{user.username}}
+                <img src="{{ user.student.avatar.url }}" class="rounded-circle" height="25" alt="">Welcome {{user.username}}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{% url 'my_profile' %}">My Profile</a>

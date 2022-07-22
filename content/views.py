@@ -62,7 +62,7 @@ class CourseDetailView(DetailView):
     template_name = "content/course_detail.html"
 
 # I used LoginRequiredMixin here so when students try to acces for a Course
-# That required a subscription payment will redirect the user to the Login view. 
+# That required a payment will redirect the user to the Login view. 
 class VideoDetailView(LoginRequiredMixin, DetailView):     # CoursePermissionMixin as a parameter
     model = Video
     template_name = "content/video_detail.html"
