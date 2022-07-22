@@ -12,22 +12,7 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 products = stripe.Product.list()
 prices = stripe.Price.list()
 
-def get_stripe_products(request):
-    print('get_stripe_products')
-    for product in products.data:
-        obj, _ = Course.objects.get_or_create(name=product.name)
-        print('object is ', obj)
-        obj.active = product.active
-        price_ = [x for x in prices.data if x.product == product.id][0] 
-        price = float(price_.unit_amount / 100)
-        obj.price = price
-        print('Stripe Price', price)
-        obj.thumbnail = product.images[0] if len(product.images) > 0 else '' 
-        obj.save()
-    
-    return HttpResponse()
-   
-    
+
 class CategoryDetailView(DetailView):
     """ This class is to display the list Categories """
     model = Category
@@ -47,16 +32,61 @@ def view_home(request, category_slug=None):
         courses = Course.objects.all()
     return render(request, 'content/home.html', {'category': category_page, 'courses' : courses})
 
-class CourseListView(ListView):
-    """ This class iherit the listView class which means it will have built 
-    in features to return a list of objects of a model. """
-    # Assign it the Course class to the model variable, because the course 
-    # list view inherits from the listView so it will automaticly 
-    # return the list of course objects to an array call object_list by default
-    model = Course
-    template_name = "content/course_list.html"
 
+# class CourseListView(ListView):
+#     """ This class iherit the listView class which means it will have built 
+#     in features to return a list of objects of a model. """
+#     # Assign it the Course class to the model variable, because the course 
+#     # list view inherits from the listView so it will automaticly 
+#     # return the list of course objects to an array call object_list by defaul
+#     model = Course
+#     template_name = "content/course_list.html"
 
+#     def get_stripe_products(self):
+#         print('get_stripe_products')
+#         for product in products.data:
+#             print('product stripe', product)
+#             obj, _ = Course.objects.get_or_create(name=product.name)
+#             print('object is ', obj)
+#             obj.active = product.active
+#             price_ = [x for x in prices.data if x.product == product.id][0] 
+#             price = float(price_.unit_amount / 100)
+#             obj.price = price
+#             print('Stripe Price', price)
+#             obj.thumbnail = product.images[0] if len(product.images) > 0 else '' 
+#             obj.save()
+
+def course_list(request):
+    template = "content/course_list.html"
+    for product in products.data:
+        print('product stripe', product.name)
+        obj, _ = Course.objects.get_or_create(name=product.name)
+        print('object is ', obj)
+        obj.active = product.active
+        price_ = [x for x in prices.data if x.product == product.id][0] 
+        print('Price is  ', price_.unit_amount)
+        price = float(0)
+        if price_.unit_amount is None:
+            print('price is empty')
+            price= float(0)
+        else:
+            price = float(price_.unit_amount / 100)
+
+        obj.price = price
+        print('Stripe Price', price)
+        obj.thumbnail = product.images[0] if len(product.images) > 0 else ''
+        obj.save()
+
+    course = Course.objects.all()
+    context = {
+        'course': course,
+    }
+
+    print('Course', course)
+    print('context', context)
+    return render(request, template, context)
+
+            
 class CourseDetailView(DetailView):
     model = Course
     template_name = "content/course_detail.html"
