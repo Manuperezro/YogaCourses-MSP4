@@ -5,6 +5,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.conf import settings
 from django.http import HttpResponse
 import stripe
+import json
 
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -57,6 +58,7 @@ def view_home(request, category_slug=None):
 #             obj.save()
 
 def course_list(request):
+    new_list = []
     template = "content/course_list.html"
     for product in products.data:
         print('product stripe', product.name)
@@ -68,7 +70,7 @@ def course_list(request):
         price = float(0)
         if price_.unit_amount is None:
             print('price is empty')
-            price= float(0)
+            price = float(0)
         else:
             price = float(price_.unit_amount / 100)
 
@@ -76,17 +78,17 @@ def course_list(request):
         print('Stripe Price', price)
         obj.thumbnail = product.images[0] if len(product.images) > 0 else ''
         obj.save()
+        new_list.append(obj)
 
     course = Course.objects.all()
     context = {
         'course': course,
+        'products': new_list,
     }
-
-    print('Course', course)
-    print('context', context)
+    
     return render(request, template, context)
-
             
+
 class CourseDetailView(DetailView):
     model = Course
     template_name = "content/course_detail.html"
