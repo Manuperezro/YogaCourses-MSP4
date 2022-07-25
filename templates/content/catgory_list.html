@@ -1,14 +1,13 @@
 {% extends 'base.html' %}
 {% block title %}
-Course list
+Categories
 {% endblock title %}
 {% block content %}
 {% load static %}
 <div class="my-5">
     <div class="row">
         {% for course in category_list %}
-        {% if object.image not null %}
-        <div class="col-md-4">
+        <div class="col-md-5">
             <div class="card my-5 mx-5 shadow-sm card-course">
                 <a href="{{ course.get_absolute_url }}">
                 <!-- <img src="{{ object.thumbnail }}" class="card-img-top" alt="thumbnail"> -->
@@ -21,7 +20,6 @@ Course list
                 </div>
             </div>
         </div>
-        {% endif %}
         {% endfor %}
     </div>
 </div>

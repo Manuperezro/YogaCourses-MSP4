@@ -3,20 +3,7 @@
 {% block title %}
 Learn
 {% endblock title %}
-
-{% block video_header %}
-<div class="container-fluid text-light bg-dark">
-    <div class="row">
-        <div class="col-9">
-            <h5>{{ course.name }}</h5>
-        </div>
-        <div class="col-3 text-right p-3 video_navbar">
-            <a href="{{ course.get_absolute_url }}">Course details <i class="fas fa-chevron-right" ></i></a>
-        </div>
-    </div>
-</div>
-{% endblock video_header %}
-
+{% include 'partials/_navbar.html' %}
 {% block content %}
 <div class="container-fluid bg-withe ">
     <div class="row">
@@ -55,8 +42,6 @@ Learn
                   </div>
                 {% endfor %}
             </div>
-
-
         </div>
     </div>
 </div>

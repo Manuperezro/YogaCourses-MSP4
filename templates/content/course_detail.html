@@ -5,32 +5,9 @@
 {% block content %}
 <div class="mt-5">
     <div class="row">
-        <div class="col-12">
+        <div class="col-lg-8 col-sm-12">
             <div class="card">
                 <div class="card-body">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <h3 class="card-title font-weight-bold mb-4">{{object.name}}</h3>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="card text-center">
-                            <div class="card-header">
-                                <h4 class="card-title">
-                                    Rock Bristol School Of Yoga
-                                </h4>
-                        </div>
-                        <br>
-                        <div class="card mb-4">
-            
-                            <div class="card-body">
-                                <i class="fas fa-th"></i>
-                                &nbsp; category : {{ object.category }}
-                            </div>
-            
-                        </div>
-                    </div>
                     <div class="embed-responsive embed-responsive-16by9">
                         <video autoplay loop controls poster="{{ object.thumbnail }}" class="embed-responsive-item">
                             <source src="{{object.video_intro_url}}" type="video/mp4">
@@ -43,7 +20,7 @@
                     <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
-                            <div class="col-12">
+                            <div class="col-lg-4 col-sm-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
@@ -70,7 +47,28 @@
                 </div>
             </div>
         </div>
-
+        <div class="col-lg-4 col-md-12 text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title font-weight-bold mb-4">{{object.name}}</h3>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">
+                        Rock Bristol School of Yoga
+                    </h4>
+                </div>
+            </div>
+            <br>
+            <div class="card mb-4">
+                <div class="card-body">
+                    <i class="fas fa-th"></i>
+                    &nbsp; {{ object.category }}
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="row mt-5">

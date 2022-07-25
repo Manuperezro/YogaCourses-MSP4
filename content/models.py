@@ -20,8 +20,10 @@ class Category(models.Model):
         verbose_name = 'category'
         verbose_name_plural = 'categories'
 
+
     def get_url(self):
         return reverse('category-list', args=[self.slug])
+
 
     # The str method tells django wich field of the model display when we need to create a instance of the category model. 
     def __str__(self):

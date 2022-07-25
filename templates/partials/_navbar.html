@@ -7,12 +7,15 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">    
         <ul class="navbar-nav mr-auto">
-            <a class="nav-link text-dark dropdown-toggle nav-text" href="#" id="navbarDropdown" role="button"
+            <a class="nav-link text-dark dropdown-toggle nav-text" href="{% url 'category-list' %}" id="navbarDropdown" role="button"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Categories
         </a>
             <li class="nav-item">
                 <a href="{% url 'course-list' %}" class="nav-link text-dark nav-text">Courses</a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'category-list' %}" class="nav-link text-dark nav-text">Categories</a>
             </li>
         </ul class="navbar-nav ml-auto">
         {% if user.is_authenticated %}
@@ -24,7 +27,6 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="{% url 'my_profile' %}">My Profile</a>
-                <a class="dropdown-item" href="#">Subscription</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="{% url 'logout' %}">
                     <i class="fas fa-sign-out-alt"></i>Logout</a>
