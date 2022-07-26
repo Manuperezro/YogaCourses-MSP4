@@ -39,6 +39,51 @@ def view_home(request, category_slug=None):
     return render(request, 'content/home.html', {'category': category_page, 'courses' : courses})
 
 
+# def course_list(request):
+#     request.GET.keys()
+#     print(request.GET['category_filter'])
+#     category_filter = request.GET.get('category_filter')
+#     new_list = []
+#     template = "content/course_list.html"
+#     for product in products.data:
+#         print('product stripe', product.name)
+#         obj, _ = Course.objects.get_or_create(name=product.name)
+
+#         if  not obj.category and category_filter:
+#             continue
+
+#         if obj.category and obj.category.id != int(category_filter) and category_filter:
+#             continue
+
+#         print('object is ', obj)
+#         obj.active = product.active
+#         price_ = [x for x in prices.data if x.product == product.id][0] 
+#         print('Price is  ', price_.unit_amount)
+#         price = float(0)
+#         if price_.unit_amount is None:
+#             print('price is empty')
+#             price = float(0)
+#         else:
+#             price = float(price_.unit_amount / 100)
+
+#         obj.price = price
+#         print('Stripe Price', price)
+#         obj.thumbnail = product.images[0] if len(product.images) > 0 else ''
+#         obj.save()
+#         new_list.append(obj)
+#     print(category_filter)
+#     if category_filter: 
+#         course = Course.objects.filter(category=category_filter)
+        
+#     else:   
+#         course = Course.objects.all()
+#     context = {
+#         'course': course,
+#         'products': new_list,
+#     }
+    
+#     return render(request, template, context)
+
 def course_list(request):
     new_list = []
     template = "content/course_list.html"

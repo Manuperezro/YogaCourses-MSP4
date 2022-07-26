@@ -5,17 +5,23 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">   
         <ul class="navbar-nav mr-auto">
-            <a class="nav-link text-dark dropdown-toggle nav-text" href="{% url 'category-list' %}" id="navbarDropdown" role="button"
+            <div class="nav-item dropdown">
+            <li class="nav-item">
+            <a class="nav-link text-dark dropdown-toggle nav-text" href="" id="navbarDropdown" role="button"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Categories
-        </a>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="nav-link text-dark nav-text" href="{% url 'course-list' %}">YogaTeachers</a>
+                <a class="nav-link text-dark nav-text" href="{% url 'course-list' %}">Begginers</a>
+                <a class="nav-link text-dark nav-text" href="{% url 'course-list' %}">Intermediate</a>
+            </div>
+            </li>
+            </div>
             <li class="nav-item">
                 <a href="{% url 'course-list' %}" class="nav-link text-dark nav-text">Courses</a>
-            </li>
-            <li class="nav-item">
-                <a href="{% url 'category-list' %}" class="nav-link text-dark nav-text">Categories</a>
             </li>
         </ul class="navbar-nav ml-auto">
         {% if user.is_authenticated %}
