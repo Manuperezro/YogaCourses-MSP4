@@ -1,4 +1,4 @@
-/* .StripeElement,
+.StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
   height: 40px;
@@ -28,7 +28,7 @@
 .fieldset-label {
     position: relative;
     right: .5rem;
-} */
+}
 
 #payment-form .form-control,
 #card-element {
