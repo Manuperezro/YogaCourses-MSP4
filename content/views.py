@@ -39,9 +39,27 @@ def view_home(request, category_slug=None):
     return render(request, 'content/home.html', {'category': category_page, 'courses' : courses})
 
 
-# def course_list(request):
+def intermediate_course_list(request):
+    print('in intermedia courses')
+    new_list = []
+    template = "content/category_list.html"
+    
+    for product in products.data:
+         obj,_ = Course.objects.get_or_create(name=product.name)
+
+         if product.active and len(product.metadata) > 0 and product.metadata.category == "intermediate":
+            new_list.append(obj)
+
+    context = {
+        'products': new_list,
+        }
+    print('New List', new_list)
+    return render(request, template, context)
+
+
+# def category_course_list(request):
 #     request.GET.keys()
-#     print(request.GET['category_filter'])
+#     print('request--', len(request.GET.keys()))
 #     category_filter = request.GET.get('category_filter')
 #     new_list = []
 #     template = "content/course_list.html"
@@ -71,11 +89,13 @@ def view_home(request, category_slug=None):
 #         obj.thumbnail = product.images[0] if len(product.images) > 0 else ''
 #         obj.save()
 #         new_list.append(obj)
-#     print(category_filter)
+#     print('filter is', category_filter)
 #     if category_filter: 
+#         print('category filter')
 #         course = Course.objects.filter(category=category_filter)
         
 #     else:   
+#         print('In else')
 #         course = Course.objects.all()
 #     context = {
 #         'course': course,
@@ -84,14 +104,18 @@ def view_home(request, category_slug=None):
     
 #     return render(request, template, context)
 
+
 def course_list(request):
     new_list = []
     template = "content/course_list.html"
     for product in products.data:
         print('product stripe', product.name)
+       
         obj, _ = Course.objects.get_or_create(name=product.name)
         print('object is ', obj)
         obj.active = product.active
+        if len(product.metadata) > 0:
+            obj.category = product.metadata.category
         price_ = [x for x in prices.data if x.product == product.id][0] 
         print('Price is  ', price_.unit_amount)
         price = float(0)
