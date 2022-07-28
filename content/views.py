@@ -26,6 +26,41 @@ class CategoryDetailView(DetailView):
 
         return context
 
+
+def course_list(request):
+    new_list = []
+    template = "content/course_list.html"
+    for product in products.data:
+        print('product stripe', product.name)
+       
+        obj, _ = Course.objects.get_or_create(name=product.name)
+        print('object is ', obj)
+        obj.active = product.active
+        if len(product.metadata) > 0:
+            obj.category = product.metadata.category
+        price_ = [x for x in prices.data if x.product == product.id][0] 
+        print('Price is  ', price_.unit_amount)
+        price = float(0)
+        if price_.unit_amount is None:
+            print('price is empty')
+            price = float(0)
+        else:
+            price = float(price_.unit_amount / 100)
+
+        obj.price = price
+        print('Stripe Price', price)
+        obj.thumbnail = product.images[0] if len(product.images) > 0 else ''
+        obj.save()
+        new_list.append(obj)
+
+    course = Course.objects.all()
+    context = {
+        'course': course,
+        'products': new_list,
+    }
+    
+    return render(request, template, context)
+
     
 def view_home(request, category_slug=None):
     """ A view to return the home page"""
@@ -42,7 +77,7 @@ def view_home(request, category_slug=None):
 def intermediate_course_list(request):
     print('in intermedia courses')
     new_list = []
-    template = "content/category_list.html"
+    template = "content/intermediate_list.html"
     
     for product in products.data:
          obj,_ = Course.objects.get_or_create(name=product.name)
@@ -53,7 +88,46 @@ def intermediate_course_list(request):
     context = {
         'products': new_list,
         }
-    print('New List', new_list)
+
+    print('New List intermediate', new_list)
+    return render(request, template, context)
+
+
+def begginers_course_list(request):
+    print('in begginers courses')
+    new_list = []
+    template = "content/begginers_list.html"
+    
+    for product in products.data:
+         obj,_ = Course.objects.get_or_create(name=product.name)
+
+         if product.active and len(product.metadata) > 0 and product.metadata.category == "Begginers":
+            new_list.append(obj)
+
+    context = {
+        'products': new_list,
+        }
+
+    print('New List begginers', new_list)
+    return render(request, template, context)
+
+
+def teachers_course_list(request):
+    print('in teachers courses')
+    new_list = []
+    template = "content/teachers_list.html"
+    
+    for product in products.data:
+         obj,_ = Course.objects.get_or_create(name=product.name)
+
+         if product.active and len(product.metadata) > 0 and product.metadata.category == "Yoga-Teachers":
+            new_list.append(obj)
+
+    context = {
+        'products': new_list,
+        }
+
+    print('New List begginers', new_list)
     return render(request, template, context)
 
 
@@ -114,8 +188,8 @@ def course_list(request):
         obj, _ = Course.objects.get_or_create(name=product.name)
         print('object is ', obj)
         obj.active = product.active
-        if len(product.metadata) > 0:
-            obj.category = product.metadata.category
+        # if len(product.metadata) > 0:
+        #     obj.category = product.metadata.category
         price_ = [x for x in prices.data if x.product == product.id][0] 
         print('Price is  ', price_.unit_amount)
         price = float(0)
