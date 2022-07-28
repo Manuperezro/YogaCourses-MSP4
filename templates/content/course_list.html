@@ -4,11 +4,11 @@ Course list
 {% endblock title %}
 {% block content %}
 {% load static %}
-<div class="my-5 list">
+<div class="container mt-5">
     <div class="row">
         {% for object in products %}
-        <div class="col-sm-12 col-md-10 col-lg-5 mx-5">
-            <div class="card-course my-5 mx-5 shadow-sm">
+        <div class="col-sm-12 col-lg-6">
+            <div class="card-course px-5">
                 <a href="{{ object.get_absolute_url }}">
                 <img src="{{ object.thumbnail }}" class="card-img-top" alt="thumbnail">
                  </a>

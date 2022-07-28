@@ -9,24 +9,17 @@
   z-index: -1;
 }
 
-.list {
-  margin-left: 5%;
-}
-
 .overlay {
-  opacity: .8;
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
-  right: 0;
   width: 100%;
   height: 100%;
-  margin: 0;
-  box-sizing: border-box;
-  padding: 15% 32px;
-  line-height: 1.5;
-  text-align: center;
-  font-size: 100%;
+  color: rgb(0, 0, 0);
+  display:flex;
+justify-content: center;
+flex-direction: column;
+text-align: center;
 }
 
 .card-stori {
@@ -134,7 +127,7 @@ video {
 
 @media screen and (min-width: 200px) {
   .overlay {
-    height: 118%;
+    height: 90%;
   }
 }
 
