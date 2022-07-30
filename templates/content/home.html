@@ -11,9 +11,8 @@ Home
             <source src="static/videos/video.mp4" type="video/mp4">
         </video>
         <div class="overlay mt-5">
-            <h1 class="my-5">Rock Bristol School of Yoga</h1>
-            <h2 class="my-5 font-weight-bolder">On Demand</h2>
-            <h3 class="my-5">Your Yoga School at Home</h3>
+            <h1>Rock Yoga <span class="font-weight-bolder"> On Demand</span></h1>
+            <h2>Your Yoga School at Home</h2>
         </div>
 
     </div>
@@ -73,11 +72,11 @@ Home
           <img src="static/images/stories3.jpg" class="card-img-stori" alt="thumbnail">
             <div class="card-body-stori">
                 <div class="d-flex justify-content-between align-items-center">
-                  <a href="{% url 'course-list' %}">
-                    <p class=" card-text font-weight-bold">Check Our Courses</p></a>
+                  <a href="{% url 'course-list' %}?category_filter=4">                    
                     <div class="col-12 font-weight-bold overlay-story">
-                      <p class="p-stori" >Explore our Begginers Courses</p> 
-                    </div>
+                    <p class="p-stori" >Explore our Begginers Courses</p> 
+                  </div>
+                </a>
                 </div>
             </div>
         </div>

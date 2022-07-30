@@ -103,7 +103,7 @@ def course_list(request):
     new_list = []
     template = "content/course_list.html"
     for product in products.data:
-        print('product stripe', product.name)
+        print('product stripe', products.data)
         obj, _ = Course.objects.get_or_create(name=product.name)
 
         if not obj.category and category_filter:
