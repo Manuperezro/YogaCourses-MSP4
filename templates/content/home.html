@@ -10,7 +10,7 @@ Home
         <video id="background-video" autoplay loop controls poster="" class="embed-responsive-item">
             <source src="static/videos/video.mp4" type="video/mp4">
         </video>
-        <div class="overlay mt-5">
+        <div class="overlay-video mt-5">
             <h1>Rock Yoga <span class="font-weight-bolder"> On Demand</span></h1>
             <h2>Your Yoga School at Home</h2>
         </div>
@@ -40,11 +40,11 @@ Home
             <img src="static/images/stories1 (2).jpg" class="card-img-stori" alt="thumbnail">
               <div class="card-body-stori">
                   <div class="d-flex justify-content-between align-items-center">
-                    <a href="{% url 'course-list' %}">
-                      <p class="card-text font-weight-bold">Check Our Courses</p></a>
-                    <div class="col-12 font-weight-bold overlay-story">
-                      <p class="p-stori" >Try the Yoga teachers Course</p>
+                    <a href="{% url 'course-list' %}?category_filter=3">                    
+                      <div class="col-12 font-weight-bold overlay-story">
+                      <p class="p-stori" >Breath with Our Mindfullness Courses</p> 
                     </div>
+                  </a>
                   </div>
               </div>
           </div>
@@ -56,11 +56,11 @@ Home
             <img src="static/images/stroriii.jpg" class="card-img-stori" alt="thumbnail">
               <div class="card-body-stori">
                   <div class="d-flex justify-content-between align-items-center">
-                    <a href="{% url 'course-list' %}">
-                      <p class="card-text font-weight-bold">Check Our Courses</p></a>
-                      <div class="col-12 font-weight-bold overlay-story">  
-                        <p class="p-stori">Dont miss Our Free Taster course</p> 
-                      </div>
+                    <a href="{% url 'course-list' %}?category_filter=2">                    
+                      <div class="col-12 font-weight-bold overlay-story">
+                      <p class="p-stori" >Try The Intermediate Levels</p> 
+                    </div>
+                  </a>
                   </div>
               </div>
           </div>
@@ -72,7 +72,7 @@ Home
           <img src="static/images/stories3.jpg" class="card-img-stori" alt="thumbnail">
             <div class="card-body-stori">
                 <div class="d-flex justify-content-between align-items-center">
-                  <a href="{% url 'course-list' %}?category_filter=4">                    
+                  <a href="{% url 'course-list' %}?category_filter=1">                    
                     <div class="col-12 font-weight-bold overlay-story">
                     <p class="p-stori" >Explore our Begginers Courses</p> 
                   </div>
@@ -84,47 +84,7 @@ Home
     </div>
   </div>
 
-<!--Javascript-->
-
-  <script>
-    function modulo(number, mod) {
-  let result = number % mod;
-  if (result < 0) {
-    result += mod;
-  }
-  return result;
-}
-
-function setUpCarousel(carousel) {
-  function handleNext() {
-    currentSlide = modulo(currentSlide + 1, numSlides);
-    changeSlide(currentSlide);
-  }
-
-  function handlePrevious() {
-    currentSlide = modulo(currentSlide - 1, numSlides);
-    changeSlide(currentSlide);
-  }
-
-  function changeSlide(slideNumber) {
-    carousel.style.setProperty('--current-slide', slideNumber);
-  }
-
-  // get elements
-  const buttonPrevious = carousel.querySelector('[data-carousel-button-previous]');
-  const buttonNext = carousel.querySelector('[data-carousel-button-next]');
-  const slidesContainer = carousel.querySelector('[data-carousel-slides-container]');
-
-  // carousel state we need to remember
-  let currentSlide = 0;
-  const numSlides = slidesContainer.children.length;
-
-  // set up events
-  buttonPrevious.addEventListener('click', handlePrevious);
-  buttonNext.addEventListener('click', handleNext);
-}
-
-const carousels = document.querySelectorAll('[data-carousel]');
-carousels.forEach(setUpCarousel);
-  </script>
+{% block postloadjs %}
+    <script src="{% static 'js/home_elements.js' %}"></script>
+{% endblock %}
 {% endblock content %}
