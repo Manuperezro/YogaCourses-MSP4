@@ -1,3 +1,5 @@
+  // Carousel following the youtube tutorial Users Stories Jasvascrpt carousel By Codelab
+
 function modulo(number, mod) {
   let result = number % mod;
   if (result < 0) {
@@ -40,6 +42,7 @@ carousels.forEach(setUpCarousel);
 
 
 // effects 
+
 $(document).hover(function(){
     $(".overlay-story").hover(function(){
       $(this).css("background-color", "#d39e00");
@@ -49,6 +52,7 @@ $(document).hover(function(){
   });
 
 // Modal Footer
+
 $(document).ready(function(){
 	$('#joinmodal').click(function(){
 		$('#joinmodal').modal('show')
