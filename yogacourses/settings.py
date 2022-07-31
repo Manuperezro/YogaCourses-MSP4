@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-s8icatycn(gr_!d5z$9c3s7-t7jso7l6$3evwu)xp-5ii!-y0c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['rockyoga.herokuapp.com', 'localhost']
 
 
 # Application definition
