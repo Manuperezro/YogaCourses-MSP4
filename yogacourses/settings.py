@@ -171,9 +171,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-# Store ours static files inside a folder called static under the directory membership 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+# # Store ours static files inside a folder called static under the directory membership 
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
 
 # a file store the media files
 MEDIA_URL = '/media/'
