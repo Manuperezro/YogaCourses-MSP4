@@ -14,9 +14,9 @@
                         </video>
                     </div>
                     <h5 class="font-weight-bold mt-4">
-                        Description
+                        Price
                     </h5>
-                    <p class="card-text">{{ course.description }}</p>
+                    <p class="card-text">£ {{ course.price }}</p>
                     <form class="form" action="{% url 'add_to_bag' course.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">

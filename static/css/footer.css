@@ -79,6 +79,11 @@ footer .content .right input[type="submit"]{
     color:#1f1e1e;
 }
 
+textarea {
+  height: 100px;
+  width: 100%;
+}
+
 footer .content .media-icons a{
   font-size: 16px;
   height: 45px;
