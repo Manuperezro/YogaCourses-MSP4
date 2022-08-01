@@ -74,6 +74,7 @@ def course_list(request):
     if category_filter: 
         print('category filter')
         course = Course.objects.filter(category=category_filter)
+        print('category filter')
         
     else:   
         print('In else')

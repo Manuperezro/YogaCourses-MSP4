@@ -126,7 +126,11 @@ video {
   min-width: 300px;
 }
 
-
+@media screen and (max-width: 499px) {
+  .carousel-button {
+    display:none;
+  }
+}
 
 @media screen and (min-width: 500px) {
   .carousel-button {
@@ -202,17 +206,5 @@ video {
     left: 45%;
 
 
-  }
-}
-
-@media screen and (max-width: 499px) {
-  .carousel-button {
-    top: 20%;
-  }
-}
-
-@media screen and (max-width: 499px) {
-  .overlay-video {
-    display:none!important;
   }
 }

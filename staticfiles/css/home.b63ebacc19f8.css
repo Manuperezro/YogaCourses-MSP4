@@ -212,7 +212,7 @@ video {
 }
 
 @media screen and (max-width: 499px) {
-  .overlay-video {
+  .overlay.video {
     display:none!important;
   }
 }
