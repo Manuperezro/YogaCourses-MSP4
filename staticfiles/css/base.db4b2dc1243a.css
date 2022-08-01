@@ -1,0 +1,27 @@
+body {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400px;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #f7f8fa;
+    letter-spacing: 0.7px;
+    padding: 8px;
+}
+
+html,body{
+  overflow-x: hidden;
+}
+  
+  .product_title {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+ 
+  .course-list-row{
+    width: 500px;
+  }

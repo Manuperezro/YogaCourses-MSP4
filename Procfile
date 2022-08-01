@@ -1,1 +1,1 @@
-web: gunicorn yogacourses.wsgi:application
+web: gunicorn yogacourses.wsgi

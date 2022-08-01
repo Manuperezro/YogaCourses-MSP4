@@ -1,0 +1,204 @@
+#background-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.overlay-video {
+  -webkit-text-stroke: 2px rgb(0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: rgb(255, 255, 255);
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card-stori {
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgb(47 50 56 / 20%), 3px 10px 0 rgb(47 50 56 / 19%);
+
+}
+
+.hero-text{
+  font-size: 650%;
+}
+
+.overlay-story {
+  top: 30%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  opacity: .8;
+  position: absolute;
+  bottom: 151px;
+  right: 0;
+  margin: 48px;
+  padding: inherit;
+  box-sizing: border-box;
+  line-height: 1.5;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: xx-large;
+  border-radius: 75%;
+  background-color: aliceblue;
+  width: 50%;
+}
+
+.p-stori {
+  margin: 3%;
+}
+
+.card-body-stori {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+
+.card-img-stori {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel {
+  --current-slide: 0;
+  /* we set position relative so absolute position works properly for the buttons */
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-button {
+  /* vertically centering the buttons */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+
+  /* basic styling */
+  padding: 0;
+  margin: 0.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  transition: color 0.1s;
+}
+
+.carousel-button:hover {
+  color: #d39e00;
+}
+
+.carousel-button_next {
+  /* The "next slide button" will be at the right */
+  right: 0;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s;
+  transform: translateX(calc(-100% * var(--current-slide)));
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+.story-messages {
+  margin: 0%;
+  padding: 0%;
+}
+
+video {
+  width: 100%;
+  min-width: 300px;
+}
+
+@media screen and (min-width: 500px) {
+  .carousel-button {
+    font-size: 2rem;
+    margin: 1rem;
+  }
+}
+
+@media screen and (min-width: 200px) {
+  .overlay-story {
+    font-size: medium;
+    left: 66px;
+
+
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .overlay-story {
+    font-size: medium;
+
+  }
+
+}
+
+@media screen and (min-width: 350px) {
+  .overlay-story {
+    font-size: medium;
+    left: 38%;
+  }
+
+}
+
+@media screen and (min-width: 390px) {
+  .overlay-story {
+    font-size: medium;
+  }
+
+}
+
+@media screen and (min-width: 400px) {
+  .overlay-story {
+    font-size: large;
+    left: 38%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .overlay-story {
+    font-size: large;
+    left: 43%;
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .overlay-story {
+    font-size: x-large;
+
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .overlay-story {
+    font-size: xx-large;
+
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .overlay-story {
+    font-size: xx-large;
+    left: 45%;
+
+
+  }
+}
