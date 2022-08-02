@@ -119,13 +119,7 @@ span.price {
   }
 }
 
-@media (max-width: 900px) {
-  .overlay-bag {
-    top: 80px;
-    }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
   .overlay-bag {
     display: none;
     }
