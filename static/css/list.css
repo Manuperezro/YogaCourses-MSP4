@@ -2,3 +2,10 @@
     left:0px;
     right: 3px;
 }
+
+@media screen and (min-width: 499px) {
+    .card-img-top {
+        height: 250px !important;
+    }
+  
+  }

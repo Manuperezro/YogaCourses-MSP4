@@ -1,10 +1,11 @@
 .card-img-top {
-    height: 325px;
+    height: 300px;
 }
+
 
 @media screen and (min-width: 499px) {
     .card-img-top {
-        height: 250px;
+        height: 250px !important;
     }
   
   }
