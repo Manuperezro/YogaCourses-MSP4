@@ -5,21 +5,7 @@
 
 @media screen and (min-width: 499px) {
     .card-img-top {
-        height: 250px !important;
-    }
-  
-  }
-
-  @media screen and (min-width: 399px) {
-    .card-img-top {
-        height: 225px !important;
-    }
-  
-  }
-
-  @media screen and (min-width: 299px) {
-    .card-img-top {
-        height: 200px !important;
+        height: 300px !important;
     }
   
   }
