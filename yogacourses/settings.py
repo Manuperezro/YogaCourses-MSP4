@@ -180,8 +180,8 @@ if 'USE_AWS' in os.environ:
     # S3 Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'rockyoga'
     AWS_S3_REGION_NAME = 'eu-west-2'
-    AWS_ACCES_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-    AWS_SECRET_ACCES_KEY = os.environ.get('AWS_SECRET_ACCES_KEY')
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCES_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
     # Static and media files
