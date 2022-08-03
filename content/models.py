@@ -85,7 +85,7 @@ class Video(models.Model):
     """ This model will return a video object, the foreign key of this model will point to the videos model """
     section = models.ForeignKey(Section, related_name='videos', on_delete=models.CASCADE)
     video_url = EmbedVideoField()
-    thumbnail = models.ImageField(upload_to='lessons/photos/%Y/%m/%d/')
+    thumbnail = models.ImageField(upload_to='sections')
     title = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, blank=True, unique=True)
     description = models.TextField(blank=True, null=True)
