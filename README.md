@@ -50,35 +50,28 @@ User will be able to create a Shopping cart to store Video-Courses prior purchas
 
   - #### First time Users Goals:
      - Be able to use the website easily.
-     - Be able to purchase products easily.
+     - Be able to browse through all the courses available for purchase.
      - Be able to save products in the shopping cart.
      - Be able to procced with a secure online payment system.
-     - Be able to create an account, login and logout.
-     - Be able to browse through all courses available for purchase
+     - Be able to Register to the website.
+     - Be able to Read about the company of the website
 
   - #### Returning Users Goals:
-     - To find the list of producst saved in their shopping cart .
-     - To be able to modify information in their profiles.
-     - To be able to see the companies social media.
-     - To be able to contact the organization.
-     - Purchase with ease and confidence
-     - To view and edit my shopping basket
-     - Have a page with my information given such as username, email, avatar.
-     
-  - #### Frequent Users Goals:
-     - To see if there is any new Update or New course in the app.
+     - To be able to find the list of producst saved in their shopping cart.
+     - To be able View and edit my shopping basket
+     - To Have a page with my information given such as username, email, avatar.
+     - To be able to Purchase with ease and confidence
+
 
   - #### Website Owner Goals:
-      - As a site owner/admin user, I would like to
-      - Edit products on the websites for reasons such as typo errors, pricing etc
-      - Add and Remove products
+     - Edit products on the websites for reasons such as typo errors, pricing etc
+     - Add and Remove products
 
-  - ### I want users to:
-
-     - Be able to navigate intuitive and whithout many instructions.
-     - Be able to enjoy the service that the app offers wihtout errors.
-     - Be able to purchase as many Videos-Courses as they want.
-     - Be able to open the link of the Video-Courses in a few clicks.
+ - #### As a user in the process of purchasing, I would like to..** 
+     - secured payment system
+     - Be acknowledged of how secure the process is for peace of mind.
+     - Edit my basket such as deleting an item, changing the quantity etc..
+     - Have a confirmation message.
 
 ## **THE 5 PLANES** 
 ### **Strategy** 
@@ -207,22 +200,20 @@ The Basic structure of Rock Yoga on Demand was created using:
 ## Features
 
  - #### Existing Features:
-
- - ##### (Main page)
      
-   + Navigation bar: 
+   ##### Navigation bar: 
 
    - Navigation Menu: I decided to go with a simple and clean navigation bar to keep the feeling of a minimalism Yoga Studio which invite to take a brake and relax.
       
    ![features](static/images/readme/navbar.png "Navigation bar")
 
-   + Courses display list:
+   ##### Courses display list:
 
    - The users are able to see here all the courses that the platform offers. wich name and price, the imgs are links which if the user purchase the course it redirect the users to the       course content.
 
     ![features](static/images/Courselist.png "Course list")
 
-   + Course detail:
+   ##### Course detail:
 
    - Here the users will be able to see A course in detail, accesing to all the content that the course offers will is compose of sections with video tutorials and series.
 
@@ -230,28 +221,28 @@ The Basic structure of Rock Yoga on Demand was created using:
 
     ![features](static/images/details..png "Course detail")
 
-   + Video Detail:
+   ##### Video Detail:
 
    - Here the Users will be able to view the the videos in full screem, also to move throught the differents sections of the courses and the others videos. whith the dropdown list.
   
    ![features](static/images/video-play2.png "Video Detail")
     
 
-   + Shopping cart
+   ##### Shopping cart
    
    - The users will be able to add, adjust quantity and remove Courses from the shopping cart once the register and Login
    - For the bag app I follow the videos of the Botique-Ado, side project from the Diploma in Code Institute, due to the complejity of the code and Stripe. I modify some bits to addapt to the requirements of This project
 
     ![features]( static/images/cart.png "Shopping cart")
 
-   + Checkout 
+   ##### Checkout 
 
    - The users will be able to procced with a secure payments, completing the checkout form.
    - For the Checkout app I also follow the videos of the Botique-Ado, side project from the Diploma in Code Institute, due to the complejity of the code and Stripe. I modify some bits to addapt to the requirements of This project
 
     ![features]( static/images/checkout.png "Checkout")
 
-   + Registration and Login Form.
+   ##### Registration and Login Form.
 
    - I also added a registration and Loging Form, where users can Sign up and register to be able to modify the profile data to acces to the full content and to purchase videos.
 
@@ -259,7 +250,7 @@ The Basic structure of Rock Yoga on Demand was created using:
 
    ![features](static/images/Login.png "Login")
 
-      + Footer.
+    ##### Footer.
 
    - In the footer the users can find all the contact detail, like social media links, phone number, email, and I add a contact form wusing emailJS where the users can contact the bussines directly.
 
@@ -267,6 +258,7 @@ The Basic structure of Rock Yoga on Demand was created using:
   
 
 ## **TESTING**
+
 ### **HTML Testing**
 Using - W3C Markup Validator
 Errors and Warnings in the .html files have been attended with the help of W3 .html Validator. After alterations, no major errors were found in the .html files; Most were related to the django templates. The few slightly concerning errors have been documented below
@@ -280,6 +272,7 @@ _navbar.html| [image](readme/images/w3_navigation.png) | did not want to alter w
 
 ### **CSS Testing**
 | FILE | Result | Notes
+--- | --- | --- |
 navbar.css | [image](static/images/noerrors.css.png) | No errors Found
 list.css | [image](static/images/noerrors.css.png) | No errors Found
 home.css | [image](static/images/noerrors.css.png) | No errors Found
@@ -289,48 +282,44 @@ checkout.css | [image](static/images/noerrors.css.png) | No errors Found
 card.css | [image](static/images/noerrors.css.png) | No errors Found
 base.css | [image](static/images/noerrors.css.png) | No errors Found
 bag.css | [image](static/images/noerrors.css.png) | 1 error found Value Error : font-weight 400px is not a font-weight value : 400px. Fixed
-2 warnings were related to the colours of the background and border of a class element being the same
 
 [top](#content)
 
 ### **PEP8 Testing**
 * I used pep8online to check whether my .py file codes were PEP8 compliant. I made the changes needed for an All right pass for all .py files.
-* After changes were made, an internal server error occured. I had to revert some line of codes (as told to me by my Gitpod terminal) back to its original state for the website to work. More details can be found in ['Bugs and Fixes'](#bugs-and-fixes) section
 
+* I test all the views.py urls.py and models.py from all the apps.
+
+* After changes were made, an internal server error occured. I had to revert some lines of code (as told to me by my Gitpod terminal) back to its original state for the website to work.
+
+* I have to left some errors as (E501: Line too long, and E711: comparison to None should be 'if cond is not None:')
+as when I change it.
 [top](#content)
 
 ### **User Stories Testing**
 | AIM | Achieved | Image |
 --- | --- | --- | 
 **As a first time visitor to the website, I would like to..** 
-Be able to browse through all the art work available for purchase | yes | [image1](readme/images/browsing_1.png) [image2](readme/images/browsing_2.png)|
-Search for specific art work via the name and/or artist | yes | [image1](readme/images/search_artist_name.png) [image2](readme/images/search_name.png) |
-Know basic information of the art work easily such as price, name etc | yes | [image](readme/images/basic_info_of_artwork.png) |
-Sorting of products on to make it easier for what I want | yes | [image](readme/images/sorting_artworks.png) |
-Read about the company of the website | yes | [image](readme/images/read_about_company.png) |
-Be able to communicate with the website as in email, contact number etc | yes | [image1](readme/images/communicate_to_website_1.png) [image2](readme/images/communicate_to_website_2.png) |
-Register to the website | yes | [image](readme/images/register_to_website.png) |
-Read reviews of the art works | yes | [image](readme/images/read_review.png) | 
-Read articles/blogs related to art and the charity sector | yes | [image](readme/images/read_blog_1.png) [image](readme/images/read_blog_2.png) |
-Purchase an item | yes | [image](readme/images/purchase_item_1.png) [image](readme/images/purchase_item_2.png) [image](readme/images/purchase_item_3.png) |
+Be able to browse through all the art work available for purchase | yes | [image1](static/images/Courselist.png) |
+Be able to Search for specific courses via categories | yes | [image1](static/images/sorting.png) |
+Be able to Know basic information of the Courses easily such as price, name etc | yes | [image1](static/images/Courselist.png) |
+Be able to Read about the company of the website | yes | [image](static/images/about.png) |
+Be able to communicate with the website as in email, contact number etc | yes | [image1](static/images/contact.png) |
+Be able to Register to the website | yes | [image](static/images/register.png) |
+Be able to procced with a secure online payment system | yes | [image](static/images/order succesfull.png) |
 **As a registered member to the website, I would like to..** 
-Purchase with ease and confidence | yes | [image](readme/images/easy_purchase_1.png) [image](readme/images/easy_purchase_2.png) |
-View and edit my shopping basket | yes | [image](readme/images/view_and_edit_1.png) [image](readme/images/view_and_edit_2.png) |
-Know about my previous purchases/orders | yes | [image](readme/images/previous_orders.png) |
-Have a page with my information given such as name, address, email etc | yes | [image](readme/images/my_information.png) | 
-Create a favourite/likes list | yes | [image](readme/images/wishlist.png) |
-Post reviews of the art works | yes | [image](readme/images/post_review.png) |
-Post articles/blogs related to art and the charity sector | yes | [image](readme/images/request_blog_post.png) |
+To be able to find the list of producst saved in their shopping cart | yes | [image](static/images/cart.png) |
+To be able View and edit my shopping basket | yes | [image](static/images/cart.png) |
+To have a page with my information given such as name, email, avatar | yes | [image](static/images/Profile.png)) | 
+To be able to Purchase with ease and confidence | yes | [image]() |
 **As a site owner/admin user, I would like to..**
-Edit products on the websites for reasons such as typo errors, pricing etc | yes | [image](readme/images/edit_product_1.png) [image](readme/images/edit_product_2.png) [image](readme/images/edit_product_3.png) |
-Add and remove products | yes | [image delete 1](readme/images/delete_product.png) [image delete 2](readme/images/delete_product_2.png) [image add](readme/images/add_product.png) |
-Add and remove reviews | yes | |
-Approve and then post of blogs by users/member | yes | [image](readme/images/approve_blog.png) |
+Edit products on the websites for reasons such as typo errors, pricing etc | yes | [image](static/images/admin.png) |
+Add and remove products | yes | [image delete 1](readme/images/delete_product.png) [image](static/images/admin.png) |
 **As a user in the process of purchasing, I would like to..** 
 A secured payment system | yes | |
 Be acknowledged of how secure the process is for peace of mind | yes | |
 Edit my basket such as deleting an item, changing the quantity etc | yes | |
-Have a confirmation message | yes | [image](readme/images/purchase_approval.png) |
+Have a confirmation message | yes | |
 
 [top](#content)
 
@@ -339,31 +328,21 @@ Have a confirmation message | yes | [image](readme/images/purchase_approval.png)
 #### CRUD (create, read, update, delete) TESTING
 | AIM | admin | registered user | non-registered user |
 --- | --- | --- | --- |
-**Products/art works - from products app**
+**Courses/art works - from content app**
 CREATE a product to add to the database | yes | no(as intended) | no(as intended)
 READ/see a product from the database on the website | yes | yes | yes
 UPDATE a product | yes | no(as intended) | no(as intended)
 DELETE a product | yes | no(as intended) | no(as intended)
-**Blogs - from blogs app**
-CREATE a blog post to add to the database | yes | yes | no(as intended)
-READ a blog from the website on the website | yes | yes | yes
-UPDATE a blog | no(as intended) | no(as intended) | no(as intended)
-DELETE a blog | yes | no(as intended) | no(as intended)
-**Reviews - from products app**
-CREATE a review | yes | yes(if previously purchased the item) | no(as intended)
-READ a review | yes | yes | yes
-UPDATE a review | no(as intended) | no(as intended) | no(as intended)
-DELETE a review | yes | yes | no(as intended)
-**Crate - from crate app**
+**Bag - from bag app**
 CREATE a crate | yes | yes | yes
 READ a crate | yes | yes | yes
 UPDATE a crate | yes | yes | yes
 DELETE a crat | yes | yes | yes
-**Wishlist - from wishlist app**
-CREATE a wishlist | yes | yes | no(as intended)
+**Profile - from accounts app**
+CREATE a users Profile | yes | yes | no(as intended)
 READ a wishlist | yes | yes | no(as intended)
 UPDATE a wishlist | yes | yes | no(as intended)
-DELETE from wishlist | yes | yes | no(as intended)
+DELETE from wishlist | yes | no | no(as intended)
 
 [top](#content)
 
