@@ -7,6 +7,9 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">   
         <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a href="{% url 'view_home' %}" class="nav-link text-dark nav-text">Home</a>
+            </li>
             <div class="nav-item dropdown">
             <li class="nav-item">
             <a class="nav-link text-dark dropdown-toggle nav-text" href="" id="navbarDropdown" role="button"
@@ -14,7 +17,7 @@
             Categories
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="ml-3 nav-link text-dark nav-text" href="{% url 'course-list' %}?category_filter=4">Mindfullness</a>
+                <a class="ml-3 nav-link text-dark nav-text" href="{% url 'course-list' %}?category_filter=4">Mindfulness</a>
                 <a class="ml-3 nav-link text-dark nav-text" href="{% url 'course-list' %}?category_filter=2">Beginers</a>
                 <a class="ml-3 nav-link text-dark nav-text" href="{% url 'course-list' %}?category_filter=3">Intermediate</a>
                 <a class="ml-3 nav-link text-dark nav-text" href="{% url 'course-list' %}?category_filter=1">Yogateachers</a>

@@ -1,6 +1,5 @@
 from django.urls import path
 from .views import CourseDetailView, VideoDetailView, course_list
-# from .views import intermediate_course_list, begginers_course_list, teachers_course_list
 from . import views
 from .views import CategoryDetailView
 

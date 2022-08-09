@@ -3,9 +3,9 @@
 }
 
 
-@media screen and (min-width: 499px) {
+@media screen and (min-width: 300px) {
     .card-img-top {
-        height: 300px !important;
+        height: 230px;
     }
   
   }

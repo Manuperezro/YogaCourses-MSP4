@@ -33,12 +33,10 @@ class Course(models.Model):
     """ Create Courses which will include list of videos """
     category = models.ForeignKey(Category, related_name='courses', on_delete=models.CASCADE, null=True)
     price = models.FloatField(null=True)
-    # user = models.ForeignKey(Student, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, blank=True, unique=True)
     thumbnail = models.URLField(null=True)
     sub_title = models.CharField(max_length=200)
-    # video_intro_url = models.CharField(max_length=200)
     description = models.TextField(blank=True, null=True)
     active = models.BooleanField(null=True)
     created = models.DateField(auto_now_add=True)
