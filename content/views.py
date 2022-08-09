@@ -26,7 +26,7 @@ class CategoryDetailView(DetailView):
 
         return context
 
-    
+
 def view_home(request, category_slug=None):
     """ A view to return the home page"""
     category_page = None
@@ -36,7 +36,8 @@ def view_home(request, category_slug=None):
         courses = Course.objects.filter(category=category_page)
     else:
         courses = Course.objects.all()
-    return render(request, 'content/home.html', {'category': category_page, 'courses' : courses})
+    return render(request, 'content/home.html', {'category': category_page, 'courses': courses})
+
 
 def course_list(request):
     request.GET.keys()
@@ -56,7 +57,7 @@ def course_list(request):
 
         print('object is ', obj)
         obj.active = product.active
-        price_ = [x for x in prices.data if x.product == product.id][0] 
+        price_ = [x for x in prices.data if x.product == product.id][0]
         print('Price is  ', price_.unit_amount)
         price = float(0)
         if price_.unit_amount is None:
@@ -71,28 +72,32 @@ def course_list(request):
         obj.save()
         new_list.append(obj)
     print('filter is', category_filter)
-    if category_filter: 
+    if category_filter:
         print('category filter')
         course = Course.objects.filter(category=category_filter)
         print('category filter')
-        
-    else:   
+
+    else:
         print('In else')
         course = Course.objects.all()
     context = {
         'course': course,
         'products': new_list,
     }
-    
-    return render(request, template, context)            
+
+    return render(request, template, context)
+
 
 class CourseDetailView(DetailView):
     model = Course
     template_name = "content/course_detail.html"
 
 # I used LoginRequiredMixin here so when students try to acces for a Course
-# That required a payment will redirect the user to the Login view. 
-class VideoDetailView(LoginRequiredMixin, DetailView):     # CoursePermissionMixin as a parameter
+# That required a payment will redirect the user to the Login view.
+
+
+class VideoDetailView(LoginRequiredMixin, DetailView):
+    # CoursePermissionMixin as a parameter
     model = Video
     template_name = "content/video_detail.html"
 
