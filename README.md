@@ -2,9 +2,9 @@ Bugs -Tumbdnail.image
 
 Bug -Sections Modal (Sections HTML), I was using the wrong object in the Video Modal Foreign key 
 
-Bug -hero video, It wasing working because the video was storage in the media_root file, I did move into the static, and create a folder named video. Also used the {% load static %} tag and them simply used the relatifve phile path of the video.mp4 in the vide src
+Bug -hero video, It wasn't working because the video was storage in the media_root file, I did move into the static, and create a folder named video. Also used the {% load static %} tag and them simply used the relatifve phile path of the video.mp4 in the vide src
 
-Developing testing = BDD => tO TES THE DATABASE with models i udes db Borwser and (Video 6. Section 3 Using fixtures to provide initial data for models in Database) python3 manage.py loaddata categrories.json
+Developing testing = BDD => To TEST THE DATABASE with models I used db Borwser and (Video 6. Section 3 Using fixtures to provide initial data for models in Database) python3 manage.py loaddata categrories.json
 
 # Rock Bristol Yoga On  Demand
 
@@ -12,24 +12,26 @@ Developing testing = BDD => tO TES THE DATABASE with models i udes db Borwser an
 
 ## Code Institute - Milestone Project 4
 
-## HTML/ CSS / JavaScript / Python / Django /  - Full Stack Development Milestone Project 3.
+## HTML/ CSS / JavaScript / Python / Django /  - Full Stack Development Milestone Project 4.
 
 ### By Manuel Perez
 
 ## Table of Content
 
-![Mock-up]( "MockUp")
+![Mock-up](static/images/flat-devices-mockup-Home.png "Home")
+
+![Mock-up](static/images/flat-devices-mockup-Courses.png "Courses" )
 
 [View Repository in GitHub Pages](https://github.com/Manuperezro/YogaCourses-MSP4)
 
-[View Deployment link Heroku](https://myrecipes-notebook.herokuapp.com/)
+[View Deployment link Heroku](https://rockyoga.herokuapp.com/)
 
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## The Why
 
-This website is an E-commerce video platform which work as an extension of a real Yoga Studio, to offer Videos Courses to their students who can't attend Phisically to the studio classes o the ono who prefer to learm and practise at home and at differents times. 
+This website is an E-commerce video platform which work as an extension of a real Yoga Studio, to offer Video Courses to their Students/Users who can't attend Phisically to the In studio classes or the ones who prefer to learm and practise from home at differents times. 
 
 ## The Bussines Goal
 
@@ -42,17 +44,17 @@ Users will be able to navigate through the web application easily and find the V
 
 Users will be able to purchase the Video courses.
 
-User will be able top create an Shopping  cart to store Video-Courses prior purchase
+User will be able to create a Shopping cart to store Video-Courses prior purchase
 
 - ### User Stories
 
   - #### First time Users Goals:
-     - be able to use the website easily.
-     - be able to purchase products easily.
-     - be able to save products in the shopping cart.
-     - be able to procced with a secure online payment system.
-     - be able to create an account, login and logout.
-     - be able to browse through all courses available for purchase
+     - Be able to use the website easily.
+     - Be able to purchase products easily.
+     - Be able to save products in the shopping cart.
+     - Be able to procced with a secure online payment system.
+     - Be able to create an account, login and logout.
+     - Be able to browse through all courses available for purchase
 
   - #### Returning Users Goals:
      - To find the list of producst saved in their shopping cart .
@@ -61,7 +63,7 @@ User will be able top create an Shopping  cart to store Video-Courses prior purc
      - To be able to contact the organization.
      - Purchase with ease and confidence
      - To view and edit my shopping basket
-     - Have a page with my information given such as name, address, email etc
+     - Have a page with my information given such as username, email, avatar.
      
   - #### Frequent Users Goals:
      - To see if there is any new Update or New course in the app.
@@ -70,31 +72,29 @@ User will be able top create an Shopping  cart to store Video-Courses prior purc
       - As a site owner/admin user, I would like to
       - Edit products on the websites for reasons such as typo errors, pricing etc
       - Add and Remove products
-      - Approve and then post of blogs by users/members
 
   - ### I want users to:
 
-     - To be able to navigate intuitive and whithout many instructions.
-     - To be able to enjoy the service that the app offers wihtout errors.
-     - To be able to purchase as many Videos-Courses as they want.
-     - To be able to open the link of the Video-Courses in a few clicks.
+     - Be able to navigate intuitive and whithout many instructions.
+     - Be able to enjoy the service that the app offers wihtout errors.
+     - Be able to purchase as many Videos-Courses as they want.
+     - Be able to open the link of the Video-Courses in a few clicks.
 
 ## **THE 5 PLANES** 
 ### **Strategy** 
-- Purpose of the website? To be able to purchase art works to raise money for the charity 
+- Purpose of the website? To be able to purchase Video-Courses 
 
-- Target audience? Art enthusiasts who also care about social disadvantages from around the world 
+- Target audience? Yoga enthusiasts who want to practice yoga or mindfulness from and appreciated the advantages of Online classes. 
 
-- Value to the user? Have a great selection of art works to choose from whist also knowing their money will go to a good cause 
+- Value to the user? Have a great selection of Video-Courses to choose from.
 
 - What makes a good experience? 
     * An easy to navigate website where they will never be more than a few clicks away to the important destinations 
     * A non-cluttered appearance to avoid over irritable stimulation 
     * An easy purchasing process 
     * A consistent theme to the website 
-    * Sufficient information regarding the directly to the product and non direct information of the product such as delivery and what the company is about 
+    * Sufficient information regarding the directly to the product and non direct information of the product such as categories and what the company is about 
 
-- How are we different? No other website has part of the financial part of the purchases go to a charity 
 
 - What we shouldn’t do? 
     * Make purchasing difficult as purchasing will be the main source of income 
@@ -104,9 +104,9 @@ User will be able top create an Shopping  cart to store Video-Courses prior purc
 
    ### Theme and Colour Scheme
 
-The Black-Gold Color Scheme palette has 5 colors which are Chinese Black (#151515), Vampire Black (#0A0A0A), Light Goldenrod Yellow (#FBFCD4), Golden Yellow (#FFDD03) and Golden Poppy (#FBC403).
+Yellow And Gray Color Scheme
 
-This color combination was created by user Manish. The Hex, RGB and CMYK codes are in the table below.
+The Yellow And Gray Color Scheme palette has 5 colors which are Platinum (#E3E3E3), Light Gray (#D6D4D2), Middle Grey (#8B8680), Golden Yellow (#FFDF00) and Spanish Yellow (#EFB90A).
 
 #### Color By color: 
 
@@ -178,7 +178,7 @@ Optimism, Encouragement.
 
 + Colour:
 
-![Color](static/images/readme/black-gold-color-palette-by-schemecolor.png "Color Scheme")
+![Color](static/images/yellow-and-gray-2-by-schemecolor.png "Color Scheme")
 
 - Links : 
 
@@ -220,37 +220,50 @@ The Basic structure of Rock Yoga on Demand was created using:
 
    - The users are able to see here all the courses that the platform offers. wich name and price, the imgs are links which if the user purchase the course it redirect the users to the       course content.
 
-    ![features](static/images/features/Drawbox.png "Course list")
+    ![features](static/images/Courselist.png "Course list")
 
    + Course detail:
 
    - Here the users will be able to see A course in detail, accesing to all the content that the course offers will is compose of sections with video tutorials and series.
 
-   + Shopping Cart:
+   - Also the users will be able to add the course to the shopping cart.
 
-     ![features](Shopping cart "Course list")
+    ![features](static/images/details..png "Course detail")
 
-   + Edit and deleted Recipes
+   + Video Detail:
+
+   - Here the Users will be able to view the the videos in full screem, also to move throught the differents sections of the courses and the others videos. whith the dropdown list.
+  
+   ![features](static/images/video-play2.png "Video Detail")
+    
+
+   + Shopping cart
    
-   - Once the recipes are created they will be able to acces the recipes item and edit, and delete them
+   - The users will be able to add, adjust quantity and remove Courses from the shopping cart once the register and Login
+   - For the bag app I follow the videos of the Botique-Ado, side project from the Diploma in Code Institute, due to the complejity of the code and Stripe. I modify some bits to addapt to the requirements of This project
 
-    ![features](static/images/features/create.recipes.png "Recipes created")
+    ![features]( static/images/cart.png "Shopping cart")
 
-   + Recipes History 
+   + Checkout 
 
-   - I decided to create a list where the users can see every created recipe organize from the latest creation till the oldest.
+   - The users will be able to procced with a secure payments, completing the checkout form.
+   - For the Checkout app I also follow the videos of the Botique-Ado, side project from the Diploma in Code Institute, due to the complejity of the code and Stripe. I modify some bits to addapt to the requirements of This project
 
-   Users also can see wich type of meal is, and date and time of creation. 
-
-    ![features](static/images/features/history.png "Recipes History")
+    ![features]( static/images/checkout.png "Checkout")
 
    + Registration and Login Form.
 
-   - I also added a registration and Loging Form, where users can Sign up and register to be able to see their own data.
+   - I also added a registration and Loging Form, where users can Sign up and register to be able to modify the profile data to acces to the full content and to purchase videos.
 
-   ![features](static/images/features/registration.png "Registration")
+   ![features](static/images/register.png "Registration")
 
-   ![features](static/images/features/login.png "Login")
+   ![features](static/images/Login.png "Login")
+
+      + Footer.
+
+   - In the footer the users can find all the contact detail, like social media links, phone number, email, and I add a contact form wusing emailJS where the users can contact the bussines directly.
+
+   ![features](static/images/footer.png "Footer")
   
 
 ## **TESTING**
@@ -259,15 +272,24 @@ Using - W3C Markup Validator
 Errors and Warnings in the .html files have been attended with the help of W3 .html Validator. After alterations, no major errors were found in the .html files; Most were related to the django templates. The few slightly concerning errors have been documented below
 | FILE | Result | Comment
 --- | --- | --- |
-checkout.html | [image](readme/images/w3_checkout.png) | could not resolve error 7
-footer.html | [image](readme/images/w3_footer.png) | do not believe a title element is needed regarding error 2 and 3
-navigation.html | [image](readme/images/w3_navigation.png) | did not want to alter with error 12 and 13 as it is from Bootstrap and changing of any id names most likely will interfere with the builtin in bootstrap jquery/js
+base.html | [image]() | could not resolve error 7
+_footer.html | [image]() | do not believe a title element is needed regarding error 2 and 3
+_navbar.html| [image](readme/images/w3_navigation.png) | did not want to alter with error 12 and 13 as it is from Bootstrap and changing of any id names most likely will interfere with the builtin in bootstrap jquery/js
 
 [top](#content)
 
 ### **CSS Testing**
 | FILE | Result | Notes
-base.css | [image](readme/images/w3_base_css.png) | 2 warnings were related to the colours of the background and border of a class element being the same
+navbar.css | [image](static/images/noerrors.css.png) | No errors Found
+list.css | [image](static/images/noerrors.css.png) | No errors Found
+home.css | [image](static/images/noerrors.css.png) | No errors Found
+footer.css | [image](static/images/noerrors.css.png) | No errors Found
+course_detail.css | [image](static/images/noerrors.css.png) | No errors Found
+checkout.css | [image](static/images/noerrors.css.png) | No errors Found
+card.css | [image](static/images/noerrors.css.png) | No errors Found
+base.css | [image](static/images/noerrors.css.png) | No errors Found
+bag.css | [image](static/images/noerrors.css.png) | 1 error found Value Error : font-weight 400px is not a font-weight value : 400px. Fixed
+2 warnings were related to the colours of the background and border of a class element being the same
 
 [top](#content)
 
