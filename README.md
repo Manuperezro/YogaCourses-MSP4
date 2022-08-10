@@ -1,11 +1,3 @@
-Bugs -Tumbdnail.image
-
-Bug -Sections Modal (Sections HTML), I was using the wrong object in the Video Modal Foreign key 
-
-Bug -hero video, It wasn't working because the video was storage in the media_root file, I did move into the static, and create a folder named video. Also used the {% load static %} tag and them simply used the relatifve phile path of the video.mp4 in the vide src
-
-Developing testing = BDD => To TEST THE DATABASE with models I used db Borwser and (Video 6. Section 3 Using fixtures to provide initial data for models in Database) python3 manage.py loaddata categrories.json
-
 # Rock Bristol Yoga On  Demand
 
 # A responsive web apllication where the users can PURCHASE Yoga courses in Video format.
@@ -572,28 +564,15 @@ You may want to have access via a copy of the repository on your own device. The
 
 ## **CREDITS**
 ### References
-* REF001 - 'profile' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/2c1b98a8efb748009445d5056c97483b/)
-* REF002 - 'checkout' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/326f171b831446588d33c0333eb4caaa/)
-* REF003 - 'crate' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module)
 
-[top](#content)
-
-### Content
-
-[top](#content)
-
-### Media
-
-* [Pink flip](https://unsplash.com/photos/1BcfKfeavVA)
-* [ueberform](https://unsplash.com/photos/eejq0xM2RTk)
-* [Europeana](https://unsplash.com/photos/6c43FgRt0Dw)
-* [Vojtech Bruzek](https://unsplash.com/photos/mCjA1I8SlS8)
-
-[top](#content)
+* REF001 - 'checkout' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/326f171b831446588d33c0333eb4caaa/)
+* REF002 - 'Bag' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/5ad560616d634896874fc24f20494e19/)
+* REF003 - 'Contetn app' Was inspired and based on an side project I did in UDEMY It was Heavily modify as I change the functionality (https://www.udemy.com/course/draft/4651056/learn/lecture/31918044?start=270#overview)
+* REF004 - 'Carousel JS' Was made with the Help of a Yotube tutorial from CODECADEMY (https://www.codecademy.com/)
 
 ### Acknowledgement 
 * Code Institue course
-* Course tutor Precious Ijege
+* Course tutors 
 * [W3Schools](https://www.w3schools.com/)
 * [Codemy](https://www.youtube.com/c/Codemycom)
 * [Very Academy](https://www.youtube.com/c/veryacademy)
@@ -603,6 +582,7 @@ You may want to have access via a copy of the repository on your own device. The
 [top](#content)
 
 ## **DISCLAIMER**
-This webite was built for educational reasons for my coding course from Code Institute. No content, written(unless mentioned in CREDITS - Content of this document) and imagery, is of mine. No offense was intentionaly made with the pricing of the art works (I randomly made up the numbers), and any namings of art works. If there is anything you would like enquire, please do so via my email manuperezroomeroo@gmail.com
+This webite was built for educational reasons for my coding course from Code Institute. No content, written(unless mentioned in CREDITS - Content of this document) and imagery, is of mine. No offense was intentionaly made with the pricing of the Courses (I randomly made up the numbers, and also randomly collect the videos from YouTube as Content).
+If there is anything you would like enquire, please do so via my email manuperezroomeroo@gmail.com
 
 [top](#content)
