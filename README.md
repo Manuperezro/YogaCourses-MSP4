@@ -256,6 +256,29 @@ The Basic structure of Rock Yoga on Demand was created using:
 
    ![features](static/images/footer.png "Footer")
   
+## **DATABASES**
+
+### **Models Flow Chart**
+
+#### Content Data Base:
+
+![Database](static/images/ContentYogaCoursesDB.jpeg "Content App DB")
+
+![Database](static/images/ContentDBStrucutre.png "Content DB Structure")
+
+![Database](static/images/CategoryDBExample.jpeg "Cateogry DB")
+
+#### Checkout Data Base:
+
+![Database](static/images/CheckoutDB.png "Checkout App DB")
+
+![Database](static/images/CheckoutDStructure.png "Checkout DB Structure")
+
+#### Acconts Data Base:
+
+![Database](static/images/DBStudentYogaCourses.png "Students App DB")
+
+![Database](static/images/StudentDB.png "Students DB Structure")
 
 ## **TESTING**
 
@@ -334,15 +357,15 @@ READ/see a product from the database on the website | yes | yes | yes
 UPDATE a product | yes | no(as intended) | no(as intended)
 DELETE a product | yes | no(as intended) | no(as intended)
 **Bag - from bag app**
-CREATE a crate | yes | yes | yes
-READ a crate | yes | yes | yes
-UPDATE a crate | yes | yes | yes
-DELETE a crat | yes | yes | yes
+CREATE a shopping cart(Add products) | yes | yes | no(as intended)
+READ the products in the Shopping cart | yes | yes | no(as intended)
+UPDATE the products in the Shopping cart | yes | yes | no(as intended)
+DELETE the products in the Shopping cart | yes | yes | no(as intended)
 **Profile - from accounts app**
-CREATE a users Profile | yes | yes | no(as intended)
-READ a wishlist | yes | yes | no(as intended)
-UPDATE a wishlist | yes | yes | no(as intended)
-DELETE from wishlist | yes | no | no(as intended)
+CREATE a Users Profile | yes | yes | no(as intended)
+READ  username, email, avatar | yes | yes | no(as intended)
+UPDATE username, email, avatar | yes | yes | no(as intended)
+DELETE a Users Profile | yes | no | no(as intended)
 
 [top](#content)
 
@@ -350,8 +373,9 @@ DELETE from wishlist | yes | no | no(as intended)
 | AIM | SM | MD | LG |
 --- | --- | --- | --- |
 **Register** 
+'First Name' field must only contain letters, numbers, and @/./+/-/_ characters | yes | yes | yes
+'Last Name' field must only contain letters, numbers, and @/./+/-/_ characters | yes | yes | yes
 'E-mail' field must have follow the pattern of have a '@' and a '.' in the email. It won't accept if it does not | yes | yes | yes
-Both 'E-mail' fields must match | yes | yes | yes
 'Username' field must only contain letters, numbers, and @/./+/-/_ characters | yes | yes | yes
 Both 'Password' fields must match | yes | yes | yes
 **Login**
@@ -361,31 +385,28 @@ Both 'Password' fields must match | yes | yes | yes
 'Full Name' field will only accept upto 50 characters | yes | yes | yes
 'E-mail' field must have follow the pattern of have a '@' and a '.' in the email | yes | yes | yes
 'Phone Number' field will only accept numbers and a maximum of 20 numbers | yes | yes | yes
+'Postcode' field will only accept upto 20 characters | yes | yes | yes
+'Town or City' field will only accept upto 40 characters | yes | yes | yes
 'Street Address 1' field will only accept upto 80 characters | yes | yes | yes
 'Street Address 2' field will only accept upto 80 characters | yes | yes | yes
-'Town or City' field will only accept upto 40 characters | yes | yes | yes
 'County, State, or Locality' field will only accept upto 80 characters | yes | yes | yes
-'Postcode' field will only accept upto 20 characters | yes | yes | yes
 'Card number' field will only accept numbers | yes | yes | yes
-**Add product - add_product.html**
+**Add Course - add_product.html**
 'Category' will have a drop down containing options from the Category database | yes | yes | yes
-'Name' will allow upto 80 characters | yes | yes | yes
-'Artist name' will only allow upto 80 characters | yes | yes | yes
-'Description' will allow upto 500 characters | yes | yes | yes
 'Price' will only accept numbers. It will take a numbers upto 4 digits in length | yes | yes | yes
 'Price' will not go lower than 0 | yes | yes | yes
-'Image url' field will accept only urls | yes | yes | yes
-'Image' will only let image files to be uploaded | yes | yes | yes
-**Create Blog - create_blog.html**
-'Title' field will accept upto 100 characters | yes | yes | yes
-'Article' field has no limits to ammount of characters | yes | yes | yes
-'Image' field will only accept image files | yes | yes | yes
-**Reviews - product_detail.html**
-'Title' field will accept upto 100 characters | yes | yes | yes
-'Review' field will accept upto 1000 characters | yes | yes | yes
-**Contact us - index.html**
+'Name' will allow upto 100 characters | yes | yes | yes
+'Slug' will only allow upto 100 characters | yes | yes | yes
+'Sub_title' will allow upto 200 characters | yes | yes | yes
+'thumbnail' will be a URL field and it is possible to be empty | yes | yes | yes
+'Description' will allow upto 500 characters | yes | yes | yes
+'Active:'  will have a drop down containing options Yes and No | yes | yes | yes
+'Is published' will be click box | yes | yes | yes
+'Is featured' will be a click box | yes | yes | yes
+**Contact us - _footer.html**
 'Name' field will accept upto 100 characters | yes | yes | yes
 'E-mail' field must have follow the pattern of have a '@' and a '.' in the email | yes | yes | yes
+'Text' will allow upto 500 characters | yes | yes | yes
 
 [top](#content)
 
@@ -397,32 +418,38 @@ I used Google Chrom Lighthouse testing to find out the quality of the website. H
 ### Responsive Testing
 AIM | SM | MD | LG |
 --- | --- | --- | --- |
-**HOME - index.html**
+**HOME - home.html**
 Links / URLs | yes | yes | yes
 Images | yes | yes | yes
 Renders as expected | yes | yes | yes
-**PRODUCTS - products.html**
+**COURSES - course_list.html**
 Links / URLs | yes | yes | yes
 Images | yes | yes | yes
 Renders as expected | yes | yes | yes
-**PRODUCT DETAIL - product_detail.html**
-Links / URLs | yes | yes | yes
-Images | yes | yes | yes
-Renders as expected | yes | yes | yes
-Form validation | yes | yes | yes
-**EDIT PRODUCT - edit_product.html**
+**COURSE DETAIL - course_detail.html**
 Links / URLs | yes | yes | yes
 Images | yes | yes | yes
 Renders as expected | yes | yes | yes
 Form validation | yes | yes | yes
-**ADD PRODUCT - add_product.html**
+**VIDEO DETAIL - video_detail.html**
 Links / URLs | yes | yes | yes
 Images | yes | yes | yes
 Renders as expected | yes | yes | yes
 Form validation | yes | yes | yes
-**CRATE - crate.html**
+**BAG - bag.html**
 Links / URLs | yes | yes | yes
 Images | yes | yes | yes
+Renders as expected | yes | yes | yes
+Form validation | yes | yes | yes
+**PROFILE - my_profile.html**
+Links / URLs | yes | yes | yes
+Images | yes | yes | yes
+Renders as expected | yes | yes | yes
+**PROFILE - login.html**
+Links / URLs | yes | yes | yes
+Renders as expected | yes | yes | yes
+**PROFILE - register.html**
+Links / URLs | yes | yes | yes
 Renders as expected | yes | yes | yes
 **CHECKOUT - checkout.html**
 Links / URLs | yes | yes | yes
@@ -432,45 +459,18 @@ Renders as expected | yes | yes | yes
 Links / URLs | yes | yes | yes
 Images | yes | yes | yes
 Renders as expected | yes | yes | yes
-**WISHLIST - wishlist.html**
-Links / URLs | yes | yes | yes
-Images | yes | yes | yes
-Renders as expected | yes | yes | yes
-**BLOGS - blogs.html**
-Links / URLs | yes | yes | yes
-Images | yes | yes | yes
-Renders as expected | yes | yes | yes
-**READ BLOG - read_blog.html**
-Links / URLs | yes | yes | yes
-Images | yes | yes | yes
-Renders as expected | yes | yes | yes
-**CREATE_BLOG - create_blog.hmtl**
-Links / URLs | yes | yes | yes
-Images | yes | yes | yes
-Renders as expected | yes | yes | yes
-Form validation | yes | yes | yes
-**REQUESTED BLOG - requested_blog.html**
-Links / URLs | yes | yes | yes
-Images | yes | yes | yes
-Renders as expected | yes | yes | yes
-Form validation | yes | yes | yes
-**PROFILE - profile.html**
-Links / URLs | yes | yes | yes
-Images | yes | yes | yes
-Renders as expected | yes | yes | yes
-**UPDATE PROFILE - update_profile.html**
-Links / URLs | yes | yes | yes
-Images | yes | yes | yes
-Renders as expected | yes | yes | yes
-Form validation | yes | yes | yes
+
 
 [top](#content)
 
 ### Bugs and Fixes
 ISSUE | Solved? | How? | link
 --- | --- | --- | --- | 
-It was not possible to NOT save the changes made in teh checkout form in checkout.html | Yes | Thanks to helpful student peers (Phillip and Luke) from the Slack community, they posted the required code needed for the checkbox to work with the .js, .html, and .py files. | (https://code-institute-room.slack.com/archives/C7HS3U3AP/p1605302104469800?thread_ts=1605222094.452700&cid=C7HS3U3AP) and (https://code-institute-room.slack.com/archives/C7HS3U3AP/p1621881386435800?thread_ts=1605222094.452700&cid=C7HS3U3AP) 
-inernal server occured after PEP8 chnages | yes | Gitpod terminal told me whre the errors were occuring. Reverted the codes back to its state before the PEP8 changes | [image](readme/images/bugs_and_fixes_pep8.png)
+Some of imgs wans't rendering after Hosting files in AWS S3 | Yes | I found a solution in Slack overflow: I had to change the src in the imgs fields and used a django Pattern {% %} instad | (https://github.com/Manuperezro/YogaCourses-MSP4/commit/d84d53b355f8b56f28f233ca72368e83ce7b9994) 
+Courses(Products form Stripe not rendering | yes | Thanks to one of the amazing tutors I realize that it was a Json object, So I import Json, created and empty list to storage the objects and them append the Products. | (https://github.com/Manuperezro/YogaCourses-MSP4/commit/3e731f54a30dcf01702d40e20ca69791c1203da2)
+Hero video Not rendering | yes | It wasn't working because the video was storage in the media_root file, I did move into the static, and create a folder named video. Also used the {% load static %} tag and them simply used the relatifve phile path of the video.mp4 in the vide src  |(https://github.com/Manuperezro/YogaCourses-MSP4/commit/e4510a2c50a2af0876c8003a8c6c8208fa2eff16)
+Sections not working when I tried to add a new video to the courses | yes | The foreign key in the Sections modal worng, I was using the Category model instead of Course model | (https://github.com/Manuperezro/YogaCourses-MSP4/commit/8ba099f8a27182579c68e53bb8d4636c918031f8)
+YouTube Videos not rendering | Yes | I found a tutorial in google which help me to realize I wasn't copying the right url from youtube, I had to copy  the embed video url, not the video url | (https://startcodingnow.com/embedding-videos-into-django-project/#:~:text=Install%20the%20package%20pip%20install%20django-embed-video%20Change%20settings.py,%28...%20%27embed_video%27%2C%29%20Add%20the%20field%20to%20your%20model)
 
 [top](#content)
 
