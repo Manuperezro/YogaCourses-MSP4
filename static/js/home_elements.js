@@ -5,6 +5,7 @@ function modulo(number, mod) {
   if (result < 0) {
     result += mod;
   }
+  
   return result;
 }
 
@@ -58,3 +59,5 @@ $(document).ready(function(){
 		$('#joinmodal').modal('show')
 	});
 });
+
+module.exports = { };
