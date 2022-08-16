@@ -49,20 +49,20 @@ carousels.forEach(setUpCarousel);
 
 // effects 
 
-// $(document).hover(function(){
-//     $(".overlay-story").hover(function(){
-//       $(this).css("background-color", "#d39e00");
-//       }, function(){
-//       $(this).css("background-color", "aliceblue");
-//     });
-//   });
+$(document).hover(function(){
+    $(".overlay-story").hover(function(){
+      $(this).css("background-color", "#d39e00");
+      }, function(){
+      $(this).css("background-color", "aliceblue");
+    });
+  });
 
 // Modal Footer
 
-// $(document).ready(function(){
-// 	$('#joinmodal').click(function(){
-// 		$('#joinmodal').modal('show')
-// 	});
-// });
+$(document).ready(function(){
+	$('#joinmodal').click(function(){
+		$('#joinmodal').modal('show')
+	});
+});
 
 module.exports = {sum, modulo};
