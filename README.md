@@ -315,7 +315,7 @@ as when I change it.
 | AIM | Achieved | Image |
 --- | --- | --- | 
 **As a first time visitor to the website, I would like to..** 
-Be able to browse through all the art work available for purchase | yes | [image1](static/images/Courselist.png) |
+Be able to browse through all the courses available for purchase | yes | [image1](static/images/Courselist.png) |
 Be able to Search for specific courses via categories | yes | [image1](static/images/sorting.png) |
 Be able to Know basic information of the Courses easily such as price, name etc | yes | [image1](static/images/Courselist.png) |
 Be able to Read about the company of the website | yes | [image](static/images/about.png) |
@@ -403,7 +403,7 @@ Both 'Password' fields must match | yes | yes | yes
 [top](#content)
 
 ### Lighthouse testing
-I used Google Chrom Lighthouse testing to find out the quality of the website. Here are my results: [image](readme/images/lighthouse_testing.png)
+I used Google Chrome Lighthouse testing to find out the quality of the website. Here are my results: [image](static/images/light House.png)
 
 [top](#content)
 
@@ -451,6 +451,16 @@ Renders as expected | yes | yes | yes
 Links / URLs | yes | yes | yes
 Images | yes | yes | yes
 Renders as expected | yes | yes | yes
+
+### Jest Test Testing Javascript:
+
+##### I used Jest test to set some of the functions I create with Javascript.
+
+I didnt mannage to test jQuery Code. So create some Mock Function to do the testing
+
+![Jest Test](static/images/emailJsTest.png "EmailJs")
+
+![Jest Test](static/images/home-Elements.Test.png "Home_elemts")
 
 
 [top](#content)
