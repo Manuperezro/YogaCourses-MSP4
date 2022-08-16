@@ -1,3 +1,14 @@
+function Response(response) {
+    console.log('SUCCESS', response);
+    
+    if (response == "success") {
+        $('#myModal').modal('show');
+    }
+    else{
+        return "FAILED"
+    }
+};
+
 function sendMail(contactForm) {
     emailjs.send("service_y0ogew3", "template_opd47s5", 
     {"from_email":contactForm.email.value,
@@ -27,4 +38,4 @@ function sendMail(contactForm) {
 }
 
 
-module.exports = { };
+module.exports = { Response };

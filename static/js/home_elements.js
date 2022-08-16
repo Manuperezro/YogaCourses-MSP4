@@ -1,5 +1,10 @@
   // Carousel following the youtube tutorial Users Stories Jasvascrpt carousel By Codelab
 
+  // Function to test if Jest test is working
+function sum(a, b) {
+    return a + b;
+  }
+
 function modulo(number, mod) {
   let result = number % mod;
   if (result < 0) {
@@ -44,20 +49,20 @@ carousels.forEach(setUpCarousel);
 
 // effects 
 
-$(document).hover(function(){
-    $(".overlay-story").hover(function(){
-      $(this).css("background-color", "#d39e00");
-      }, function(){
-      $(this).css("background-color", "aliceblue");
-    });
-  });
+// $(document).hover(function(){
+//     $(".overlay-story").hover(function(){
+//       $(this).css("background-color", "#d39e00");
+//       }, function(){
+//       $(this).css("background-color", "aliceblue");
+//     });
+//   });
 
 // Modal Footer
 
-$(document).ready(function(){
-	$('#joinmodal').click(function(){
-		$('#joinmodal').modal('show')
-	});
-});
+// $(document).ready(function(){
+// 	$('#joinmodal').click(function(){
+// 		$('#joinmodal').modal('show')
+// 	});
+// });
 
-module.exports = {  };
+module.exports = {sum, modulo};
