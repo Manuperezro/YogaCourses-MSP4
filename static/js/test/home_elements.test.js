@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-const { modulo, sum } = require('../home_elements');
+const { sum, modulo } = require('../home_elements');
 
 test('adds 1 + 2 to equal 3', () => {
   expect(sum(1, 2)).toBe(3);

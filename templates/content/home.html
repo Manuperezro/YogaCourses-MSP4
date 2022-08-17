@@ -7,7 +7,7 @@ Home
 
 <div class="hero mt-1">
     <div class="embed-responsive-16by9">
-        <video id="background-video" autoplay loop controls poster="" class="embed-responsive-item">
+        <video id="background-video" autoplay loop controls class="embed-responsive-item">
             <source src="{% static 'videos/video.mp4' %}" type="video/mp4">
         </video>
         <div class="overlay-video mt-5">
@@ -83,6 +83,7 @@ Home
     </div>
     </div>
   </div>
+</div>
 
 {% block postloadjs %}
     <script src="{% static 'js/home_elements.js' %}"></script>

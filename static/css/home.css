@@ -218,6 +218,12 @@ video {
   }
 }
 
+@media screen and (max-width: 299px) {
+  .carousel-button {
+    top: 25% !important;
+  }
+}
+
 @media screen and (max-width: 950px) {
   .carousel-button {
     top: 35% !important;

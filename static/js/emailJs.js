@@ -37,5 +37,4 @@ function sendMail(contactForm) {
     return false; 
 }
 
-
 module.exports = { Response };

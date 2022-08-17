@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-const {Response }= require("../emailJs");
+const { Response }= require("../emailJs");
 
 test('error message when email info is missing', () => {
   let response= "error";

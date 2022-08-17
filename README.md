@@ -10,6 +10,71 @@
 
 ## Table of Content
 
+# content 
+
+- [Rock Bristol Yoga On  Demand](#rock-bristol-yoga-on--demand)
+- [A responsive web apllication where the users can PURCHASE Yoga courses in Video format.](#a-responsive-web-apllication-where-the-users-can-purchase-yoga-courses-in-video-format)
+  * [Code Institute - Milestone Project 4](#code-institute---milestone-project-4)
+  * [HTML/ CSS / JavaScript / Python / Django /  - Full Stack Development Milestone Project 4.](#html--css---javascript---python---django------full-stack-development-milestone-project-4)
+    + [By Manuel Perez](#by-manuel-perez)
+  * [Table of Content](#table-of-content)
+  * [The Why](#the-why)
+  * [The Bussines Goal](#the-bussines-goal)
+  * [(UX) User Experience:](#-ux--user-experience-)
+    + [User Stories](#user-stories)
+      - [First time Users Goals:](#first-time-users-goals-)
+      - [Returning Users Goals:](#returning-users-goals-)
+      - [Website Owner Goals:](#website-owner-goals-)
+      - [As a user in the process of purchasing, I would like to..**](#as-a-user-in-the-process-of-purchasing--i-would-like-to--)
+  * [**THE 5 PLANES**](#--the-5-planes--)
+    + [**Strategy**](#--strategy--)
+  * [Design:](#design-)
+    + [Theme and Colour Scheme](#theme-and-colour-scheme)
+      - [Color By color:](#color-by-color-)
+    + [Design Brief:](#design-brief-)
+  * [Wireframes](#wireframes)
+  * [Features](#features)
+      - [Existing Features:](#existing-features-)
+        * [Navigation bar:](#navigation-bar-)
+        * [Courses display list:](#courses-display-list-)
+        * [Course detail:](#course-detail-)
+        * [Video Detail:](#video-detail-)
+        * [Shopping cart](#shopping-cart)
+        * [Checkout](#checkout)
+        * [Registration and Login Form.](#registration-and-login-form)
+  * [**DATABASES**](#--databases--)
+    + [**Models Flow Chart**](#--models-flow-chart--)
+      - [Content Data Base:](#content-data-base-)
+      - [Checkout Data Base:](#checkout-data-base-)
+      - [Acconts Data Base:](#acconts-data-base-)
+  * [**TESTING**](#--testing--)
+    + [**HTML Testing**](#--html-testing--)
+    + [**CSS Testing**](#--css-testing--)
+    + [**PEP8 Testing**](#--pep8-testing--)
+    + [**User Stories Testing**](#--user-stories-testing--)
+    + [**Cross Platfrom Testing**](#--cross-platfrom-testing--)
+      - [CRUD (create, read, update, delete) TESTING](#crud--create--read--update--delete--testing)
+    + [FORM VALIDATION TESTING](#form-validation-testing)
+    + [Lighthouse testing](#lighthouse-testing)
+    + [Responsive Testing](#responsive-testing)
+    + [Jest Test Testing Javascript:](#jest-test-testing-javascript-)
+        * [I used Jest test to set some of the functions I create with Javascript.](#i-used-jest-test-to-set-some-of-the-functions-i-create-with-javascript)
+    + [Django test Testing Python code, views and Models:](#django-test-testing-python-code--views-and-models-)
+        * [I used Django tests to set some models and views I cretes  with Python.](#i-used-django-tests-to-set-some-models-and-views-i-cretes--with-python)
+    + [Bugs and Fixes](#bugs-and-fixes)
+  * [**DEPLOYMENT**](#--deployment--)
+    + [Making a local clone](#making-a-local-clone)
+    + [Working with a local clone](#working-with-a-local-clone)
+    + [Deploying to Heroku](#deploying-to-heroku)
+    + [Hosting files with AWS](#hosting-files-with-aws)
+    + [Setting up a real active email service](#setting-up-a-real-active-email-service)
+  * [**CREDITS**](#--credits--)
+    + [References](#references)
+    + [Acknowledgement](#acknowledgement)
+  * [**DISCLAIMER**](#--disclaimer--)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 ![Mock-up](static/images/flat-devices-mockup-Home.png "Home")
 
 ![Mock-up](static/images/flat-devices-mockup-Courses.png "Courses" )
@@ -17,9 +82,6 @@
 [View Repository in GitHub Pages](https://github.com/Manuperezro/YogaCourses-MSP4)
 
 [View Deployment link Heroku](https://rockyoga.herokuapp.com/)
-
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## The Why
 
@@ -64,6 +126,8 @@ User will be able to create a Shopping cart to store Video-Courses prior purchas
      - Be acknowledged of how secure the process is for peace of mind.
      - Edit my basket such as deleting an item, changing the quantity etc..
      - Have a confirmation message.
+
+[top](#content)
 
 ## **THE 5 PLANES** 
 ### **Strategy** 
@@ -177,6 +241,8 @@ the goal was to inspire a space where you can feel freedom, free of extress and 
 
 Where the mind can take you to a meditative state without strees and distrumtions easyly.
 
+[top](#content)
+
 ## Wireframes
 
 The Basic structure of Rock Yoga on Demand was created using: 
@@ -188,6 +254,8 @@ The Basic structure of Rock Yoga on Demand was created using:
  ![wireframe](static/images/readme/wireframe1.png "PC  and phone wireframe")
 
  ![wireframe](static/images/readme/wireframe2.png "PC  and phone wireframe")
+
+[top](#content)
 
 ## Features
 
@@ -248,6 +316,8 @@ The Basic structure of Rock Yoga on Demand was created using:
 
    ![features](static/images/footer.png "Footer")
   
+[top](#content)
+
 ## **DATABASES**
 
 ### **Models Flow Chart**
@@ -280,12 +350,18 @@ Errors and Warnings in the .html files have been attended with the help of W3 .h
 | FILE | Result | Comment
 --- | --- | --- |
 base.html | [image](static/images/base.html-validator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
-_footer.html | [image]() | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
+_footer.html | [image](static/images/course_list.validator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
 _navbar.html| [image](readme/images/w3_navigation.png) |Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}, Also error 6 left, as When I try to change the Div it brakes the dropdown error
-video_detail.html | [image]() | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
-home.html | [image]() | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
-course_list.html | [image]() | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
-course_detail.html | [image]() | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
+video_detail.html | [image](static/images/videodetailvalidator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
+home.html | [image](static/images/home.validator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
+course_list.html | [image](static/images/course_list.validator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
+course_detail.html | [image](static/images/course_detailvalidator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
+register.html | [image](static/images/course_list.validator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
+my_profile.html | [image](static/images/course_list.validator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
+login.html | [image](static/images/course_list.validator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
+bag.html | [image](static/images/bag.validator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
+checkout_success.html | [image](static/images/sucess.validator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
+checkout.html | [image](static/images/checkout.validator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
 
 [top](#content)
 
@@ -466,6 +542,12 @@ I didnt mannage to test jQuery Code. So create some Mock Function to do the test
 
 ![Jest Test](static/images/home-Elements.Test.png "Home_elemts")
 
+### Django test Testing Python code, views and Models:
+
+##### I used Django tests to set some models and views I cretes  with Python.
+
+
+[Test Commit](https://github.com/Manuperezro/YogaCourses-MSP4/commit/a88b036998cb1502d1df75f4ba57c19b959e9850/)
 
 [top](#content)
 

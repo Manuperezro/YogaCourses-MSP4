@@ -13,6 +13,7 @@ function modulo(number, mod) {
   
   return result;
 }
+  // Function to test if Jest test is working End
 
 function setUpCarousel(carousel) {
   function handleNext() {
