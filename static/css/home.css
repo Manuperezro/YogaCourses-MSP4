@@ -132,7 +132,6 @@ video {
   .carousel-button {
     font-size: 2rem;
     margin: 1rem;
-    top: 35% !important;
   }
 }
 
@@ -208,11 +207,12 @@ video {
 
 @media screen and (max-width: 499px) {
   .carousel-button {
-    top: 20% !important;
+    top: 25% !important;
   }
 }
 
-@media screen and (max-width: 499px) {
+
+@media screen and (max-width: 399px) {
   .carousel-button {
     top: 20% !important;
   }
@@ -220,7 +220,7 @@ video {
 
 @media screen and (max-width: 950px) {
   .carousel-button {
-    top: 40% !important;
+    top: 35% !important;
   }
 }
 
