@@ -132,6 +132,7 @@ video {
   .carousel-button {
     font-size: 2rem;
     margin: 1rem;
+    top: 35% !important;
   }
 }
 

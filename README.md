@@ -279,9 +279,13 @@ Using - W3C Markup Validator
 Errors and Warnings in the .html files have been attended with the help of W3 .html Validator. After alterations, no major errors were found in the .html files; Most were related to the django templates. The few slightly concerning errors have been documented below
 | FILE | Result | Comment
 --- | --- | --- |
-base.html | [image]() | could not resolve error 7
-_footer.html | [image]() | do not believe a title element is needed regarding error 2 and 3
-_navbar.html| [image](readme/images/w3_navigation.png) | did not want to alter with error 12 and 13 as it is from Bootstrap and changing of any id names most likely will interfere with the builtin in bootstrap jquery/js
+base.html | [image](static/images/base.html-validator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
+_footer.html | [image]() | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
+_navbar.html| [image](readme/images/w3_navigation.png) |Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}, Also error 6 left, as When I try to change the Div it brakes the dropdown error
+video_detail.html | [image]() | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
+home.html | [image]() | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
+course_list.html | [image]() | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
+course_detail.html | [image]() | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
 
 [top](#content)
 
