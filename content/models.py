@@ -37,6 +37,7 @@ class Course(models.Model):
     price = models.FloatField(null=True)
     name = models.CharField(max_length=100)
     slug = models.SlugField(max_length=100, blank=True, unique=True)
+    video_intro_url = EmbedVideoField(null=True)
     thumbnail = models.URLField(null=True)
     sub_title = models.CharField(max_length=200)
     description = models.TextField(blank=True, null=True)
