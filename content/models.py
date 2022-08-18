@@ -127,6 +127,7 @@ def pre_save_video(sender, instance, *args, **kwargs):
     if not instance.slug:
         instance.slug = slugify(instance.title)
 
+
 pre_save.connect(pre_save_course, sender=Course)
 pre_save.connect(pre_save_section, sender=Section)
 pre_save.connect(pre_save_video, sender=Video)
