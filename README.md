@@ -281,6 +281,9 @@ The Basic structure of Rock Yoga on Demand was created using:
 
    ##### Course detail:
 
+   - I Decided to dont use an auto play video here as it was to noise to navigate through the Content and be able to see all the sections of the courses, so I left the Video    decoration around the course image to create the feeling of a video platform, every single image below in the section will open a video. 
+    I did this by modifing the model and removing the url_intro_video. and adding the thumbnail image.   
+
    - Here the users will be able to see A course in detail, accesing to all the content that the course offers will is compose of sections with video tutorials and series.
 
    - Also the users will be able to add the course to the shopping cart.
