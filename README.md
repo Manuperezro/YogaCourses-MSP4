@@ -8,80 +8,86 @@
 
 ### By Manuel Perez
 
-## Table of Content
 
-# content 
-
-- [Rock Bristol Yoga On  Demand](#rock-bristol-yoga-on--demand)
-- [A responsive web apllication where the users can PURCHASE Yoga courses in Video format.](#a-responsive-web-apllication-where-the-users-can-purchase-yoga-courses-in-video-format)
-  * [Code Institute - Milestone Project 4](#code-institute---milestone-project-4)
-  * [HTML/ CSS / JavaScript / Python / Django /  - Full Stack Development Milestone Project 4.](#html--css---javascript---python---django------full-stack-development-milestone-project-4)
-    + [By Manuel Perez](#by-manuel-perez)
-  * [Table of Content](#table-of-content)
-  * [The Why](#the-why)
-  * [The Bussines Goal](#the-bussines-goal)
-  * [(UX) User Experience:](#-ux--user-experience-)
-    + [User Stories](#user-stories)
-      - [First time Users Goals:](#first-time-users-goals-)
-      - [Returning Users Goals:](#returning-users-goals-)
-      - [Website Owner Goals:](#website-owner-goals-)
-      - [As a user in the process of purchasing, I would like to..**](#as-a-user-in-the-process-of-purchasing--i-would-like-to--)
-  * [**THE 5 PLANES**](#--the-5-planes--)
-    + [**Strategy**](#--strategy--)
-  * [Design:](#design-)
-    + [Theme and Colour Scheme](#theme-and-colour-scheme)
-      - [Color By color:](#color-by-color-)
-    + [Design Brief:](#design-brief-)
-  * [Wireframes](#wireframes)
-  * [Features](#features)
-      - [Existing Features:](#existing-features-)
-        * [Navigation bar:](#navigation-bar-)
-        * [Courses display list:](#courses-display-list-)
-        * [Course detail:](#course-detail-)
-        * [Video Detail:](#video-detail-)
-        * [Shopping cart](#shopping-cart)
-        * [Checkout](#checkout)
-        * [Registration and Login Form.](#registration-and-login-form)
-  * [**DATABASES**](#--databases--)
-    + [**Models Flow Chart**](#--models-flow-chart--)
-      - [Content Data Base:](#content-data-base-)
-      - [Checkout Data Base:](#checkout-data-base-)
-      - [Acconts Data Base:](#acconts-data-base-)
-  * [**TESTING**](#--testing--)
-    + [**HTML Testing**](#--html-testing--)
-    + [**CSS Testing**](#--css-testing--)
-    + [**PEP8 Testing**](#--pep8-testing--)
-    + [**User Stories Testing**](#--user-stories-testing--)
-    + [**Cross Platfrom Testing**](#--cross-platfrom-testing--)
-      - [CRUD (create, read, update, delete) TESTING](#crud--create--read--update--delete--testing)
-    + [FORM VALIDATION TESTING](#form-validation-testing)
-    + [Lighthouse testing](#lighthouse-testing)
-    + [Responsive Testing](#responsive-testing)
-    + [Jest Test Testing Javascript:](#jest-test-testing-javascript-)
-        * [I used Jest test to set some of the functions I create with Javascript.](#i-used-jest-test-to-set-some-of-the-functions-i-create-with-javascript)
-    + [Django test Testing Python code, views and Models:](#django-test-testing-python-code--views-and-models-)
-        * [I used Django tests to set some models and views I cretes  with Python.](#i-used-django-tests-to-set-some-models-and-views-i-cretes--with-python)
-    + [Bugs and Fixes](#bugs-and-fixes)
-  * [**DEPLOYMENT**](#--deployment--)
-    + [Making a local clone](#making-a-local-clone)
-    + [Working with a local clone](#working-with-a-local-clone)
-    + [Deploying to Heroku](#deploying-to-heroku)
-    + [Hosting files with AWS](#hosting-files-with-aws)
-    + [Setting up a real active email service](#setting-up-a-real-active-email-service)
-  * [**CREDITS**](#--credits--)
-    + [References](#references)
-    + [Acknowledgement](#acknowledgement)
-  * [**DISCLAIMER**](#--disclaimer--)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ![Mock-up](static/images/flat-devices-mockup-Home.png "Home")
 
 ![Mock-up](static/images/flat-devices-mockup-Courses.png "Courses" )
 
+
+### Repository Link
+
 [View Repository in GitHub Pages](https://github.com/Manuperezro/YogaCourses-MSP4)
 
+### Live Project Link
+
 [View Deployment link Heroku](https://rockyoga.herokuapp.com/)
+
+## Table of Content
+
+- [The Why](#the-why)
+- [The Bussines Goal](#the-bussines-goal)
+- [(UX) User Experience:](#-ux--user-experience-)
+  * [User Stories](#user-stories)
+    + [First time Users Goals:](#first-time-users-goals-)
+    + [Returning Users Goals:](#returning-users-goals-)
+    + [Website Owner Goals:](#website-owner-goals-)
+    + [As a user in the process of purchasing, I would like to..**](#as-a-user-in-the-process-of-purchasing--i-would-like-to--)
+- [**THE 5 PLANES**](#--the-5-planes--)
+  * [**Strategy**](#--strategy--)
+- [Design:](#design-)
+  * [Theme and Colour Scheme](#theme-and-colour-scheme)
+    + [Color By color:](#color-by-color-)
+  * [Design Brief:](#design-brief-)
+- [Wireframes](#wireframes)
+- [Features](#features)
+    + [Existing Features:](#existing-features-)
+      - [Navigation bar:](#navigation-bar-)
+      - [Courses display list:](#courses-display-list-)
+      - [Course detail:](#course-detail-)
+      - [Video Detail:](#video-detail-)
+      - [Shopping cart](#shopping-cart)
+      - [Checkout](#checkout)
+      - [Registration and Login Form.](#registration-and-login-form)
+- [Future Features I will like to include.](#future-features-i-will-like-to-include)
+      - [Download the content](#download-the-content)
+      - [Membership Options](#membership-options)
+      - [Yoga API](#yoga-api)
+- [**DATABASES**](#--databases--)
+  * [**Models Flow Chart**](#--models-flow-chart--)
+    + [Content Data Base:](#content-data-base-)
+    + [Checkout Data Base:](#checkout-data-base-)
+    + [Acconts Data Base:](#acconts-data-base-)
+- [**TESTING**](#--testing--)
+  * [**HTML Testing**](#--html-testing--)
+  * [**CSS Testing**](#--css-testing--)
+  * [**PEP8 Testing**](#--pep8-testing--)
+  * [**User Stories Testing**](#--user-stories-testing--)
+  * [**Cross Platfrom Testing**](#--cross-platfrom-testing--)
+    + [CRUD (create, read, update, delete) TESTING](#crud--create--read--update--delete--testing)
+  * [FORM VALIDATION TESTING](#form-validation-testing)
+  * [Lighthouse testing](#lighthouse-testing)
+  * [Responsive Testing](#responsive-testing)
+  * [Jest Test Testing Javascript:](#jest-test-testing-javascript-)
+      - [I used Jest test to set some of the functions I create with Javascript.](#i-used-jest-test-to-set-some-of-the-functions-i-create-with-javascript)
+  * [Django test Testing Python code, views and Models:](#django-test-testing-python-code--views-and-models-)
+      - [I used Django tests to set some models and views I cretes  with Python.](#i-used-django-tests-to-set-some-models-and-views-i-cretes--with-python)
+  * [Bugs and Fixes](#bugs-and-fixes)
+- [**DEPLOYMENT**](#--deployment--)
+  * [Making a local clone](#making-a-local-clone)
+  * [Working with a local clone](#working-with-a-local-clone)
+  * [Deploying to Heroku](#deploying-to-heroku)
+  * [Hosting files with AWS](#hosting-files-with-aws)
+  * [Setting up a real active email service](#setting-up-a-real-active-email-service)
+- [**CREDITS**](#--credits--)
+  * [References](#references)
+  * [Acknowledgement](#acknowledgement)
+- [**DISCLAIMER**](#--disclaimer--)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
+# content 
 
 ## The Why
 
@@ -247,7 +253,7 @@ Where the mind can take you to a meditative state without strees and distrumtion
 
 The Basic structure of Rock Yoga on Demand was created using: 
 
-  [balsamiq](https://balsamiq.com/).
+ [balsamiq](https://balsamiq.com/).
 
 - PC Mac screen: 
 
@@ -315,7 +321,25 @@ The Basic structure of Rock Yoga on Demand was created using:
    - In the footer the users can find all the contact detail, like social media links, phone number, email, and I add a contact form wusing emailJS where the users can contact the bussines directly.
 
    ![features](static/images/footer.png "Footer")
+
+## Future Features I will like to include.
+
+   ##### Download the content
+
+   - I will like to add the option to download the videos into the users pc after purchase.
+
+
+   ##### Membership Options
+
+   - I will probably include some memberships options so the users can get acces to specific content, depends of the membership they purchase.
+
+   - In this project the content can be accese without actually purchase, as I wanted to create the logic for a shopping cart using in real life e-commerce appication with the Idea that DVDs will be sent to the users addres without delivery cost.
   
+
+   ##### Yoga API
+
+   - I will include a yoga API wich will be used by users to transalate some yoga poses from Sanskrit to their english name.
+
 [top](#content)
 
 ## **DATABASES**
@@ -659,16 +683,18 @@ You may want to have access via a copy of the repository on your own device. The
 [top](#content)
 
 ## **CREDITS**
+
 ### References
 
-* REF001 - 'checkout' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/326f171b831446588d33c0333eb4caaa/)
-* REF002 - 'Bag' app was heavily copied/slightly adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/5ad560616d634896874fc24f20494e19/)
+* REF001 - 'checkout' app was heavily copied and adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/326f171b831446588d33c0333eb4caaa/)
+* REF002 - 'Bag' app was heavily copied and adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/5ad560616d634896874fc24f20494e19/)
 * REF003 - 'Contetn app' Was inspired and based on an side project I did in UDEMY It was Heavily modify as I change the functionality (https://www.udemy.com/course/draft/4651056/learn/lecture/31918044?start=270#overview)
 * REF004 - 'Carousel JS' Was made with the Help of a Yotube tutorial from CODECADEMY (https://www.codecademy.com/)
 
 ### Acknowledgement 
 * Code Institue course
 * Course tutors 
+* City of Bristol College
 * [W3Schools](https://www.w3schools.com/)
 * [Codemy](https://www.youtube.com/c/Codemycom)
 * [Very Academy](https://www.youtube.com/c/veryacademy)
