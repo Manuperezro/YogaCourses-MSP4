@@ -1,6 +1,6 @@
 # Rock Bristol Yoga On  Demand
 
-# A responsive web apllication where the users can PURCHASE Yoga courses in Video format.
+# A responsive web application where the users can PURCHASE Yoga courses in Video format.
 
 ## Code Institute - Milestone Project 4
 
@@ -9,91 +9,90 @@
 ### By Manuel Perez
 
 
-
 ![Mock-up](static/images/flat-devices-mockup-Home.png "Home")
 
 ![Mock-up](static/images/flat-devices-mockup-Courses.png "Courses" )
 
-
 ### Repository Link
 
-[View Repository in GitHub Pages](https://github.com/Manuperezro/YogaCourses-MSP4)
+[View Repository in GitHub Pages] (https://github.com/Manuperezro/YogaCourses-MSP4)
 
 ### Live Project Link
 
-[View Deployment link Heroku](https://rockyoga.herokuapp.com/)
+[View Deployment link Heroku] (https://rockyoga.herokuapp.com/)
 
 ## Table of Content
 
-- [The Why](#the-why)
-- [The Bussines Goal](#the-bussines-goal)
-- [(UX) User Experience:](#-ux--user-experience-)
-  * [User Stories](#user-stories)
-    + [First time Users Goals:](#first-time-users-goals-)
-    + [Returning Users Goals:](#returning-users-goals-)
-    + [Website Owner Goals:](#website-owner-goals-)
-    + [As a user in the process of purchasing, I would like to..**](#as-a-user-in-the-process-of-purchasing--i-would-like-to--)
-- [**THE 5 PLANES**](#--the-5-planes--)
-  * [**Strategy**](#--strategy--)
-- [Design:](#design-)
-  * [Theme and Colour Scheme](#theme-and-colour-scheme)
-    + [Color By color:](#color-by-color-)
-  * [Design Brief:](#design-brief-)
-- [Wireframes](#wireframes)
-- [Features](#features)
-    + [Existing Features:](#existing-features-)
-      - [Navigation bar:](#navigation-bar-)
-      - [Courses display list:](#courses-display-list-)
-      - [Course detail:](#course-detail-)
-      - [Video Detail:](#video-detail-)
-      - [Shopping cart](#shopping-cart)
-      - [Checkout](#checkout)
-      - [Registration and Login Form.](#registration-and-login-form)
-- [Future Features I will like to include.](#future-features-i-will-like-to-include)
-      - [Download the content](#download-the-content)
-      - [Membership Options](#membership-options)
-      - [Yoga API](#yoga-api)
-- [**DATABASES**](#--databases--)
-  * [**Models Flow Chart**](#--models-flow-chart--)
-    + [Content Data Base:](#content-data-base-)
-    + [Checkout Data Base:](#checkout-data-base-)
-    + [Acconts Data Base:](#acconts-data-base-)
-- [**TESTING**](#--testing--)
-  * [**HTML Testing**](#--html-testing--)
-  * [**CSS Testing**](#--css-testing--)
-  * [**PEP8 Testing**](#--pep8-testing--)
-  * [**User Stories Testing**](#--user-stories-testing--)
-  * [**Cross Platfrom Testing**](#--cross-platfrom-testing--)
-    + [CRUD (create, read, update, delete) TESTING](#crud--create--read--update--delete--testing)
-  * [FORM VALIDATION TESTING](#form-validation-testing)
-  * [Lighthouse testing](#lighthouse-testing)
-  * [Responsive Testing](#responsive-testing)
-  * [Jest Test Testing Javascript:](#jest-test-testing-javascript-)
-      - [I used Jest test to set some of the functions I create with Javascript.](#i-used-jest-test-to-set-some-of-the-functions-i-create-with-javascript)
-  * [Django test Testing Python code, views and Models:](#django-test-testing-python-code--views-and-models-)
-      - [I used Django tests to set some models and views I cretes  with Python.](#i-used-django-tests-to-set-some-models-and-views-i-cretes--with-python)
-  * [Bugs and Fixes](#bugs-and-fixes)
-- [**DEPLOYMENT**](#--deployment--)
-  * [Making a local clone](#making-a-local-clone)
-  * [Working with a local clone](#working-with-a-local-clone)
-  * [Deploying to Heroku](#deploying-to-heroku)
-  * [Hosting files with AWS](#hosting-files-with-aws)
-  * [Setting up a real active email service](#setting-up-a-real-active-email-service)
-- [**CREDITS**](#--credits--)
-  * [References](#references)
-  * [Acknowledgement](#acknowledgement)
-- [**DISCLAIMER**](#--disclaimer--)
+- [content](#content)
+  * [The Why] (#the-why)
+  * [The Business Goal] (#the-bussines-goal)
+  * [(UX) User Experience:] (#-ux--user-experience-)
+    + [User Stories] (#user-stories)
+      - [First time Users Goals:] (#first-time-users-goals-)
+      - [Returning Users Goals:] (#returning-users-goals-)
+      - [Website Owner Goals:] (#website-owner-goals-)
+      - [As a user in the process of purchasing, I would like to.**](#as-a-user-in-the-process-of-purchasing--i-would-like-to--)
+  * [**THE 5 PLANES**] (#--the-5-planes--)
+    + [**Strategy**] (#--strategy--)
+  * [Design:] (#design-)
+    + [Theme and Colour Scheme] (#theme-and-colour-scheme)
+      - [Colour By colour:] (#color-by-color-)
+    + [Design Brief:](#design-brief-)
+  * [Wireframes](#wireframes)
+  * [Features](#features)
+      - [Existing Features:](#existing-features-)
+        * [Navigation bar:] (#navigation-bar-)
+        * [Courses display list:] (#courses-display-list-)
+        * [Course detail:] (#course-detail-)
+        * [Video Detail:] (#video-detail-)
+        * [Shopping cart] (#shopping-cart)
+        * [Checkout](#checkout)
+        * [Registration and Login Form.] (#registration-and-login-form)
+  * [Future Features I would like to include.] (#future-features-i-will-like-to-include)
+        * [Download the content] (#download-the-content)
+        * [Membership Options] (#membership-options)
+        * [Yoga API] (#yoga-api)
+  * [**DATABASES**] (#--databases--)
+    + [**Models Flow Chart**] (#--models-flow-chart--)
+      - [Content Data Base:] (#content-data-base-)
+      - [Checkout Data Base:] (#checkout-data-base-)
+      - [Accounts Data Base:] (#acconts-data-base-)
+  * [**TESTING**] (#--testing--)
+    + [**HTML Testing**] (#--html-testing--)
+    + [**CSS Testing**] (#--css-testing--)
+    + [**PEP8 Testing**] (#--pep8-testing--)
+    + [**User Stories Testing**] (#--user-stories-testing--)
+    + [**Cross Platform Testing**] (#--cross-platfrom-testing--)
+      - [CRUD (create, read, update, delete) TESTING] (#crud--create--read--update--delete--testing)
+    + [FORM VALIDATION TESTING] (#form-validation-testing)
+    + [Lighthouse testing] (#lighthouse-testing)
+    + [Responsive Testing] (#responsive-testing)
+    + [Jest Test Testing JavaScript:](#jest-test-testing-javascript-)
+        * [I used Jest test to set some of the functions I create with Javascript.](#i-used-jest-test-to-set-some-of-the-functions-i-create-with-javascript)
+    + [Django test Testing Python code, views and Models:](#django-test-testing-python-code--views-and-models-)
+        * [I used Django tests to set some models and views I cretes  with Python.](#i-used-django-tests-to-set-some-models-and-views-i-cretes--with-python)
+    + [Bugs and Fixes](#bugs-and-fixes)
+    + [Remainding Errors in the Google Developers Tool Console:](#remainding-errors-in-the-google-developers-tool-console-)
+  * [**DEPLOYMENT**](#--deployment--)
+    + [Making a local clone](#making-a-local-clone)
+    + [Working with a local clone](#working-with-a-local-clone)
+    + [Deploying to Heroku](#deploying-to-heroku)
+    + [Hosting files with AWS](#hosting-files-with-aws)
+    + [Setting up a real active email service](#setting-up-a-real-active-email-service)
+  * [**CREDITS**](#--credits--)
+    + [References](#references)
+    + [Acknowledgement](#acknowledgement)
+  * [**DISCLAIMER**](#--disclaimer--)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 # content 
 
 ## The Why
 
-This website is an E-commerce video platform which work as an extension of a real Yoga Studio, to offer Video Courses to their Students/Users who can't attend Phisically to the In studio classes or the ones who prefer to learm and practise from home at differents times. 
+This Website is an E-commerce video platform which work as an extension of a real Yoga Studio, to offer Video Courses to their Students/Users who can't attend Physically to the In studio classes or the ones who prefer to learn and practise from home at different times. 
 
-## The Bussines Goal
+## The Business Goal
 
 + Increase the number of users.  
 + Increase the income of the Yoga studio and expands their number customers from only In-studio customers, to online customers.
@@ -122,7 +121,6 @@ User will be able to create a Shopping cart to store Video-Courses prior purchas
      - To Have a page with my information given such as username, email, avatar.
      - To be able to Purchase with ease and confidence
 
-
   - #### Website Owner Goals:
      - Edit products on the websites for reasons such as typo errors, pricing etc
      - Add and Remove products
@@ -150,7 +148,6 @@ User will be able to create a Shopping cart to store Video-Courses prior purchas
     * A consistent theme to the website 
     * Sufficient information regarding the directly to the product and non direct information of the product such as categories and what the company is about 
 
-
 - What we shouldn’t do? 
     * Make purchasing difficult as purchasing will be the main source of income 
     * Not registering should not have the same experience as registered users’ registered user should have a better experience in the form of offers, convenience etc 
@@ -161,21 +158,21 @@ User will be able to create a Shopping cart to store Video-Courses prior purchas
 
 Yellow And Gray Color Scheme
 
-The Yellow And Gray Color Scheme palette has 5 colors which are Platinum (#E3E3E3), Light Gray (#D6D4D2), Middle Grey (#8B8680), Golden Yellow (#FFDF00) and Spanish Yellow (#EFB90A).
+The Yellow And Gray Colour Scheme palette has 5 colours which are Platinum (#E3E3E3), Light Gray (#D6D4D2), Middle Grey (#8B8680), Golden Yellow (#FFDF00) and Spanish Yellow (#EFB90A).
 
-#### Color By color: 
+#### Colour By colour: 
 
-Here an explanation of the 3 mains color of the pallete.
+Here an explanation of the 3 mains colour of the palette.
 
 Black:
 
-The color black has always fared well with versatility and elegance. Black signifies simplicity and functionality. This color works best in modern interior design and architecture.
+The colour black has always fared well with versatility and elegance. Black signifies simplicity and functionality. This colour works best in modern interior design and architecture.
 
-On a psychological front, an all-black room can be overwhelming and gloomy. However, if you pair the color with red, white, blue, or almost anything else, it provides excellent contrast.
+On a psychological front, an all-black room can be overwhelming and gloomy. However, if you pair the colour with red, white, blue, or almost anything else, it provides excellent contrast.
 
-Contrary to popular belief, the color black is an excellent addition to interior design, especially in the kitchen, living room, dining area, and bathroom. With this color scheme, form follows function and accommodates simplistic design trends.
+Contrary to popular belief, the colour black is an excellent addition to interior design, especially in the kitchen, living room, dining area, and bathroom. With this colour scheme, form follows function and accommodates simplistic design trends.
 
-Emotions associated with the color Black are:
+Emotions associated with the colour Black are:
 
 Functionality, Simplicity.
 
@@ -187,14 +184,13 @@ Elegance, Modernism, Sophistication.
 
 Efficiency, Control, Beauty.
 
-
 Gray:
 
-The color Gray is another neutral color that is highly associated with elegance and style. Although there is some controversy as to the effects of gray on the human mind, if used correctly, it can have quite a positive effect.
+The colour Gray is another neutral colour that is highly associated with elegance and style. Although there is some controversy as to the effects of Gray on the human mind, if used correctly, it can have quite a positive effect.
 
-Some people do find the color depressing. However, gray can be used as a neutralizer for vibrant color schemes. It is best to avoid using light gray colors on the walls, but you can use dark gray on one wall and surround it with happy colors such as white, yellow, or pink. You can also implement gray colors in furniture in a bright room. It adds elegance and sophistication to the design plan.
+Some people do find the colour depressing. However, Gray can be used as a neutralizer for vibrant colour schemes. It is best to avoid using light Gray colours on the walls, but you can use dark Gray on one wall and surround it with happy colours such as white, yellow, or pink. You can also implement Gray colours in furniture in a bright room. It adds elegance and sophistication to the design plan.
 
-In reality, gray invokes different feelings in different people. The various shades of gray can have a calming effect for some people, while it drives others into depression. It is safer to instill gray in textiles rather than wall colors. If you do use it as a dominant room color, make sure to introduce plenty of natural light to make the room feel more welcoming and warm.
+In reality, gray invokes different feelings in different people. The various shades of gray can have a calming effect for some people, while it drives others into depression. It is safer to instil Gray in textiles rather than wall colors. If you do use it as a dominant room color, make sure to introduce plenty of natural light to make the room feel more welcoming and warm.
 
 Emotions associated with the color Gray are:
 
@@ -205,7 +201,6 @@ Gloominess, Depression, Steely.
 Strength, Power, Rigidity, Determination, Will Power.
 
 Style, Elegance, Sophistication.
-
 
 Gold-Yellow:
 
@@ -233,19 +228,19 @@ Optimism, Encouragement.
 
 + Colour:
 
-![Color](static/images/yellow-and-gray-2-by-schemecolor.png "Color Scheme")
+![Colour](static/images/yellow-and-gray-2-by-schemecolor.png "Colour Scheme")
 
 - Links : 
 
 + Background:
 
-The Background Video was downnload from n[Pexels](https://www.pexels.com/es-es/).
+The Background Video was download from n[Pexels](https://www.pexels.com/es-es/).
 
 - background Video:
 
-the goal was to inspire a space where you can feel freedom, free of extress and where you can be able to breath clean and fresh air.
+the goal was to inspire a space where you can feel freedom, free of stress and where you can be able to breath clean and fresh air.
 
-Where the mind can take you to a meditative state without strees and distrumtions easyly.
+Where the mind can take you to a meditative state without stress and distributions easily.
 
 [top](#content)
 
@@ -275,16 +270,16 @@ The Basic structure of Rock Yoga on Demand was created using:
 
    ##### Courses display list:
 
-   - The users are able to see here all the courses that the platform offers. wich name and price, the imgs are links which if the user purchase the course it redirect the users to the       course content.
+   - The users are able to see here all the courses that the platform offers. which name and price, the images are links which if the user purchase the course, it redirect the users to the       course content.
 
     ![features](static/images/Courselist.png "Course list")
 
    ##### Course detail:
 
-   - I Decided to dont use an auto play video here as it was to noise to navigate through the Content and be able to see all the sections of the courses, so I left the Video    decoration around the course image to create the feeling of a video platform, every single image below in the section will open a video. 
-    I did this by modifing the model and removing the url_intro_video. and adding the thumbnail image.   
+   - I Decided to don’t use an auto play video here as it was to noise to navigate through the Content and be able to see all the sections of the courses, so I left the Video    decoration around the course image to create the feeling of a video platform, every single image below in the section will open a video. 
+    I did this by modifying the model and removing the url_intro_video. and adding the thumbnail image.   
 
-   - Here the users will be able to see A course in detail, accesing to all the content that the course offers will is compose of sections with video tutorials and series.
+   - Here the users will be able to see A course in detail, accessing to all the content that the course offers will is compose of sections with video tutorials and series.
 
    - Also the users will be able to add the course to the shopping cart.
 
@@ -292,7 +287,7 @@ The Basic structure of Rock Yoga on Demand was created using:
 
    ##### Video Detail:
 
-   - Here the Users will be able to view the the videos in full screem, also to move throught the differents sections of the courses and the others videos. whith the dropdown list.
+   - Here the Users will be able to view the videos in full screen, also to move through the different sections of the courses and the other videos using the dropdown list.
   
    ![features](static/images/video-play2.png "Video Detail")
     
@@ -300,20 +295,20 @@ The Basic structure of Rock Yoga on Demand was created using:
    ##### Shopping cart
    
    - The users will be able to add, adjust quantity and remove Courses from the shopping cart once the register and Login
-   - For the bag app I follow the videos of the Botique-Ado, side project from the Diploma in Code Institute, due to the complejity of the code and Stripe. I modify some bits to addapt to the requirements of This project
+   - For the bag app I follow the videos of the Boutique-Ado, side project from the Diploma in Code Institute, due to the complexity of the code and Stripe. I modify some bits to addapt to the requirements of This project
 
     ![features]( static/images/cart.png "Shopping cart")
 
    ##### Checkout 
 
-   - The users will be able to procced with a secure payments, completing the checkout form.
-   - For the Checkout app I also follow the videos of the Botique-Ado, side project from the Diploma in Code Institute, due to the complejity of the code and Stripe. I modify some bits to addapt to the requirements of This project
+   - The users will be able to procced with a secure payment, completing the checkout form.
+   - For the Checkout app I also follow the videos of the Boutique-Ado, side project from the Diploma in Code Institute, due to the complexity of the code and Stripe. I modify some bits to adapt to the requirements of This project
 
     ![features]( static/images/checkout.png "Checkout")
 
    ##### Registration and Login Form.
 
-   - I also added a registration and Loging Form, where users can Sign up and register to be able to modify the profile data to acces to the full content and to purchase videos.
+   - I also added a registration and Loging Form, where users can Sign up and register to be able to modify the profile data to access to the full content and to purchase videos.
 
    ![features](static/images/register.png "Registration")
 
@@ -321,7 +316,7 @@ The Basic structure of Rock Yoga on Demand was created using:
 
     ##### Footer.
 
-   - In the footer the users can find all the contact detail, like social media links, phone number, email, and I add a contact form wusing emailJS where the users can contact the bussines directly.
+   - In the footer the users can find all the contact detail, like social media links, phone number, email, and I add a contact form using emailJS where the users can contact the business directly.
 
    ![features](static/images/footer.png "Footer")
 
@@ -331,17 +326,16 @@ The Basic structure of Rock Yoga on Demand was created using:
 
    - I will like to add the option to download the videos into the users pc after purchase.
 
-
    ##### Membership Options
 
-   - I will probably include some memberships options so the users can get acces to specific content, depends of the membership they purchase.
+   - I will probably include some memberships options so the users can get access to specific content, depends of the membership they purchase.
 
-   - In this project the content can be accese without actually purchase, as I wanted to create the logic for a shopping cart using in real life e-commerce appication with the Idea that DVDs will be sent to the users addres without delivery cost.
+   - In this project the content can be access it without actually purchase, as I wanted to create the logic for a shopping cart using in real life e-commerce application with the Idea that DVDs will be sent to the users address without delivery cost.
   
 
    ##### Yoga API
 
-   - I will include a yoga API wich will be used by users to transalate some yoga poses from Sanskrit to their english name.
+   - I will include a yoga API which will be used by users to translate some yoga poses from Sanskrit to their English name.
 
 [top](#content)
 
@@ -355,7 +349,7 @@ The Basic structure of Rock Yoga on Demand was created using:
 
 ![Database](static/images/ContentDBStrucutre.png "Content DB Structure")
 
-![Database](static/images/CategoryDBExample.jpeg "Cateogry DB")
+![Database](static/images/CategoryDBExample.jpeg "Category DB")
 
 #### Checkout Data Base:
 
@@ -373,13 +367,13 @@ The Basic structure of Rock Yoga on Demand was created using:
 
 ### **HTML Testing**
 Using - W3C Markup Validator
-Errors and Warnings in the .html files have been attended with the help of W3 .html Validator. After alterations, no major errors were found in the .html files; Most were related to the django templates. The few slightly concerning errors have been documented below
+Errors and Warnings in the .html files have been attended with the help of W3 .html Validator. After alterations, no major errors were found in the .html files; Most were related to the Django templates. The few slightly concerning errors have been documented below
 | FILE | Result | Comment
 --- | --- | --- |
-base.html | [image](static/images/base.html-validator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
-_footer.html | [image](static/images/course_list.validator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
-_navbar.html| [image](readme/images/w3_navigation.png) |Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}, Also error 6 left, as When I try to change the Div it brakes the dropdown error
-video_detail.html | [image](static/images/videodetailvalidator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
+base.html | [image](static/images/base.html-validator.png) | Only the errors regarding to the Django code left. W3validators does not recognize Django syntax as {%  %}
+_footer.html | [image](static/images/course_list.validator.png) | Only the errors regarding to the Django code left. W3validators does not recognize django syntax as {%  %}
+_navbar.html| [image](readme/images/w3_navigation.png) |Only the errors regarding to the Django code left. W3validators does not recognize Django syntax as {%  %}, Also error 6 left, as When I try to change the Div it brakes the dropdown error
+video_detail.html | [image](static/images/videodetailvalidator.png) | Only the errors regarding to the Django code left. W3validators does not recognize django syntax as {%  %}
 home.html | [image](static/images/home.validator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
 course_list.html | [image](static/images/course_list.validator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
 course_detail.html | [image](static/images/course_detailvalidator.png) | Only the errors regarding to the django code left. W3validators does not recognize django syntax as {%  %}
@@ -412,8 +406,6 @@ bag.css | [image](static/images/noerrors.css.png) | 1 error found Value Error : 
 
 * I test all the views.py urls.py and models.py from all the apps.
 
-* After changes were made, an internal server error occured. I had to revert some lines of code (as told to me by my Gitpod terminal) back to its original state for the website to work.
-
 * I have to left some errors as (E501: Line too long, and E711: comparison to None should be 'if cond is not None:')
 as when I change it.
 [top](#content)
@@ -430,7 +422,7 @@ Be able to communicate with the website as in email, contact number etc | yes | 
 Be able to Register to the website | yes | [image](static/images/register.png) |
 Be able to procced with a secure online payment system | yes | [image](static/images/order succesfull.png) |
 **As a registered member to the website, I would like to..** 
-To be able to find the list of producst saved in their shopping cart | yes | [image](static/images/cart.png) |
+To be able to find the list of courses saved in their shopping cart | yes | [image](static/images/cart.png) |
 To be able View and edit my shopping basket | yes | [image](static/images/cart.png) |
 To have a page with my information given such as name, email, avatar | yes | [image](static/images/Profile.png)) | 
 To be able to Purchase with ease and confidence | yes | [image]() |
@@ -484,28 +476,28 @@ Both 'Password' fields must match | yes | yes | yes
 'Full Name' field will only accept upto 50 characters | yes | yes | yes
 'E-mail' field must have follow the pattern of have a '@' and a '.' in the email | yes | yes | yes
 'Phone Number' field will only accept numbers and a maximum of 20 numbers | yes | yes | yes
-'Postcode' field will only accept upto 20 characters | yes | yes | yes
-'Town or City' field will only accept upto 40 characters | yes | yes | yes
-'Street Address 1' field will only accept upto 80 characters | yes | yes | yes
-'Street Address 2' field will only accept upto 80 characters | yes | yes | yes
-'County, State, or Locality' field will only accept upto 80 characters | yes | yes | yes
+'Postcode' field will only accept up to 20 characters | yes | yes | yes
+'Town or City' field will only accept up to 40 characters | yes | yes | yes
+'Street Address 1' field will only accept up to 80 characters | yes | yes | yes
+'Street Address 2' field will only accept up to 80 characters | yes | yes | yes
+'County, State, or Locality' field will only accept up to 80 characters | yes | yes | yes
 'Card number' field will only accept numbers | yes | yes | yes
 **Add Course - add_product.html**
 'Category' will have a drop down containing options from the Category database | yes | yes | yes
-'Price' will only accept numbers. It will take a numbers upto 4 digits in length | yes | yes | yes
+'Price' will only accept numbers. It will take a numbers up to 4 digits in length | yes | yes | yes
 'Price' will not go lower than 0 | yes | yes | yes
-'Name' will allow upto 100 characters | yes | yes | yes
-'Slug' will only allow upto 100 characters | yes | yes | yes
-'Sub_title' will allow upto 200 characters | yes | yes | yes
+'Name' will allow up to 100 characters | yes | yes | yes
+'Slug' will only allow up to 100 characters | yes | yes | yes
+'Sub_title' will allow up to 200 characters | yes | yes | yes
 'thumbnail' will be a URL field and it is possible to be empty | yes | yes | yes
-'Description' will allow upto 500 characters | yes | yes | yes
+'Description' will allow up to 500 characters | yes | yes | yes
 'Active:'  will have a drop down containing options Yes and No | yes | yes | yes
 'Is published' will be click box | yes | yes | yes
 'Is featured' will be a click box | yes | yes | yes
 **Contact us - _footer.html**
 'Name' field will accept upto 100 characters | yes | yes | yes
 'E-mail' field must have follow the pattern of have a '@' and a '.' in the email | yes | yes | yes
-'Text' will allow upto 500 characters | yes | yes | yes
+'Text' will allow up to 500 characters | yes | yes | yes
 
 [top](#content)
 
@@ -573,7 +565,6 @@ I didnt mannage to test jQuery Code. So create some Mock Function to do the test
 
 ##### I used Django tests to set some models and views I cretes  with Python.
 
-
 [Test Commit](https://github.com/Manuperezro/YogaCourses-MSP4/commit/a88b036998cb1502d1df75f4ba57c19b959e9850/)
 
 [top](#content)
@@ -581,16 +572,15 @@ I didnt mannage to test jQuery Code. So create some Mock Function to do the test
 ### Bugs and Fixes
 ISSUE | Solved? | How? | link
 --- | --- | --- | --- | 
-Some of imgs wans't rendering after Hosting files in AWS S3 | Yes | I found a solution in Slack overflow: I had to change the src in the imgs fields and used a django Pattern {% %} instad | (https://github.com/Manuperezro/YogaCourses-MSP4/commit/d84d53b355f8b56f28f233ca72368e83ce7b9994) 
+Some of imgs wasn’t rendering after Hosting files in AWS S3 | Yes | I found a solution in Slack overflow: I had to change the src in the imgs fields and used a Django Pattern {% %} instead | (https://github.com/Manuperezro/YogaCourses-MSP4/commit/d84d53b355f8b56f28f233ca72368e83ce7b9994) 
 Courses(Products form Stripe not rendering | yes | Thanks to one of the amazing tutors I realize that it was a Json object, So I import Json, created and empty list to storage the objects and them append the Products. | (https://github.com/Manuperezro/YogaCourses-MSP4/commit/3e731f54a30dcf01702d40e20ca69791c1203da2)
-Hero video Not rendering | yes | It wasn't working because the video was storage in the media_root file, I did move into the static, and create a folder named video. Also used the {% load static %} tag and them simply used the relatifve phile path of the video.mp4 in the vide src  |(https://github.com/Manuperezro/YogaCourses-MSP4/commit/e4510a2c50a2af0876c8003a8c6c8208fa2eff16)
-Sections not working when I tried to add a new video to the courses | yes | The foreign key in the Sections modal worng, I was using the Category model instead of Course model | (https://github.com/Manuperezro/YogaCourses-MSP4/commit/8ba099f8a27182579c68e53bb8d4636c918031f8)
-YouTube Videos not rendering | Yes | I found a tutorial in google which help me to realize I wasn't copying the right url from youtube, I had to copy  the embed video url, not the video url | (https://startcodingnow.com/embedding-videos-into-django-project/#:~:text=Install%20the%20package%20pip%20install%20django-embed-video%20Change%20settings.py,%28...%20%27embed_video%27%2C%29%20Add%20the%20field%20to%20your%20model)
+Hero video Not rendering | yes | It wasn't working because the video was storage in the media_root file, I did move into the static, and create a folder named video. Also used the {% load static %} tag and them simply used the relative file path of the video.mp4 in the vide src  |(https://github.com/Manuperezro/YogaCourses-MSP4/commit/e4510a2c50a2af0876c8003a8c6c8208fa2eff16)
+Sections not working when I tried to add a new video to the courses | yes | The foreign key in the Sections modal wrong, I was using the Category model instead of Course model | (https://github.com/Manuperezro/YogaCourses-MSP4/commit/8ba099f8a27182579c68e53bb8d4636c918031f8)
+YouTube Videos not rendering | Yes | I found a tutorial in google which help me to realize I wasn't copying the right url from YouTube, I had to copy  the embed video url, not the video url | (https://startcodingnow.com/embedding-videos-into-django-project/#:~:text=Install%20the%20package%20pip%20install%20django-embed-video%20Change%20settings.py,%28...%20%27embed_video%27%2C%29%20Add%20the%20field%20to%20your%20model)
 
+### Remainding Errors in the Google Developers Tool Console:
 
-### Errors:
-
-- The only errors shows in the console in google developers tool, are related to the Jest test Mock functions I created to test the code. They don't affect the User's intercativity with the site.
+- The only errors shows in the console in google developers tool, are related to the Jest test Mock functions I created to test the code. They don't affect the User's interactivity with the site.
 
 [top](#content)
 
@@ -694,10 +684,10 @@ You may want to have access via a copy of the repository on your own device. The
 
 ### References
 
-* REF001 - 'checkout' app was heavily copied and adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/326f171b831446588d33c0333eb4caaa/)
-* REF002 - 'Bag' app was heavily copied and adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/5ad560616d634896874fc24f20494e19/)
-* REF003 - 'Contetn app' Was inspired and based on an side project I did in UDEMY It was Heavily modify as I change the functionality (https://www.udemy.com/course/draft/4651056/learn/lecture/31918044?start=270#overview)
-* REF004 - 'Carousel JS' Was made with the Help of a Yotube tutorial from CODECADEMY (https://www.codecademy.com/)
+* REF001 - 'checkout' app was heavily copied, modify and adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/326f171b831446588d33c0333eb4caaa/)
+* REF002 - 'Bag' app was heavily copied, modify and adapted from Code Insitute Full Stack Frameworks with Django module (https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/5ad560616d634896874fc24f20494e19/)
+* REF003 - 'Content app' Was inspired and based on an side project I did in UDEMY It was Heavily modify as I change the functionality (https://www.udemy.com/course/draft/4651056/learn/lecture/31918044?start=270#overview)
+* REF004 - 'Carousel JS' Was made with the Help of a YouTube tutorial from CODECADEMY (https://www.codecademy.com/)
 
 ### Acknowledgement 
 * Code Institue course
