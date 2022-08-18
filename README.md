@@ -587,6 +587,11 @@ Hero video Not rendering | yes | It wasn't working because the video was storage
 Sections not working when I tried to add a new video to the courses | yes | The foreign key in the Sections modal worng, I was using the Category model instead of Course model | (https://github.com/Manuperezro/YogaCourses-MSP4/commit/8ba099f8a27182579c68e53bb8d4636c918031f8)
 YouTube Videos not rendering | Yes | I found a tutorial in google which help me to realize I wasn't copying the right url from youtube, I had to copy  the embed video url, not the video url | (https://startcodingnow.com/embedding-videos-into-django-project/#:~:text=Install%20the%20package%20pip%20install%20django-embed-video%20Change%20settings.py,%28...%20%27embed_video%27%2C%29%20Add%20the%20field%20to%20your%20model)
 
+
+### Errors:
+
+- The only errors shows in the console in google developers tool, are related to the Jest test Mock functions I created to test the code. They don't affect the User's intercativity with the site.
+
 [top](#content)
 
 ## **DEPLOYMENT**
