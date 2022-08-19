@@ -8,7 +8,7 @@
         <div class="col-lg-8 col-sm-12">
             <div class="card">
                 <div class="card-body">
-                    <p>This are not videos, the videos can be found in the sections below</p>
+                    <p class="card-text font-weight-bold">{{ course.name }}</p>
                     <div class="embed-responsive embed-responsive-16by9">
                         <video poster="{{ object.thumbnail }}">
                             <source src="{{object.video_intro_url}}" type="video/mp4">
