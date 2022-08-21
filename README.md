@@ -236,6 +236,11 @@ Optimism, Encouragement.
 
 The Background Video was download from n[Pexels](https://www.pexels.com/es-es/).
 
+Even If use of a background Video is considered as bad practice for UX I decided to go for it, to get the experience of implemeting a video in one of my Projects, and practicing with embeded videos, I though it is was a good choice as the website is a Video Platform so can give the users an Idea of what the sites offers, However the video it has a only little movement of the waves wich is not noise at all.
+
+The Video has been selected from a collection of Background videos made it to fulfill this purpose.
+
+
 - background Video:
 
 the goal was to inspire a space where you can feel freedom, free of stress and where you can be able to breath clean and fresh air.
