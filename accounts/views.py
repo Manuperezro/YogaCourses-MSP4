@@ -5,6 +5,11 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import UpdateProfileForm
 
+from checkout.models import Order
+
+from .models import Student
+from .forms import UpdateProfileForm
+
 # Login Register and Logout Functions
 
 
@@ -109,3 +114,20 @@ def my_profile(request):
     }
 
     return render(request, 'accounts/my_profile.html', context)
+
+
+def order_history(request, order_number):
+    order = get_object_or_404(Order, order_number=order_number)
+
+    messages.info(request, (
+        f'This is a past confirmation for order number {order_number}. '
+        'A confirmation email was sent on the order date.'
+    ))
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'order': order,
+        'from_profile': True,
+    }
+
+    return render(request, template, context)
