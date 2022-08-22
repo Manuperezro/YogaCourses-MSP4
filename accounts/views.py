@@ -92,6 +92,7 @@ def my_profile(request):
 
     # if not request.user.is_authenticated:
     #     return redirect('login')
+    profile = get_object_or_404(Student, user=request.user)
 
     if request.method == 'POST':
         user = request.user
@@ -104,11 +105,13 @@ def my_profile(request):
             user.save()
             # Your account have been updated!
             return redirect('my_profile')
-
+    
+    orders = profile.orders.all()
     student_form = UpdateProfileForm(instance=request.user.student)
 
     context = {
         'student': request.user.student,
+        'order': order,
         'student_form': student_form
     }
 
