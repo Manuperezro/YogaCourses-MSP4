@@ -16,6 +16,5 @@ class TestCheckout(TestCase):
     
     def test_view_checkout(self):
         self.client.login(username="temporary", password="temporary")
-        print('course is ', self.course.id)
         response = self.client.get(reverse('checkout'))
         self.assertEqual(response.status_code, 302)

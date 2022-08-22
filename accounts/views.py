@@ -35,7 +35,6 @@ def login(request):
             return redirect('course-list')
 
         else:
-            print('Invalid credentials')
             messages.success(request, "There was an Error in the Login, Please Try again")
             return redirect('login')
 
@@ -119,6 +118,8 @@ def my_profile(request):
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
 
+    print("Order is", order)
+
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '
         'A confirmation email was sent on the order date.'
@@ -127,7 +128,7 @@ def order_history(request, order_number):
     template = 'checkout/checkout_success.html'
     context = {
         'order': order,
-        'from_profile': True,
+        # 'from_profile': True,
     }
 
     return render(request, template, context)

@@ -12,7 +12,6 @@ def bag_contents(request):
 
     for course_id, quantity in bag.items():
     # Search the Course table where the primary key is course_id
-        print('bag_item:', bag_items)
         course = get_object_or_404(Course, pk=course_id)
         total += quantity * course.price
         bag_items.append({

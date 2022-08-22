@@ -104,7 +104,6 @@ def checkout(request):
         )
 
         order_form = OrderForm()
-        print('payment intent', intent)
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \

@@ -17,7 +17,6 @@ class TestBag(TestCase):
 
     def test_add_to_bag(self):
         self.client.login(username="temporary", password="temporary")
-        print('course is ', self.course.id)
         response = self.client.post('/bag/add/'+str(self.course.id), data={'quantity':'1', 'redirect_url':'/'})
         self.assertEqual(response.status_code, 302)
         response = self.client.get(reverse('view_bag'))

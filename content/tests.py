@@ -27,7 +27,6 @@ class TestViews(TestCase):
     
     def test_course_detail_view(self):
         course = Course.objects.all().first()
-        print(course.get_absolute_url())
         response = self.client.get(course.get_absolute_url())
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'content/course_detail.html')
