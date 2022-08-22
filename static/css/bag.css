@@ -70,7 +70,7 @@ label {
 }
 
 .btn {
-  float: left;
+  float: right;
   height: 42px;
   width: 49%;
   font-size: 18px;
@@ -81,16 +81,17 @@ label {
   letter-spacing: 1px;
   cursor: pointer;
   margin-top: 12px;
+  margin-bottom: 12px;
   border: 2px solid #7f6c41;
   transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
-  background-color: #fbbc00;
+  background-color: #ffffff;
 }
 
 .btn_log:hover {
-  background-color: #fbbc00;
+  background-color: #ffffff;
 }
 
 a {
