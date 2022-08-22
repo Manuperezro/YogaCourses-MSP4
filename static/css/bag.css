@@ -70,6 +70,7 @@ label {
 }
 
 .btn {
+  float: right;
   background-color: #000000;
   color: white;
   padding: 12px;
@@ -77,16 +78,19 @@ label {
   border: none;
   width: 49%;
   border-radius: 3px;
+  border: 2px solid #d19814;
   cursor: pointer;
   font-size: 17px;
 }
 
 .btn:hover {
-  background-color: #fbbc00;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
 }
 
 .btn_log:hover {
-  background-color: #fbbc00;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
 }
 
 a {
