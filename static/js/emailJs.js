@@ -37,4 +37,31 @@ function sendMail(contactForm) {
     return false; 
 }
 
+
+function validateForm() {
+    var x = document.forms["contact-form"]["name"].value;
+    var y = document.forms["contact-form"]["email"].value;
+    var z = document.forms["contact-form"]["text"].value;
+    
+    if (x == null || x == "") {
+        nameError = "Please enter your name";
+        document.getElementById("myModal").id = "myModalError"; 
+        return false;
+    } 
+    
+    else if (y == null || y == "") {
+        emailError = "Please enter your email";
+        document.getElementById("myModal").id = "myModalError";
+        return false;
+    } 
+    
+    else if (z == null || z == "") {        
+        telephoneError = "Please enter your telephone";
+        document.getElementById("myModal").id = "myModalError";
+        return false;
+    } 
+    
+    else {return true;}
+    }
+
 module.exports = { Response };

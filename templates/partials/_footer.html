@@ -25,7 +25,7 @@
       </div>
       <div class="right box">
         <div class="topic">Contact The Web Developer</div>
-        <form onsubmit="return sendMail(this);">
+        <form onsubmit="return sendMail(this);" name="contact-form">
 
           <input class="FooterPlaceholder" name="name" type="text" placeholder="Enter Your name">
 
@@ -73,7 +73,7 @@
           <!-- Modal  Fail content-->
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class=" text-center">Sorry Something went wrong</h4>
+              <h4 class=" text-center">ERROR: Make sure that all the fields are filled before submit.</h4>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
