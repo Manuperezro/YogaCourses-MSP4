@@ -111,7 +111,7 @@ def my_profile(request):
 
     context = {
         'student': request.user.student,
-        'order': order,
+        'orders': orders,
         'student_form': student_form
     }
 
