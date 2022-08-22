@@ -44,20 +44,23 @@ function validateForm() {
     var z = document.forms["contact-form"]["text"].value;
     
     if (x == null || x == "") {
-        nameError = "Please enter your name";
-        document.getElementById("myModal").id = "myModalError"; 
+        var emptyX = document.getElementById("send");
+        emptyX.dataset.target = "myModalError";
+
         return false;
     } 
     
     else if (y == null || y == "") {
-        emailError = "Please enter your email";
-        document.getElementById("myModal").id = "myModalError";
+        var emptyY = document.getElementById("send");
+        emptyY.dataset.target = "myModalError";
+
         return false;
     } 
     
     else if (z == null || z == "") {        
-        telephoneError = "Please enter your telephone";
-        document.getElementById("myModal").id = "myModalError";
+        var emptyZ = document.getElementById("send");
+        emptyZ.dataset.target = "myModalError";
+
         return false;
     } 
     

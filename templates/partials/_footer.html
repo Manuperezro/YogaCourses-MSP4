@@ -1,5 +1,5 @@
 {% load static %}
-<footer class="mt-5">
+<footer>
     <div class="content">
       <div class="left box">
         <div class="upper">
@@ -27,11 +27,11 @@
         <div class="topic">Contact The Web Developer</div>
         <form onsubmit="return sendMail(this);" name="contact-form">
 
-          <input class="FooterPlaceholder" name="name" type="text" placeholder="Enter Your name">
+          <input class="FooterPlaceholder" name="name" type="text" placeholder="Enter Your name" required>
 
-          <input class="FooterPlaceholder" name="email" type="text" placeholder="Enter email address">
+          <input class="FooterPlaceholder" name="email" type="text" placeholder="Enter email address" required>
 
-          <textarea class="FooterPlaceholder" id="subject" name="text" placeholder="Write Your query"></textarea>
+          <textarea class="FooterPlaceholder" id="subject" name="text" placeholder="Write Your query" required></textarea>
 
           <input type="submit" name="" value="Send" id="send" data-toggle="modal" data-target="#myModal">
 
