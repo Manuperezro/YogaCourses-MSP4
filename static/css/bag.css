@@ -85,6 +85,10 @@ label {
   background-color: #fbbc00;
 }
 
+.btn_log:hover {
+  background-color: #fbbc00;
+}
+
 a {
   color: #2196F3;
 }
