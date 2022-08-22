@@ -46,22 +46,16 @@ function validateForm() {
     if (x == null || x == "") {
         var emptyX = document.getElementById("send");
         emptyX.dataset.target = "myModalError";
-
-        return false;
     } 
     
     else if (y == null || y == "") {
         var emptyY = document.getElementById("send");
         emptyY.dataset.target = "myModalError";
-
-        return false;
     } 
     
     else if (z == null || z == "") {        
         var emptyZ = document.getElementById("send");
         emptyZ.dataset.target = "myModalError";
-
-        return false;
     } 
     
     else {return true;}
