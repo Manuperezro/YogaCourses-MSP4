@@ -118,6 +118,13 @@ footer a{
 footer a:hover{
   color: #eb2f06;
 }
+
+.contact-form small {
+  color: #eb2f06;
+  visibility: hidden;
+
+}
+
 @media (max-width:1100px) {
   footer .content .middle{
     padding-left: 50px;

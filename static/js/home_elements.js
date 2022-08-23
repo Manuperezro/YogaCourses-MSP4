@@ -1,4 +1,4 @@
-  // Carousel following the youtube tutorial Users Stories Jasvascrpt carousel By Codelab
+  // carousel following the youtube tutorial Users Stories Jasvascrpt carousel By Codelab
 
   // Function to test if Jest test is working
 function sum(a, b) {

@@ -25,15 +25,15 @@
       </div>
       <div class="right box">
         <div class="topic">Contact The Web Developer</div>
-        <form onsubmit="return sendMail(this);" name="contact-form">
+        <form onsubmit="return sendMail(this);" id="form" name="contact-form" class="contact-form">
+        
+          <input class="FooterPlaceholder" id="input_name" name="name" type="text" placeholder="Enter Your name" required/>
 
-          <input class="FooterPlaceholder" name="name" type="text" placeholder="Enter Your name" required>
-
-          <input class="FooterPlaceholder" name="email" type="text" placeholder="Enter email address" required>
+          <input class="FooterPlaceholder" id="input_email" name="email" type="text" placeholder="Enter email address" required/>
 
           <textarea class="FooterPlaceholder" id="subject" name="text" placeholder="Write Your query" required></textarea>
 
-          <input type="submit" name="Send" value="Send" id="send" data-toggle="modal" data-target="#myModal">
+          <input onclick="validateForm()" type="submit" name="Send" value="Send" id="send">
 
           <div class="media-icons">
             <a href="https://www.facebook.com/" target="blank"><i class="fab fa-facebook-f"></i></a>
@@ -47,7 +47,7 @@
     </div>
 
     <!-- Modal Success -->
-  <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal fade" id="myModalSucces" role="dialog">
     <div class="modal-dialog">
     
       <!-- Modal Success content-->

@@ -1,3 +1,4 @@
+// Jest test Function
 function Response(response) {
     console.log('SUCCESS', response);
     
@@ -8,6 +9,7 @@ function Response(response) {
         return "FAILED"
     }
 };
+// Jest test Function End
 
 function sendMail(contactForm) {
     emailjs.send("service_y0ogew3", "template_opd47s5", 
@@ -20,12 +22,12 @@ function sendMail(contactForm) {
         console.log('SUCCESS', response);
         $("#send")
         if (response == "success") {
-            $('#myModal').modal('show');
+            $('#myModalSucces').modal();
         }
+        $('#myModalSucces').modal();
     },
     function(error){
         console.log('FAILED', error);
-        console.log('SUCCESS', response);
         $("#send")
         if (response == "failed") {
             $('#myModalFail').modal('show');
@@ -37,25 +39,33 @@ function sendMail(contactForm) {
     return false; 
 }
 
-
 function validateForm() {
     var x = document.forms["contact-form"]["name"].value;
     var y = document.forms["contact-form"]["email"].value;
     var z = document.forms["contact-form"]["text"].value;
     
     if (x == null || x == "") {
+        $('#myModalSucces').modal('hide');
+        $('#myModalError').modal();
         var emptyX = document.getElementById("send");
-        emptyX.dataset.target = "myModalError";
+        emptyX.attr("data-target", "myModalError");
+        emptyZ.attr("disabled", "true");
     } 
     
     else if (y == null || y == "") {
+        $('#myModalSucces').modal('hide');
+        $('#myModalError').modal();
         var emptyY = document.getElementById("send");
-        emptyY.dataset.target = "myModalError";
+        emptyY.attr("data-target", "myModalError");
+        emptyZ.attr("disabled", "true");
     } 
     
-    else if (z == null || z == "") {        
+    else if (z == null || z == "") { 
+        $('#myModalSucces').modal('hide');
+        $('#myModalError').modal();      
         var emptyZ = document.getElementById("send");
-        emptyZ.dataset.target = "myModalError";
+        emptyZ.attr("data-target", "myModalError");
+        emptyZ.attr("disabled", "true");
     } 
     
     else {return true;}
