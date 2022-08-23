@@ -3,6 +3,13 @@
     font-size: 14px;
 }
 
+.bord {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+
+}
+
 .cart_thead {
     font-weight: normal;
     text-transform: uppercase;
@@ -85,7 +92,7 @@ label {
 
 .btn:hover {
   background-color: #ffffff;
-  color: rgb(0, 0, 0);
+  color: black !important;
 }
 
 .btn_log:hover {

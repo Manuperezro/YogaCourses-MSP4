@@ -91,8 +91,6 @@ def logout(request):
 @login_required(login_url='/accounts/login')
 def my_profile(request):
 
-    # if not request.user.is_authenticated:
-    #     return redirect('login')
     profile = get_object_or_404(Student, user=request.user)
 
     if request.method == 'POST':

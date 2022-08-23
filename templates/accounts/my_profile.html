@@ -6,7 +6,7 @@ My profile
 <div class="container mt-5 mb-5">
     <div class="row">
         <div class="col-md-12 mx-auto">
-            <div class="card">
+            <div class="card bord">
 
                 <div class="card-body">
                     <img src="{{ student.avatar.url }}" alt="" class="rounded-circle mx-auto d-block" height="100"
@@ -25,12 +25,12 @@ My profile
                         <div class="form-group">
                             {{ student_form.as_p }}
                         </div>
-                        <button type="submit" class="btn_log btn-success text-white">Update</button>
+                        <button type="submit" class="btn btn-success text-white">Update</button>
                     </form>
                 </div>
             </div>
 
-            <div class="card mt-5">
+            <div class="card bord mt-5">
                 <div class="card-body">
                     <h3 class="border-bottom mb-4">Order History</h3>
 
@@ -64,7 +64,7 @@ My profile
                                                 {% endfor %}
                                             </ul>
                                         </td>
-                                        <td>${{ order.grand_total }}</td>
+                                        <td>£{{ total | floatformat:2 }}</td>
                                     </tr>
                                 {% endfor %}
                             </tbody>
