@@ -582,6 +582,7 @@ Courses(Products form Stripe not rendering | yes | Thanks to one of the amazing 
 Hero video Not rendering | yes | It wasn't working because the video was storage in the media_root file, I did move into the static, and create a folder named video. Also used the {% load static %} tag and them simply used the relative file path of the video.mp4 in the vide src  |(https://github.com/Manuperezro/YogaCourses-MSP4/commit/e4510a2c50a2af0876c8003a8c6c8208fa2eff16)
 Sections not working when I tried to add a new video to the courses | yes | The foreign key in the Sections modal wrong, I was using the Category model instead of Course model | (https://github.com/Manuperezro/YogaCourses-MSP4/commit/8ba099f8a27182579c68e53bb8d4636c918031f8)
 YouTube Videos not rendering | Yes | I found a tutorial in google which help me to realize I wasn't copying the right url from YouTube, I had to copy  the embed video url, not the video url | (https://startcodingnow.com/embedding-videos-into-django-project/#:~:text=Install%20the%20package%20pip%20install%20django-embed-video%20Change%20settings.py,%28...%20%27embed_video%27%2C%29%20Add%20the%20field%20to%20your%20model)
+Checkout messages showing in the Login form | Yes | I found a way of clearing the other messages and just hd to add a couple of lines of code <  storage = messages.get_messages(request) / storage.used = True>  | (https://github.com/Manuperezro/YogaCourses-MSP4/commit/81d802fa03325552721f507c3e0ab8186a732590)
 
 ### Remainding Errors in the Google Developers Tool Console:
 
