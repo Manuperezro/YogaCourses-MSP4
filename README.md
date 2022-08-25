@@ -444,7 +444,7 @@ Have a confirmation message | yes | |
 
 - #### **Cross Platfrom Testing**
 
-- #### CRUD (create, read, update, delete) TESTING
+- #### CRUD (create, read, update, delete) Testing
 | AIM | admin | registered user | non-registered user |
 --- | --- | --- | --- |
 **Courses/art works - from content app**

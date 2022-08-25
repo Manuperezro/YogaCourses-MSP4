@@ -84,6 +84,10 @@ def register(request):
 def logout(request):
     """ This function redirect to the course list view """
     auth.logout(request)
+    storage = messages.get_messages(request)
+    storage.used = True
+
+    messages.success(request, "Thanks See you soon!")
     return redirect('course-list')
 
 
