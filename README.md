@@ -23,82 +23,81 @@
 
 ## Table of Content
 
-- [content](#content)
-  * [The Why](#the-why)
-  * [The Business Goal](#the-business-goal)
-  * [(UX) User Experience:](#-ux--user-experience-)
-    + [User Stories](#user-stories)
-      - [First time Users Goals:](#first-time-users-goals-)
-      - [Returning Users Goals:](#returning-users-goals-)
-      - [Website Owner Goals:](#website-owner-goals-)
-      - [As a user in the process of purchasing, I would like to..**](#as-a-user-in-the-process-of-purchasing--i-would-like-to--)
-  * [**THE 5 PLANES**](#--the-5-planes--)
-    + [**Strategy**](#--strategy--)
-  * [Design:](#design-)
-    + [Theme and Colour Scheme](#theme-and-colour-scheme)
-      - [Colour By colour:](#colour-by-colour-)
-    + [Design Brief:](#design-brief-)
-  * [Wireframes](#wireframes)
-  * [Features](#features)
-      - [Existing Features:](#existing-features-)
-        * [Navigation bar:](#navigation-bar-)
-        * [Courses display list:](#courses-display-list-)
-        * [Course detail:](#course-detail-)
-        * [Video Detail:](#video-detail-)
-        * [Shopping cart](#shopping-cart)
-        * [Checkout](#checkout)
-        * [Registration and Login Form.](#registration-and-login-form)
-  * [Future Features I will like to include.](#future-features-i-will-like-to-include)
-        * [Download the content](#download-the-content)
-        * [Membership Options](#membership-options)
-        * [Yoga API](#yoga-api)
-  * [**DATABASES**](#--databases--)
-    + [**Models Flow Chart**](#--models-flow-chart--)
-      - [Content Data Base:](#content-data-base-)
-      - [Checkout Data Base:](#checkout-data-base-)
-      - [Acconts Data Base:](#acconts-data-base-)
-  * [**TESTING**](#--testing--)
+- [The Why](#the-why)
+- [The Business Goal](#the-business-goal)
+- [(UX) User Experience:](#-ux--user-experience-)
+  * [User Stories](#user-stories)
+    + [First time Users Goals:](#first-time-users-goals-)
+    + [Returning Users Goals:](#returning-users-goals-)
+    + [Website Owner Goals:](#website-owner-goals-)
+    + [As a user in the process of purchasing, I would like to..**](#as-a-user-in-the-process-of-purchasing--i-would-like-to--)
+- [**THE 5 PLANES**](#--the-5-planes--)
+  * [**Strategy**](#--strategy--)
+- [Design:](#design-)
+  * [Theme and Colour Scheme](#theme-and-colour-scheme)
+    + [Colour By colour:](#colour-by-colour-)
+  * [Design Brief:](#design-brief-)
+- [Wireframes](#wireframes)
+- [Features](#features)
+    + [Existing Features:](#existing-features-)
+      - [Navigation bar:](#navigation-bar-)
+      - [Courses display list:](#courses-display-list-)
+      - [Course detail:](#course-detail-)
+      - [Video Detail:](#video-detail-)
+      - [Shopping cart](#shopping-cart)
+      - [Checkout](#checkout)
+      - [Registration and Login Form.](#registration-and-login-form)
+      - [Footer.](#footer)
+- [Future Features I will like to include.](#future-features-i-will-like-to-include)
+      - [Download the content](#download-the-content)
+      - [Membership Options](#membership-options)
+      - [Yoga API](#yoga-api)
+- [**DATABASES**](#--databases--)
+  * [**Models Flow Chart**](#--models-flow-chart--)
+    + [Content Data Base:](#content-data-base-)
+    + [Checkout Data Base:](#checkout-data-base-)
+    + [Acconts Data Base:](#acconts-data-base-)
+- [**TESTING**](#--testing--)
     + [**HTML Testing**](#--html-testing--)
     + [**CSS Testing**](#--css-testing--)
     + [**PEP8 Testing**](#--pep8-testing--)
     + [**User Stories Testing**](#--user-stories-testing--)
     + [**Cross Platfrom Testing**](#--cross-platfrom-testing--)
-      - [CRUD (create, read, update, delete) TESTING](#crud--create--read--update--delete--testing)
-    + [FORM VALIDATION TESTING](#form-validation-testing)
-    + [Lighthouse testing](#lighthouse-testing)
-    + [Responsive Testing](#responsive-testing)
-    + [Jest Test Testing Javascript:](#jest-test-testing-javascript-)
-        * [I used Jest test to set some of the functions I create with Javascript.](#i-used-jest-test-to-set-some-of-the-functions-i-create-with-javascript)
-    + [Django test Testing Python code, views and Models:](#django-test-testing-python-code--views-and-models-)
-        * [I used Django tests to set some models and views I cretes  with Python.](#i-used-django-tests-to-set-some-models-and-views-i-cretes--with-python)
-    + [Bugs and Fixes](#bugs-and-fixes)
-    + [Remainding Errors in the Google Developers Tool Console:](#remainding-errors-in-the-google-developers-tool-console-)
-  * [**DEPLOYMENT**](#--deployment--)
-    + [Making a local clone](#making-a-local-clone)
-    + [Working with a local clone](#working-with-a-local-clone)
-    + [Deploying to Heroku](#deploying-to-heroku)
-    + [Hosting files with AWS](#hosting-files-with-aws)
-    + [Setting up a real active email service](#setting-up-a-real-active-email-service)
-  * [**CREDITS**](#--credits--)
-    + [References](#references)
-    + [Acknowledgement](#acknowledgement)
-  * [**DISCLAIMER**](#--disclaimer--)
+    + [CRUD (create, read, update, delete) TESTING](#crud--create--read--update--delete--testing)
+    + [Form Validation Testing](#form-validation-testing)
+  * [Lighthouse testing](#lighthouse-testing)
+  * [Responsive Testing](#responsive-testing)
+  * [Jest Test Testing Javascript:](#jest-test-testing-javascript-)
+      - [I used Jest test to set some of the functions I create with Javascript.](#i-used-jest-test-to-set-some-of-the-functions-i-create-with-javascript)
+  * [Django test Testing Python code, views and Models:](#django-test-testing-python-code--views-and-models-)
+      - [I used Django tests to set some models and views I cretes  with Python.](#i-used-django-tests-to-set-some-models-and-views-i-cretes--with-python)
+  * [Bugs and Fixes](#bugs-and-fixes)
+  * [Remainding Errors in the Google Developers Tool Console:](#remainding-errors-in-the-google-developers-tool-console-)
+- [**DEPLOYMENT**](#--deployment--)
+  * [Making a local clone](#making-a-local-clone)
+  * [Working with a local clone](#working-with-a-local-clone)
+  * [Deploying to Heroku](#deploying-to-heroku)
+  * [Hosting files with AWS](#hosting-files-with-aws)
+  * [Setting up a real active email service](#setting-up-a-real-active-email-service)
+- [**CREDITS**](#--credits--)
+  * [References](#references)
+  * [Acknowledgement](#acknowledgement)
+- [**DISCLAIMER**](#--disclaimer--)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
-
 # content 
 
-## The Why
+- ## The Why
 
 This Website is an E-commerce video platform which work as an extension of a real Yoga Studio, to offer Video Courses to their Students/Users who can't attend Physically to the In studio classes or the ones who prefer to learn and practise from home at different times. 
 
-## The Business Goal
+- ## The Business Goal
 
 + Increase the number of users.  
 + Increase the income of the Yoga studio and expands their number customers from only In-studio customers, to online customers.
 
-## (UX) User Experience: 
+- ## (UX) User Experience: 
 
 Users will be able to navigate through the web application easily and find the Video-courses they are looking for.
 
@@ -134,8 +133,8 @@ User will be able to create a Shopping cart to store Video-Courses prior purchas
 
 [top](#content)
 
-## **THE 5 PLANES** 
-### **Strategy** 
+- ## **THE 5 PLANES** 
+- ### **Strategy** 
 - Purpose of the website? To be able to purchase Video-Courses 
 
 - Target audience? Yoga enthusiasts who want to practice yoga or mindfulness from and appreciated the advantages of Online classes. 
@@ -153,15 +152,15 @@ User will be able to create a Shopping cart to store Video-Courses prior purchas
     * Make purchasing difficult as purchasing will be the main source of income 
     * Not registering should not have the same experience as registered users’ registered user should have a better experience in the form of offers, convenience etc 
 
-    ## Design:
+   - ## Design:
 
-   ### Theme and Colour Scheme
+   - ### Theme and Colour Scheme
 
 Yellow And Gray Color Scheme
 
 The Yellow And Gray Colour Scheme palette has 5 colours which are Platinum (#E3E3E3), Light Gray (#D6D4D2), Middle Grey (#8B8680), Golden Yellow (#FFDF00) and Spanish Yellow (#EFB90A).
 
-#### Colour By colour: 
+- #### Colour By colour: 
 
 Here an explanation of the 3 mains colour of the palette.
 
@@ -225,7 +224,7 @@ Caution, Sickness, Doom, Decay, Jealousy.
 
 Optimism, Encouragement.
 
-### Design Brief:
+- ### Design Brief:
 
 + Colour:
 
@@ -250,7 +249,7 @@ Where the mind can take you to a meditative state without stress and distributio
 
 [top](#content)
 
-## Wireframes
+- ## Wireframes
 
 The Basic structure of Rock Yoga on Demand was created using: 
 
@@ -264,23 +263,23 @@ The Basic structure of Rock Yoga on Demand was created using:
 
 [top](#content)
 
-## Features
+- ## Features
 
  - #### Existing Features:
      
-   ##### Navigation bar: 
+   - ##### Navigation bar: 
 
    - Navigation Menu: I decided to go with a simple and clean navigation bar to keep the feeling of a minimalism Yoga Studio which invite to take a brake and relax.
       
    ![features](static/images/readme/navbar.png "Navigation bar")
 
-   ##### Courses display list:
+   - ##### Courses display list:
 
    - The users are able to see here all the courses that the platform offers. which name and price, the images are links which if the user purchase the course, it redirect the users to the       course content.
 
     ![features](static/images/Courselist.png "Course list")
 
-   ##### Course detail:
+   - ##### Course detail:
 
    - I Decided to don’t use an auto play video here as it was to noise to navigate through the Content and be able to see all the sections of the courses, so I left the Video    decoration around the course image to create the feeling of a video platform, every single image below in the section will open a video. 
     I did this by modifying the model and removing the url_intro_video. and adding the thumbnail image.   
@@ -291,28 +290,28 @@ The Basic structure of Rock Yoga on Demand was created using:
 
     ![features](static/images/details..png "Course detail")
 
-   ##### Video Detail:
+   - ##### Video Detail:
 
    - Here the Users will be able to view the videos in full screen, also to move through the different sections of the courses and the other videos using the dropdown list.
   
    ![features](static/images/video-play2.png "Video Detail")
     
 
-   ##### Shopping cart
+   - ##### Shopping cart
    
    - The users will be able to add, adjust quantity and remove Courses from the shopping cart once the register and Login
    - For the bag app I follow the videos of the Boutique-Ado, side project from the Diploma in Code Institute, due to the complexity of the code and Stripe. I modify some bits to addapt to the requirements of This project
 
     ![features]( static/images/cart.png "Shopping cart")
 
-   ##### Checkout 
+   - ##### Checkout 
 
    - The users will be able to procced with a secure payment, completing the checkout form.
    - For the Checkout app I also follow the videos of the Boutique-Ado, side project from the Diploma in Code Institute, due to the complexity of the code and Stripe. I modify some bits to adapt to the requirements of This project
 
     ![features]( static/images/checkout.png "Checkout")
 
-   ##### Registration and Login Form.
+   - ##### Registration and Login Form.
 
    - I also added a registration and Loging Form, where users can Sign up and register to be able to modify the profile data to access to the full content and to purchase videos.
 
@@ -320,36 +319,36 @@ The Basic structure of Rock Yoga on Demand was created using:
 
    ![features](static/images/Login.png "Login")
 
-    ##### Footer.
+   - ##### Footer.
 
    - In the footer the users can find all the contact detail, like social media links, phone number, email, and I add a contact form using emailJS where the users can contact the business directly.
 
    ![features](static/images/footer.png "Footer")
 
-## Future Features I will like to include.
+- ## Future Features I will like to include.
 
-   ##### Download the content
+   - ##### Download the content
 
    - I will like to add the option to download the videos into the users pc after purchase.
 
-   ##### Membership Options
+   - ##### Membership Options
 
    - I will probably include some memberships options so the users can get access to specific content, depends of the membership they purchase.
 
    - In this project the content can be access it without actually purchase, as I wanted to create the logic for a shopping cart using in real life e-commerce application with the Idea that DVDs will be sent to the users address without delivery cost.
   
 
-   ##### Yoga API
+   - ##### Yoga API
 
    - I will include a yoga API which will be used by users to translate some yoga poses from Sanskrit to their English name.
 
 [top](#content)
 
-## **DATABASES**
+- ## **DATABASES**
 
-### **Models Flow Chart**
+- ### **Models Flow Chart**
 
-#### Content Data Base:
+- #### Content Data Base:
 
 ![Database](static/images/ContentYogaCoursesDB.jpeg "Content App DB")
 
@@ -357,21 +356,21 @@ The Basic structure of Rock Yoga on Demand was created using:
 
 ![Database](static/images/CategoryDBExample.jpeg "Category DB")
 
-#### Checkout Data Base:
+- #### Checkout Data Base:
 
 ![Database](static/images/CheckoutDB.png "Checkout App DB")
 
 ![Database](static/images/CheckoutDStructure.png "Checkout DB Structure")
 
-#### Acconts Data Base:
+- #### Acconts Data Base:
 
 ![Database](static/images/DBStudentYogaCourses.png "Students App DB")
 
 ![Database](static/images/StudentDB.png "Students DB Structure")
 
-## **TESTING**
+- ## **TESTING**
 
-### **HTML Testing**
+- #### **HTML Testing**
 Using - W3C Markup Validator
 Errors and Warnings in the .html files have been attended with the help of W3 .html Validator. After alterations, no major errors were found in the .html files; Most were related to the Django templates. The few slightly concerning errors have been documented below
 | FILE | Result | Comment
@@ -392,7 +391,7 @@ checkout.html | [image](static/images/checkout.validator.png) | Only the errors 
 
 [top](#content)
 
-### **CSS Testing**
+- #### **CSS Testing**
 | FILE | Result | Notes
 --- | --- | --- |
 navbar.css | [image](static/images/noerrors.css.png) | No errors Found
@@ -407,7 +406,7 @@ bag.css | [image](static/images/noerrors.css.png) | 1 error found Value Error : 
 
 [top](#content)
 
-### **PEP8 Testing**
+- #### **PEP8 Testing**
 * I used pep8online to check whether my .py file codes were PEP8 compliant. I made the changes needed for an All right pass for all .py files.
 
 * I test all the views.py urls.py and models.py from all the apps.
@@ -416,7 +415,7 @@ bag.css | [image](static/images/noerrors.css.png) | 1 error found Value Error : 
 as when I change it.
 [top](#content)
 
-### **User Stories Testing**
+- #### **User Stories Testing**
 | AIM | Achieved | Image |
 --- | --- | --- | 
 **As a first time visitor to the website, I would like to..** 
@@ -443,9 +442,9 @@ Have a confirmation message | yes | |
 
 [top](#content)
 
-### **Cross Platfrom Testing**
+- #### **Cross Platfrom Testing**
 
-#### CRUD (create, read, update, delete) TESTING
+- #### CRUD (create, read, update, delete) TESTING
 | AIM | admin | registered user | non-registered user |
 --- | --- | --- | --- |
 **Courses/art works - from content app**
@@ -466,7 +465,7 @@ DELETE a Users Profile | yes | no | no(as intended)
 
 [top](#content)
 
-### FORM VALIDATION TESTING
+- #### Form Validation Testing
 | AIM | SM | MD | LG |
 --- | --- | --- | --- |
 **Register** 
@@ -488,7 +487,7 @@ Both 'Password' fields must match | yes | yes | yes
 'Street Address 2' field will only accept up to 80 characters | yes | yes | yes
 'County, State, or Locality' field will only accept up to 80 characters | yes | yes | yes
 'Card number' field will only accept numbers | yes | yes | yes
-**Add Course - add_product.html**
+**Add Course -**
 'Category' will have a drop down containing options from the Category database | yes | yes | yes
 'Price' will only accept numbers. It will take a numbers up to 4 digits in length | yes | yes | yes
 'Price' will not go lower than 0 | yes | yes | yes
@@ -507,12 +506,12 @@ Both 'Password' fields must match | yes | yes | yes
 
 [top](#content)
 
-### Lighthouse testing
+- ### Lighthouse testing
 I used Google Chrome Lighthouse testing to find out the quality of the website. Here are my results: [image](static/images/light House.png)
 
 [top](#content)
 
-### Responsive Testing
+- ### Responsive Testing
 AIM | SM | MD | LG |
 --- | --- | --- | --- |
 **HOME - home.html**
@@ -557,9 +556,9 @@ Links / URLs | yes | yes | yes
 Images | yes | yes | yes
 Renders as expected | yes | yes | yes
 
-### Jest Test Testing Javascript:
+- ### Jest Test Testing Javascript:
 
-##### I used Jest test to set some of the functions I create with Javascript.
+- ##### I used Jest test to set some of the functions I create with Javascript.
 
 I didnt mannage to test jQuery Code. So create some Mock Function to do the testing
 
@@ -567,15 +566,15 @@ I didnt mannage to test jQuery Code. So create some Mock Function to do the test
 
 ![Jest Test](static/images/home-Elements.Test.png "Home_elemts")
 
-### Django test Testing Python code, views and Models:
+- ### Django test Testing Python code, views and Models:
 
-##### I used Django tests to set some models and views I cretes  with Python.
+- ##### I used Django tests to set some models and views I cretes  with Python.
 
 [Test Commit](https://github.com/Manuperezro/YogaCourses-MSP4/commit/a88b036998cb1502d1df75f4ba57c19b959e9850/)
 
 [top](#content)
 
-### Bugs and Fixes
+- ### Bugs and Fixes
 ISSUE | Solved? | How? | link
 --- | --- | --- | --- | 
 Some of imgs wasn’t rendering after Hosting files in AWS S3 | Yes | I found a solution in Slack overflow: I had to change the src in the imgs fields and used a Django Pattern {% %} instead | (https://github.com/Manuperezro/YogaCourses-MSP4/commit/d84d53b355f8b56f28f233ca72368e83ce7b9994) 
