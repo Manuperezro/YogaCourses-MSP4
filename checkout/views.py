@@ -143,7 +143,7 @@ def checkout_success(request, order_number):
             'default_county': order.county,
         }
         user_profile_form = UpdateProfileForm(profile_data, instance=profile)
-                
+
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')

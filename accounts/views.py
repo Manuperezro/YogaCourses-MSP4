@@ -104,7 +104,7 @@ def my_profile(request):
             user.save()
             # Your account have been updated!
             return redirect('my_profile')
-    
+
     orders = profile.orders.all()
     student_form = UpdateProfileForm(instance=request.user.student)
 

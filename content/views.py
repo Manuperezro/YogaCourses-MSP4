@@ -45,7 +45,7 @@ def course_list(request):
     new_list = []
     template = "content/course_list.html"
     for product in products.data:
-        
+
         obj, _ = Course.objects.get_or_create(name=product.name)
 
         if not obj.category and category_filter:
@@ -66,14 +66,13 @@ def course_list(request):
         obj.thumbnail = product.images[0] if len(product.images) > 0 else ''
         obj.save()
         new_list.append(obj)
-    
+
     if category_filter:
-        
+
         course = Course.objects.filter(category=category_filter)
-        
 
     else:
-        
+
         course = Course.objects.all()
     context = {
         'course': course,

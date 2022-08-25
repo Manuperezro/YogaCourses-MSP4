@@ -23,4 +23,3 @@ class TestBag(TestCase):
         self.assertContains(response, "test course")
         self.assertTemplateUsed(response, "bag/bag.html")
         self.assertEqual(response.status_code, 200)
-

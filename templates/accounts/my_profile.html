@@ -59,12 +59,12 @@ My profile
                                             <ul class="list-unstyled">
                                                 {% for item in order.lineitems.all %}
                                                     <li class="small">
-                                                        {{ item.product.name }} x{{ item.quantity }}
+                                                        {{ item.course }} x{{ item.quantity }}
                                                     </li>
                                                 {% endfor %}
                                             </ul>
                                         </td>
-                                        <td>£{{ total | floatformat:2 }}</td>
+                                        <td>£{{ lineitem_total | floatformat:2 }}</td>
                                     </tr>
                                 {% endfor %}
                             </tbody>

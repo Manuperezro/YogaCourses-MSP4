@@ -3,6 +3,7 @@ from django.test import TestCase
 from django.urls import reverse
 from .models import Student
 
+
 class RegisterPageTests(TestCase):
     def test_url_exists_at_correct_location_signupview(self):
         response = self.client.get("/accounts/register/")
@@ -30,7 +31,7 @@ class RegisterPageTests(TestCase):
         self.assertEqual(get_user_model().objects.all()[0].username, "testuser")
         self.assertEqual(get_user_model().objects.all()[0].email, "testuser@email.com")
 
-    
+
 class LoginPageTests(TestCase):
 
     def test_url_exists_at_correct_location_loginview(self):
@@ -48,10 +49,10 @@ class LoginPageTests(TestCase):
             {
                 "username": "testuser",
                 "password": "testpass123",
-                
+
             },
         )
-        
+
         self.assertEqual(response.status_code, 302)
         self.assertEqual(get_user_model().objects.all().count(), 1)
         self.assertEqual(get_user_model().objects.all()[0].username, "testuser")
