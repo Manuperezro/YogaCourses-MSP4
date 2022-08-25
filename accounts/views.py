@@ -87,7 +87,7 @@ def logout(request):
     storage = messages.get_messages(request)
     storage.used = True
 
-    messages.success(request, "Thanks See you soon!")
+    messages.success(request, "It is Good to see you!")
     return redirect('course-list')
 
 
