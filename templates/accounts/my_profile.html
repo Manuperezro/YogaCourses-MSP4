@@ -64,7 +64,7 @@ My profile
                                                 {% endfor %}
                                             </ul>
                                         </td>
-                                        <td>£{{ lineitem_total | floatformat:2 }}</td>
+                                        <td>£{{ order.order_total | floatformat:2 }}</td>
                                     </tr>
                                 {% endfor %}
                             </tbody>
