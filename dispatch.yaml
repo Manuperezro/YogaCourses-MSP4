@@ -1,0 +1,3 @@
+dispatch:
+  - url: "rockyoga.uk/*"
+    service: default
